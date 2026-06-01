@@ -1,0 +1,145 @@
+import os
+import glob
+import shutil
+import sqlite3
+import json
+
+class AnkiConnection:
+    def __init__(self, profile_name="Main"):
+        self.profile_name = profile_name
+        self.db_path = self._find_db_path()
+        self.temp_db_path = None
+        self.conn = None
+        
+    def _find_db_path(self):
+        appdata = os.getenv('APPDATA')
+        if not appdata:
+            raise EnvironmentError("APPDATA environment variable not found.")
+        
+        path = os.path.join(appdata, "Anki2", self.profile_name, "collection.anki2")
+        if not os.path.exists(path):
+            # Try to list available profiles to help the user
+            anki2_dir = os.path.join(appdata, "Anki2")
+            if os.path.exists(anki2_dir):
+                profiles = [d for d in os.listdir(anki2_dir) if os.path.isdir(os.path.join(anki2_dir, d)) and d != "addons21"]
+                raise FileNotFoundError(f"Database not found for profile '{self.profile_name}'. Available profiles: {profiles}")
+            else:
+                raise FileNotFoundError(f"Anki2 folder not found in AppData/Roaming.")
+        return path
+
+    def connect(self):
+        """Creates a copy of the database to avoid locks and connects to it."""
+        # Use workspace or scratch directory for temp file
+        temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp")
+        os.makedirs(temp_dir, exist_ok=True)
+        self.temp_db_path = os.path.join(temp_dir, f"collection_temp_{self.profile_name}.anki2")
+        
+        shutil.copy2(self.db_path, self.temp_db_path)
+        self.conn = sqlite3.connect(self.temp_db_path)
+        return self.conn
+
+    def close(self):
+        if self.conn:
+            self.conn.close()
+            self.conn = None
+        if self.temp_db_path and os.path.exists(self.temp_db_path):
+            try:
+                os.remove(self.temp_db_path)
+            except OSError:
+                pass # ignore errors deleting temp file
+
+    def __enter__(self):
+        self.connect()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.close()
+
+    def get_decks(self):
+        """Returns dict of did -> name"""
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT id, name FROM decks")
+        return {row[0]: row[1] for row in cursor.fetchall()}
+
+    def get_notetypes(self):
+        """Returns dict of ntid -> {name, fields: {ord: name}}"""
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT id, name FROM notetypes")
+        notetypes = {row[0]: {'name': row[1], 'fields': {}} for row in cursor.fetchall()}
+        
+        cursor.execute("SELECT ntid, ord, name FROM fields")
+        for ntid, ord_val, f_name in cursor.fetchall():
+            if ntid in notetypes:
+                notetypes[ntid]['fields'][ord_val] = f_name
+        return notetypes
+
+    def get_notes_in_deck(self, deck_name):
+        """Retrieves all notes in a specific deck with card stats (lapses, ease, reps, queue)."""
+        cursor = self.conn.cursor()
+        decks = self.get_decks()
+        
+        # Find deck ID (case insensitive search)
+        did = None
+        for d_id, name in decks.items():
+            if name.lower() == deck_name.lower():
+                did = d_id
+                break
+                
+        if did is None:
+            raise ValueError(f"Deck '{deck_name}' not found. Available decks: {list(decks.values())}")
+            
+        notetypes = self.get_notetypes()
+        
+        # Query cards in this deck or original deck (if in filtered deck) and get stats
+        cursor.execute("""
+            SELECT n.id, n.mid, n.flds, n.tags, c.lapses, c.factor, c.reps, c.queue
+            FROM cards c
+            JOIN notes n ON c.nid = n.id
+            WHERE c.did = ? OR c.odid = ?
+        """, (did, did))
+        
+        raw_data = cursor.fetchall()
+        
+        # Aggregate by note id since notes can have multiple cards
+        notes_agg = {}
+        for n_id, mid, flds, tags, lapses, factor, reps, queue in raw_data:
+            if n_id not in notes_agg:
+                notes_agg[n_id] = {
+                    'mid': mid,
+                    'flds': flds,
+                    'tags': tags,
+                    'lapses': [],
+                    'factors': [],
+                    'reps': [],
+                    'queues': []
+                }
+            notes_agg[n_id]['lapses'].append(lapses or 0)
+            notes_agg[n_id]['factors'].append(factor or 2500)
+            notes_agg[n_id]['reps'].append(reps or 0)
+            notes_agg[n_id]['queues'].append(queue or 0)
+            
+        notes = []
+        for n_id, data in notes_agg.items():
+            nt_info = notetypes.get(data['mid'], {'name': 'Unknown', 'fields': {}})
+            field_values = data['flds'].split('\x1f')
+            fields_dict = nt_info['fields']
+            
+            # Map field names to values
+            note_fields = {}
+            for ord_val, name in fields_dict.items():
+                note_fields[name] = field_values[ord_val] if ord_val < len(field_values) else ""
+                
+            tags_list = [t for t in data['tags'].split(' ') if t]
+            
+            # Summarize stats across cards of this note
+            notes.append({
+                'id': n_id,
+                'notetype': nt_info['name'],
+                'tags': tags_list,
+                'fields': note_fields,
+                'lapses': max(data['lapses']) if data['lapses'] else 0,
+                'ease': min(data['factors']) if data['factors'] else 2500,
+                'reps': sum(data['reps']) if data['reps'] else 0,
+                'suspended': any(q < 0 for q in data['queues']) if data['queues'] else False
+            })
+        return notes

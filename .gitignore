@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database temp files
+scripts/temp/
+collection_temp_*.anki2
+
+# Local data extracts containing personal study cards
+data/anki_extract.json
+
+# Local test outputs
+tests/test_grammar_import.csv
+
+# IDEs and OS files
+.vscode/
+.idea/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
