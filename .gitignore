@@ -6,6 +6,7 @@ __pycache__/
 # Local database temp files
 scripts/temp/
 collection_temp_*.anki2
+.env
 
 # Local data extracts containing personal study cards
 data/anki_extract.json
@@ -19,3 +20,9 @@ tests/test_grammar_import.csv
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+#images
+imagenes_vocabulario/
+imagenes_gramatica/
+imagenes_frases/
+imagenes_frases_memorable/
