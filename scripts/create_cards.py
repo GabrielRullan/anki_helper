@@ -226,13 +226,17 @@ def main():
         # 3. Create the Anki card payload
         print(" -> Adding card to Anki... ", end="", flush=True)
         definitions_html = f"<p>{word} ({pinyin})</p><p>∙ {translation}</p>"
+        # Clean phrase and translation of any '*', '-' or '_'
+        frase_clean = frase.replace('*', '').replace('-', '').replace('_', '')
+        traduccion_clean = traduccion.replace('*', '').replace('-', '').replace('_', '')
+        
         note_payload = {
             "deckName": "Chinese::Words",
             "modelName": "Migaku Word",
             "fields": {
                 "Word": word,
-                "Sentence": frase,
-                "Translated Sentence": traduccion,
+                "Sentence": frase_clean,
+                "Translated Sentence": traduccion_clean,
                 "Definitions": definitions_html,
                 "Example Sentences": "",
                 "Notes": desc,
