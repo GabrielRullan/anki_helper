@@ -26,3 +26,9 @@ imagenes_vocabulario/
 imagenes_gramatica/
 imagenes_frases/
 imagenes_frases_memorable/
+
+#data
+new_words.md
+
+#logs
+data/image_generation_errors.log
