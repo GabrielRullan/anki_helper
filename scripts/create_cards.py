@@ -28,8 +28,7 @@ ANKICONNECT_URL = 'http://127.0.0.1:8765'
 MODELS_TO_TRY = [
     'imagen-4.0-fast-generate-001',
     'imagen-4.0-generate-001',
-    'imagen-4.0-ultra-generate-001',
-    'imagen-3.0-generate-002'
+    'imagen-4.0-ultra-generate-001'
 ]
 
 ERROR_LOG_PATH = "data/image_generation_errors.log"
@@ -91,39 +90,46 @@ def generate_image_file(word, prompt_text, output_dir):
 
     for model_id in MODELS_TO_TRY:
         print(f"Using model {model_id}...", end=" ", flush=True)
-        try:
-            response = client.models.generate_images(
-                model=model_id,
-                prompt=prompt_text,
-                config=types.GenerateImagesConfig(
-                    number_of_images=1,
-                    output_mime_type="image/png",
-                    aspect_ratio="1:1"
+        
+        attempts = 3
+        for attempt in range(attempts):
+            try:
+                response = client.models.generate_images(
+                    model=model_id,
+                    prompt=prompt_text,
+                    config=types.GenerateImagesConfig(
+                        number_of_images=1,
+                        output_mime_type="image/png",
+                        aspect_ratio="1:1"
+                    )
                 )
-            )
-            
-            if response and response.generated_images:
-                for generated_image in response.generated_images:
-                    image_bytes = generated_image.image.image_bytes
-                    with open(filename, "wb") as f:
-                        f.write(image_bytes)
-                    return filename
-            else:
-                msg = f"Warning: {model_id} returned no images"
-                log_error(word, prompt_text, msg)
-                continue
                 
-        except Exception as e:
-            error_msg = str(e)
-            if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
-                print(f"Quota exceeded for {model_id}...", end=" ", flush=True)
-                continue
-            else:
-                msg = f"Error with {model_id}: {error_msg}"
-                log_error(word, prompt_text, msg)
-                print(f"{msg}", end=" ", flush=True)
-                return None
-                
+                if response and response.generated_images:
+                    for generated_image in response.generated_images:
+                        image_bytes = generated_image.image.image_bytes
+                        with open(filename, "wb") as f:
+                            f.write(image_bytes)
+                        return filename
+                else:
+                    msg = f"Warning: {model_id} returned no images"
+                    log_error(word, prompt_text, msg)
+                    break
+                    
+            except Exception as e:
+                error_msg = str(e)
+                if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                    if attempt < attempts - 1:
+                        sleep_time = 15 * (attempt + 1)
+                        print(f"Rate limited. Sleeping {sleep_time}s and retrying...", end=" ", flush=True)
+                        time.sleep(sleep_time)
+                    else:
+                        print(f"Quota exceeded for {model_id} after {attempts} attempts...", end=" ", flush=True)
+                else:
+                    msg = f"Error with {model_id}: {error_msg}"
+                    log_error(word, prompt_text, msg)
+                    print(f"{msg}", end=" ", flush=True)
+                    break
+                    
     return None
 
 def parse_new_words(file_path):
@@ -135,40 +141,105 @@ def parse_new_words(file_path):
         content = f.read()
 
     try:
-        pendiente_section = content.split('## 🟡 Pendiente de incluir')[1].split('## 🔴 Suelto')[0]
+        parts = content.split('## 🟡 Pendiente de incluir')
+        pendiente_section = parts[-1].split('## 🔴 Suelto')[0]
     except IndexError:
         print("Error: Sections missing in markdown.")
         return []
 
-    blocks = re.split(r'^\s*[*]\s*\*\*', pendiente_section, flags=re.MULTILINE)
     items = []
-    for block in blocks:
-        block = block.strip()
-        if not block:
+    current_item = None
+    
+    for line in pendiente_section.splitlines():
+        line_stripped = line.strip()
+        if not line_stripped:
             continue
-        
-        match_word = re.match(r'^([^*]+)\*\*\s*\(([^)]+)\)\s*—\s*([^\n]+)', block)
-        if match_word:
-            word = match_word.group(1).strip()
-            pinyin = match_word.group(2).strip()
-            translation = match_word.group(3).strip()
             
-            frase_match = re.search(r'^\s*[*]\s*\*Frase:\*\s*([^\n]+)', block, re.MULTILINE)
-            traduccion_match = re.search(r'^\s*[*]\s*\*Traducción:\*\s*([^\n]+)', block, re.MULTILINE)
-            desc_match = re.search(r'^\s*[*]\s*\*Descripción:\*\s*([^\n]+)', block, re.MULTILINE)
-            prompt_match = re.search(r'^\s*[*]\s*\*Prompt:\*\s*([^\n]+)', block, re.MULTILINE)
-            
-            items.append({
+        root_match = re.match(r'^[-*]\s+(?:\*\*)?([^*()]+?)(?:\*\*)?\s*\(([^)]+)\)(?:\s*(?:—|-)\s*(.+))?', line)
+        if root_match:
+            if current_item:
+                items.append(current_item)
+            word = root_match.group(1).strip()
+            pinyin = root_match.group(2).strip().replace('_', '').replace('*', '').strip()
+            translation = root_match.group(3).strip() if root_match.group(3) else ""
+            current_item = {
                 'word': word,
                 'pinyin': pinyin,
                 'translation': translation,
-                'frase': frase_match.group(1).strip() if frase_match else "",
-                'traduccion': traduccion_match.group(1).strip() if traduccion_match else "",
-                'desc': desc_match.group(1).strip() if desc_match else "",
-                'prompt': prompt_match.group(1).strip() if prompt_match else "",
-                'orig_line': f"- **{word}** ({pinyin}) — {translation}" + (f" #{block.split('#')[-1]}" if '#' in block else "")
-            })
+                'frase': "",
+                'traduccion': "",
+                'desc': "",
+                'prompt': "",
+                'orig_line': line.strip()
+            }
+            continue
+            
+        if current_item:
+            frase_match = re.match(r'^\s*[-*]\s*(?:\*\*|\*|_|__)Frase:(?:\*\*|\*|_|__)\s*(.+)', line)
+            if frase_match:
+                current_item['frase'] = frase_match.group(1).strip()
+                continue
+                
+            traduccion_es_match = re.match(r'^\s*[-*]\s*(?:\*\*|\*|_|__)Traducción Español:(?:\*\*|\*|_|__)\s*(.+)', line)
+            if traduccion_es_match:
+                current_item['traduccion'] = traduccion_es_match.group(1).strip()
+                continue
+                
+            traduccion_generic_match = re.match(r'^\s*[-*]\s*(?:\*\*|\*|_|__)Traducción:(?:\*\*|\*|_|__)\s*(.+)', line)
+            if traduccion_generic_match and not current_item['traduccion']:
+                current_item['traduccion'] = traduccion_generic_match.group(1).strip()
+                continue
+
+            desc_match = re.match(r'^\s*[-*]\s*(?:\*\*|\*|_|__)Descripción:(?:\*\*|\*|_|__)\s*(.+)', line)
+            if desc_match:
+                current_item['desc'] = desc_match.group(1).strip()
+                continue
+                
+            prompt_match = re.match(r'^\s*[-*]\s*(?:\*\*|\*|_|__)Prompt:(?:\*\*|\*|_|__)\s*(.+)', line)
+            if prompt_match:
+                current_item['prompt'] = prompt_match.group(1).strip()
+                continue
+
+    if current_item:
+        items.append(current_item)
+        
     return items
+
+def generate_missing_fields(word, translation, frase, frase_translation, client):
+    needed_fields = []
+    if not translation:
+        needed_fields.append("translation (translate the Chinese word to Spanish and English, format as 'Spanish / English')")
+    needed_fields.append("visual_description (a simple, visual scene in English representing the sentence, suitable for a Peanuts/Charlie Brown cartoon style illustration, focusing on a single character/action, no abstract concepts)")
+
+    prompt = f"""
+Analyze this Chinese vocabulary word and sentence:
+Word: {word}
+Current Translation: {translation if translation else "Unknown"}
+Sentence: {frase}
+Sentence Translation: {frase_translation}
+
+We need to generate the following missing fields:
+{chr(10).join(f"- {f}" for f in needed_fields)}
+
+Format your response as a JSON object with these keys (if needed):
+- "translation": (string, only if missing)
+- "visual_description": (string, single visual sentence describing the scene in English, e.g., "A child looking under a couch with a magnifying glass.")
+
+Return ONLY the raw JSON block, no markdown formatting.
+"""
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json"
+            )
+        )
+        data = json.loads(response.text.strip())
+        return data
+    except Exception as e:
+        print(f"Error generating fields for {word}: {e}")
+        return {}
 
 def main():
     workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -180,7 +251,7 @@ def main():
     pending_items = parse_new_words(new_words_path)
     
     if not pending_items:
-        print("No pending words with prompts found.")
+        print("No pending words found.")
         return
         
     print(f"Found {len(pending_items)} words to process.")
@@ -226,75 +297,39 @@ def main():
         
         print(f"\n[{index}/{len(queue)}] Processing: {word}...")
         
-        # 1. Generate the image
-        print(" -> Generating image... ", end="", flush=True)
-        img_path = generate_image_file(word, prompt, output_dir)
-        if not img_path:
-            print("Failed (Image generation error). Skipping.")
-            continue
-        print(f"Done. Saved to {img_path}")
-        
-        # 2. Add image to Anki Media collection
-        filename = f"{word}.png"
-        print(" -> Storing image in Anki... ", end="", flush=True)
-        try:
-            request_anki("storeMediaFile", filename=filename, path=os.path.abspath(img_path))
+        # Fill missing fields via Gemini
+        if not translation or not desc or not prompt:
+            print(" -> Generating missing fields with Gemini... ", end="", flush=True)
+            generated = generate_missing_fields(word, translation, frase, traduccion, client)
+            if 'translation' in generated and not translation:
+                translation = generated['translation'].strip()
+                item['translation'] = translation
+                print(f"[Translation: {translation}] ", end="")
+            if 'visual_description' in generated and not desc:
+                desc = generated['visual_description'].strip()
+                item['desc'] = desc
+                print("[Visual Description generated] ", end="")
+            if desc and not prompt:
+                prompt = (
+                    f"Minimalist Peanuts cartoon style illustration for a language learning flashcard. "
+                    f"The image must be extremely simple, focusing only on {desc}. "
+                    f"Strict requirements: "
+                    f"- Absolutely no text, no letters, no words, no speech bubbles, and no characters from any alphabet (Latin, Chinese, etc.). "
+                    f"- Plain, solid, completely white background. "
+                    f"- Clean line art with minimal, flat colors. "
+                    f"- Plenty of empty white space around the centered characters."
+                )
+                item['prompt'] = prompt
+                print("[Prompt constructed] ", end="")
             print("Done.")
-        except Exception as e:
-            print(f"Failed to store media in Anki: {e}. Skipping.")
-            continue
+
+        # 1. Generate the image (Bypassed / Ignored as requested)
+        filename = ""
             
-        # 3. Generate and store TTS audio for Word and Sentence
+        # 3. Generate and store TTS audio for Word and Sentence (Bypassed / Ignored as requested)
         word_audio_filename = ""
         sentence_audio_filename = ""
-        timestamp = int(time.time())
-        
-        # Word audio
-        print(" -> Generating word TTS audio... ", end="", flush=True)
-        word_audio_bytes = download_tts(word)
-        if word_audio_bytes:
-            word_temp_path = os.path.join(output_dir, f"temp_word_{timestamp}.mp3")
-            try:
-                with open(word_temp_path, "wb") as f:
-                    f.write(word_audio_bytes)
-                word_audio_filename = f"tts_word_{word}_{timestamp}.mp3"
-                request_anki("storeMediaFile", filename=word_audio_filename, path=os.path.abspath(word_temp_path))
-                print("Done.")
-            except Exception as e:
-                print(f"Failed to store word audio: {e}")
-                word_audio_filename = ""
-            finally:
-                if os.path.exists(word_temp_path):
-                    try:
-                        os.remove(word_temp_path)
-                    except OSError:
-                        pass
-        else:
-            print("Failed.")
-
-        # Sentence audio
         frase_clean = frase.replace('*', '').replace('-', '').replace('_', '')
-        print(" -> Generating sentence TTS audio... ", end="", flush=True)
-        sent_audio_bytes = download_tts(frase_clean)
-        if sent_audio_bytes:
-            sent_temp_path = os.path.join(output_dir, f"temp_sent_{timestamp}.mp3")
-            try:
-                with open(sent_temp_path, "wb") as f:
-                    f.write(sent_audio_bytes)
-                sentence_audio_filename = f"tts_sent_{word}_{timestamp}.mp3"
-                request_anki("storeMediaFile", filename=sentence_audio_filename, path=os.path.abspath(sent_temp_path))
-                print("Done.")
-            except Exception as e:
-                print(f"Failed to store sentence audio: {e}")
-                sentence_audio_filename = ""
-            finally:
-                if os.path.exists(sent_temp_path):
-                    try:
-                        os.remove(sent_temp_path)
-                    except OSError:
-                        pass
-        else:
-            print("Failed.")
             
         # 4. Create the Anki card payload
         print(" -> Adding card to Anki... ", end="", flush=True)
@@ -311,7 +346,7 @@ def main():
                 "Definitions": definitions_html,
                 "Example Sentences": "",
                 "Notes": desc,
-                "Images": f'<img src="{filename}">',
+                "Images": f'<img src="{filename}">' if filename else "",
                 "Sentence Audio": f"[sound:{sentence_audio_filename}]" if sentence_audio_filename else "",
                 "Word Audio": f"[sound:{word_audio_filename}]" if word_audio_filename else ""
             },
@@ -341,9 +376,6 @@ def main():
         header = content.split('## 🟢 Incluido en Anki')[0].rstrip()
         incluido_part = content.split('## 🟢 Incluido en Anki')[1].split('## 🟡 Pendiente de incluir')[0].strip()
         
-        # Parse the remaining pending section
-        # We want to remove the successful words from the pending section
-        # And add them to the included section
         success_set = {x['word'] for x in success_words}
         
         # We can construct the new incluido_part
@@ -351,10 +383,13 @@ def main():
         if new_incluido_part:
             new_incluido_part += "\n"
         for item in success_words:
-            # We match Obsidian tags from their original suelto lines (e.g. #trabajo)
-            # Default tags can be reconstructed
-            # Let's see: we saved the original line as it would look in Suelto/Incluido
-            new_incluido_part += f"{item['orig_line']}\n"
+            # Reconstruct the line neatly, preserving tags
+            tags_part = ""
+            if '#' in item['orig_line']:
+                tags = re.findall(r'#\w+', item['orig_line'])
+                if tags:
+                    tags_part = " " + " ".join(tags)
+            new_incluido_part += f"- **{item['word']}** ({item['pinyin']}) — {item['translation']}{tags_part}\n"
             
         # Rebuild the pending section by keeping only the ones that were NOT successful
         pendiente_section = "\n\n## 🟡 Pendiente de incluir\n*Aquí van las palabras en transición antes de añadirlas a Anki. Cada una debe incluir traducción y una frase memorable:*\n"
@@ -372,15 +407,18 @@ def main():
             d = item['desc']
             pr = item['prompt']
             
-            pendiente_section += f"* **{w}** ({p}) — {t}\n"
+            pendiente_section += f"- **{w}** ({p})"
+            if t:
+                pendiente_section += f" — {t}"
+            pendiente_section += "\n"
             if f:
-                pendiente_section += f"  * *Frase:* {f}\n"
+                pendiente_section += f"    - **Frase:** {f}\n"
             if tr:
-                pendiente_section += f"  * *Traducción:* {tr}\n"
+                pendiente_section += f"    - _Traducción Español:_ {tr}\n"
             if d:
-                pendiente_section += f"  * *Descripción:* {d}\n"
+                pendiente_section += f"    - **Descripción:** {d}\n"
             if pr:
-                pendiente_section += f"  * *Prompt:* {pr}\n"
+                pendiente_section += f"    - **Prompt:** {pr}\n"
                 
         suelto_part = content.split('## 🔴 Suelto')[1].strip()
         
@@ -397,6 +435,5 @@ def main():
         print("new_words.md updated successfully!")
         
     print(f"\nBatch job complete! Added {len(success_words)} cards to Anki.")
-
 if __name__ == "__main__":
     main()

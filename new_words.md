@@ -22,6 +22,7 @@
 # Vocabulario
 
 ## 🟢 Incluido en Anki
+- **蚜虫** (yáchóng) — pulgón / aphid
 * **爆米花** (bàomǐhuā) — Palomitas de maíz
 * **脸谱** (liǎnpǔ) — Máscara / Maquillaje facial (de la ópera tradicional china)
 * **楼长** (lóuzhǎng) — Administrador / Presidente del edificio
@@ -129,14 +130,96 @@
 - **礼拜天** (lǐbàitiān) — Domingo
 - **优秀** (yōuxiù) — Excelente, sobresaliente
 - **兴奋** (xīngfèn) — Emocionado, entusiasmado
+- **瓢虫** (piáochóng) — Mariquita / Ladybug
+- **电风扇** (diànfēngshàn) — Ventilador / Electric fan
+- **租一个工位** (zū yí ge gōngwèi) — Alquilar un puesto de trabajo / Rent a coworking desk
+- **表扬** (biǎoyáng) — Elogiar, alabar / To praise, commend
+- **粗心** (cūxīn) — Negligente, descuidado / Careless, reckless
+- **打招呼** (dǎ zhāohu) — Saludar / To greet, say hello
+- **打针** (dǎzhēn) — Poner una inyección / To give or receive an injection
+- **登机牌** (dēngjīpái) — Tarjeta de embarque / Boarding pass
+- **放暑假** (fàng shǔjià) — Tener vacaciones de verano / To have summer vacation
+- **付款** (fù kuǎn) — Pagar / To make a payment
+- **复印** (fùyìn) — Fotocopiar / To photocopy
+- **高速公路** (gāosù gōnglù) — Autopista / Highway, expressway
+- **鼓励** (gǔlì) — Animar, alentar; ánimo / To encourage; encouragement
+- **管理** (guǎnlǐ) — Administrar, gestionar / To manage, administer
+- **广播** (guǎngbō) — Radiodifusión, emisión de radio / Broadcast, radio
+- **规定** (guīdìng) — Estipular, regular; regla / To regulate; regulation, rule
+- **寒假** (hánjià) — Vacaciones de invierno / Winter vacation
+- **航班** (hángbān) — Vuelo programado / Flight
+- **盒子** (hézi) — Caja, estuche / Box, case
+- **护士** (hùshi) — Enfermera / Nurse
+- **激动** (jīdòng) — Entusiasmado, emocionado / Excited, thrilled
+- **及时** (jíshí) — A tiempo, oportunamente / Timely, in time
+- **技术** (jìshù) — Técnica, tecnología, habilidad / Technology, skill
+- **降落** (jiàngluò) — Aterrizar, descender / To land, descend
+- **郊区** (jiāoqū) — Suburbios, afueras / Suburbs, outskirts
+- **骄傲** (jiāo'ào) — Orgulloso (positivo), engreído (negativo) / Proud, arrogant
+- **接着** (jiēzhe) — Seguir, continuar, a continuación / To follow, carry on, then
+- **节约** (jiéyuē) — Economizar, ahorrar / To save, economize
+- **经济** (jīngjì) — Economía; económico / Economy; financial
+- **举办** (jǔbàn) — Celebrar, organizar (un evento) / To hold, run (an event)
+- **恐怕** (kǒngpà) — Temer que, probablemente, tal vez / To fear that, perhaps
+- **矿泉水** (kuàngquánshuǐ) — Agua mineral / Mineral water
+- **来自** (láizì) — Provenir de, venir de / To come from
+- **理发** (lǐ fà) — Cortarse el pelo / To get a haircut
+- **凉快** (liángkuai) — Fresco (clima) / Cool, pleasant
+- **流利** (liúlì) — Fluido, fluido / Fluent
+- **律师** (lǜshī) — Abogado / Lawyer
+- **排队** (pái duì) — Hacer cola / To line up, queue
+- **排列** (páiliè) — Ordenar, poner en orden / To arrange, align
+- **批评** (pīpíng) — Criticar; crítica / To criticize; criticism
+- **任何** (rènhé) — Cualquier, cualquiera / Any, whichever
+- **商量** (shāngliang) — Consultar, discutir, hablar / To consult, discuss
+- **实在** (shízài) — Verdadero, honesto; realmente / Honest, real; indeed, honestly
+- **世纪** (shìjì) — Siglo / Century
+- **受到** (shòudào) — Recibir, ser objeto de (un trato o acción) / To receive, suffer, accept
+- **售货员** (shòuhuòyuán) — Dependiente, vendedor / Salesclerk, shop assistant
+- **数量** (shùliàng) — Cantidad / Quantity, amount
+- **顺序** (shùnxù) — Orden, secuencia / Order, sequence
+- **硕士** (shuòshì) — Máster, maestría / Master's degree
+- **塑料袋** (sùliàodài) — Bolsa de plástico / Plastic bag
+- **速度** (sùdù) — Velocidad / Speed
+- **推迟** (tuīchí) — Aplazar, posponer / To postpone, delay
+- **卫生间** (wèishēngjiān) — Baño, aseos / Toilet, bathroom
+- **文章** (wénzhāng) — Artículo, ensayo / Article, essay
+- **污染** (wūrǎn) — Contaminar; contaminación / To pollute; pollution
+- **现金** (xiànjīn) — Efectivo, dinero en metálico / Cash
+- **相反** (xiāngfǎn) — Al contrario, opuesto / Opposite, contrary
+- **相同** (xiāngtóng) — Mismo, idéntico / Same, identical
+- **信封** (xìnfēng) — Sobre (para cartas) / Envelope
+- **信息** (xìnxī) — Información, mensaje / Information, message
+- **性别** (xìngbié) — Género, sexo / Gender, sex
+- **演出** (yǎnchū) — Espectáculo, representación; actuar / Performance, show; to perform
+- **演员** (yǎnyuán) — Actor o actriz / Actor, actress, performer
+- **眼镜** (yǎnjìng) — Gafas, anteojos / Glasses, spectacles
+- **养成** (yǎngchéng) — Formar, cultivar (un hábito) / To cultivate, form (a habit)
+- **尤其** (yóuqí) — Especialmente, sobre todo / Especially, particularly
+- **于是** (yúshì) — Entonces, por lo tanto / So, hence, thereupon
+- **预习** (yùxí) — Preparar o estudiar antes de clase / To preview, prepare lessons
+- **允许** (yǔnxǔ) — Permitir, autorizar / To allow, permit
+- **杂志** (zázhì) — Revista / Magazine
+- **占线** (zhànxiàn) — Línea ocupada (teléfono) / Busy line (telephone)
+- **重视** (zhòngshì) — Dar importancia a, valorar / To value, attach importance to
+- **祝贺** (zhùhè) — Felicitar, enhorabuena / To congratulate; congratulations
+- **专门** (zhuānmén) — Especialmente, ex profeso / Specially, specialized
+- **专业** (zhuānyè) — Especialidad, carrera, campo de estudio; profesional / Major, profession; professional
+- **作用** (zuòyòng) — Efecto, influencia, función / Action, function, effect
+- **座** (zuò) — Clasificador para edificios, montañas, etc. / Measure word for large structures
+- **潮湿** (cháoshī) — Húmedo / Humid, damp
+- **闷** (mēn) — Bochornoso, sofocante / Stuffy, muggy
+- **冷静** (lěngjìng) — Tranquilo, sereno / Calm, cool-headed
+- **理想** (lǐxiǎng) — Ideal; satisfactorio / Ideal; aspiration
+- **输** (shū) — Perder, ser derrotado / To lose, be defeated
+- **优点** (yōudiǎn) — Virtud, ventaja, punto fuerte / Merit, advantage, strong point
+- **暂时** (zànshí) — Temporalmente / Temporary, for the time being
+
 
 ## 🟡 Pendiente de incluir
 *Aquí van las palabras en transición antes de añadirlas a Anki. Cada una debe incluir traducción y una frase memorable:*
 
 ## 🔴 Suelto
+*Palabras en caracteres chinos listas para estudio, con su pronunciación, significado y etiquetas de Obsidian:
+*Palabras en caracteres chinos listas para estudio, con su pronunciación, significado y etiquetas de Obsidian:
 *Palabras en caracteres chinos listas para estudio, con su pronunciación, significado y etiquetas de Obsidian:*
-* Mariquita (animal)
-* 电风扇diànfēngshàn ventilador 
-* 潮湿 chǎoshī húmedo 
-* 闷mēn bochornoso, sofocante,
-* 租一个工位 zū yí ge gōngwèi
