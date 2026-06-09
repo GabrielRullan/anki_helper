@@ -5,7 +5,7 @@ import sys
 import time
 import math
 
-ANKICONNECT_URL = 'http://localhost:8765'
+ANKICONNECT_URL = 'http://127.0.0.1:8765'
 
 def request_anki(action, **params):
     payload = {"action": action, "version": 6}

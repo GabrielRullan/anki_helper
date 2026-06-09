@@ -1,0 +1,923 @@
+[
+  {
+    "note_id": 1781004427195,
+    "hanzi": "丫",
+    "pinyin": "yā",
+    "english": "fork, bifurcation; girl, maiden",
+    "actor": "Yelena (Black Widow)",
+    "set": "-a",
+    "tone_location": "In Front [1]",
+    "components": [
+      "丫 (丫)"
+    ]
+  },
+  {
+    "note_id": 1781004427199,
+    "hanzi": "亨",
+    "pinyin": "hēng",
+    "english": "smooth, successful; prosperous",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-eng",
+    "tone_location": "In Front [1]",
+    "components": [
+      "亠 (Pickle top)",
+      "口 (Giant Mouth, Kirby)",
+      "子 (Home alone kid)"
+    ]
+  },
+  {
+    "note_id": 1781004427202,
+    "hanzi": "倔",
+    "pinyin": "jué",
+    "english": "stubborn, unyielding; perverse",
+    "actor": "Wednesdey Adams (Gena Ortega)",
+    "set": "-e",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "亻 (Strawman)",
+      "屈 (屈)"
+    ]
+  },
+  {
+    "note_id": 1781004427206,
+    "hanzi": "兽",
+    "pinyin": "shòu",
+    "english": "beast, animal; brute",
+    "actor": "007 (Connery)",
+    "set": "-ou",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "爫 (Giant white gloved hand coming from above)",
+      "田 (Rice Field, Window)",
+      "夬 (Waiter bringing toasts)"
+    ]
+  },
+  {
+    "note_id": 1781004427210,
+    "hanzi": "凌",
+    "pinyin": "líng",
+    "english": "high, lofty; severe cold; bully, insult",
+    "actor": "Lisa Simpsons",
+    "set": "-eng",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "冫 (Icicles)"
+    ]
+  },
+  {
+    "note_id": 1781004427214,
+    "hanzi": "割",
+    "pinyin": "gē",
+    "english": "cut, sever, cleave; divide",
+    "actor": "Chef (Gordon Ramsey)",
+    "set": "-e",
+    "tone_location": "In Front [1]",
+    "components": [
+      "害 (to do harm to)",
+      "刀 (Cleaver)"
+    ]
+  },
+  {
+    "note_id": 1781004427217,
+    "hanzi": "匆",
+    "pinyin": "cōng",
+    "english": "hurried, hasty, rushed",
+    "actor": "C-3P0",
+    "set": "-ong",
+    "tone_location": "In Front [1]",
+    "components": [
+      "勹 (Rope)",
+      "力 (Strongly)"
+    ]
+  },
+  {
+    "note_id": 1781004427221,
+    "hanzi": "卓",
+    "pinyin": "zhuó",
+    "english": "outstanding, remarkable; table, desk",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-o",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "卜 (Magic wand, voldemort)",
+      "早 (Sunflower)"
+    ]
+  },
+  {
+    "note_id": 1781004427225,
+    "hanzi": "呈",
+    "pinyin": "chéng",
+    "english": "present, submit; show, appear",
+    "actor": "Chaplin",
+    "set": "-eng",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "口 (Giant Mouth, Kirby)",
+      "王 ([temp] King)"
+    ]
+  },
+  {
+    "note_id": 1781004427228,
+    "hanzi": "咯",
+    "pinyin": "lo, gē",
+    "english": "(onomatopoeia for clucking or spitting sound); (exclamatory particle)",
+    "actor": "Lisa Simpsons",
+    "set": "-o",
+    "tone_location": "Roof [5]",
+    "components": [
+      "口 (Giant Mouth, Kirby)",
+      "各 (Kirby With a slaver whip and a slur)"
+    ]
+  },
+  {
+    "note_id": 1781004427231,
+    "hanzi": "嘲",
+    "pinyin": "cháo, zhāo",
+    "english": "ridicule, mock; morning",
+    "actor": "Chaplin",
+    "set": "-ao",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "口 (Giant Mouth, Kirby)",
+      "朝 (abbr. for 朝鮮|朝鲜[Chao2 xian3] Korea)"
+    ]
+  },
+  {
+    "note_id": 1781004427235,
+    "hanzi": "嚣",
+    "pinyin": "xiāo",
+    "english": "clamor, uproar; arrogant",
+    "actor": "Alien&#x27;s Ripley (Sigourney)",
+    "set": "-ao",
+    "tone_location": "In Front [1]",
+    "components": [
+      "口 (Giant Mouth, Kirby)",
+      "口 (Giant Mouth, Kirby)",
+      "爻 (the solid and broken lines of the eight trigrams 八卦[ba1 gua4], e.g. ☶)",
+      "页 (The Constitution)"
+    ]
+  },
+  {
+    "note_id": 1781004427238,
+    "hanzi": "坤",
+    "pinyin": "kūn",
+    "english": "earth; feminine, female; mother",
+    "actor": "Kevin Hart",
+    "set": "-en",
+    "tone_location": "In Front [1]",
+    "components": [
+      "土 (Pot of soil)",
+      "申 (Kami Sama)"
+    ]
+  },
+  {
+    "note_id": 1781004427242,
+    "hanzi": "塘",
+    "pinyin": "táng",
+    "english": "dike, embankment; pond, pool",
+    "actor": "Big bald black cop (Terry Crews)",
+    "set": "-ang",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "土 (Pot of soil)",
+      "唐 (Sugar)"
+    ]
+  },
+  {
+    "note_id": 1781004427245,
+    "hanzi": "墅",
+    "pinyin": "shù",
+    "english": "villa, country house",
+    "actor": "007 (Connery)",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "艹 (Grass)",
+      "土 (Pot of soil)"
+    ]
+  },
+  {
+    "note_id": 1781004427249,
+    "hanzi": "奘",
+    "pinyin": "zàng, zhuàng",
+    "english": "(used in names, e.g., Xuanzang); bulky, stout",
+    "actor": "El Zorro",
+    "set": "-ang",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "大 (Giant robot)",
+      "壮 (Zhuang ethnic group, the largest ethnic minority in China)"
+    ]
+  },
+  {
+    "note_id": 1781004427253,
+    "hanzi": "娜",
+    "pinyin": "nà",
+    "english": "elegant, graceful (often in names)",
+    "actor": "Astrophysicist (Neil Degrasse Tyson)",
+    "set": "-a",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "女 (Geisha)",
+      "那 (surname Na)"
+    ]
+  },
+  {
+    "note_id": 1781004427257,
+    "hanzi": "岳",
+    "pinyin": "yuè",
+    "english": "high mountain, peak; father-in-law",
+    "actor": "Yelena (Black Widow)",
+    "set": "-e",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "山 ([temp] Mountain)",
+      "丘 (Hill Billy)"
+    ]
+  },
+  {
+    "note_id": 1781004427263,
+    "hanzi": "崖",
+    "pinyin": "yá",
+    "english": "cliff, precipice; bank",
+    "actor": "Yelena (Black Widow)",
+    "set": "-a",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "山 ([temp] Mountain)"
+    ]
+  },
+  {
+    "note_id": 1781004427266,
+    "hanzi": "彗",
+    "pinyin": "huì",
+    "english": "comet; broom",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-ei",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "彐 (Pig SnoutTrident)",
+      "丰 (Bales of Wheat or Hay)"
+    ]
+  },
+  {
+    "note_id": 1781004427269,
+    "hanzi": "忌",
+    "pinyin": "jì",
+    "english": "fear, dread; avoid, abstain from; jealousy",
+    "actor": "Wednesdey Adams (Gena Ortega)",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "己 (Giant Snake like in Harry Potter)",
+      "心 ([temp] Heart)"
+    ]
+  },
+  {
+    "note_id": 1781004427273,
+    "hanzi": "悍",
+    "pinyin": "hàn",
+    "english": "brave, fierce; valiant",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-an",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "忄 (little heart)",
+      "干 ([temp] Dry)"
+    ]
+  },
+  {
+    "note_id": 1781004427277,
+    "hanzi": "悠",
+    "pinyin": "yōu",
+    "english": "long, distant; leisurely, relaxed",
+    "actor": "Yelena (Black Widow)",
+    "set": "-ou",
+    "tone_location": "In Front [1]",
+    "components": [
+      "攸 (Repairman)",
+      "心 ([temp] Heart)"
+    ]
+  },
+  {
+    "note_id": 1781004427281,
+    "hanzi": "愧",
+    "pinyin": "kuì",
+    "english": "ashamed; conscience-stricken",
+    "actor": "Kevin Hart",
+    "set": "-ei",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "忄 (little heart)",
+      "鬼 (GoblinGhost (e.g., Casper))"
+    ]
+  },
+  {
+    "note_id": 1781004427285,
+    "hanzi": "拎",
+    "pinyin": "līn",
+    "english": "lift, carry (by hand)",
+    "actor": "Lisa Simpsons",
+    "set": "-en",
+    "tone_location": "In Front [1]",
+    "components": [
+      "扌 (The hand in Adam&#x27;s)",
+      "令 ([temp] Order)"
+    ]
+  },
+  {
+    "note_id": 1781004427288,
+    "hanzi": "拯",
+    "pinyin": "zhěng",
+    "english": "rescue, save; lift up",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-eng",
+    "tone_location": "Room [3]",
+    "components": [
+      "扌 (The hand in Adam&#x27;s)"
+    ]
+  },
+  {
+    "note_id": 1781004427292,
+    "hanzi": "捞",
+    "pinyin": "lāo",
+    "english": "dredge, scoop up; fish out",
+    "actor": "Lisa Simpsons",
+    "set": "-ao",
+    "tone_location": "In Front [1]",
+    "components": [
+      "扌 (The hand in Adam&#x27;s)",
+      "劳 (劳)"
+    ]
+  },
+  {
+    "note_id": 1781004427295,
+    "hanzi": "撕",
+    "pinyin": "sī",
+    "english": "tear, rip; rend",
+    "actor": "Samuel L Jackson",
+    "set": "-(Null)",
+    "tone_location": "In Front [1]",
+    "components": [
+      "扌 (The hand in Adam&#x27;s)",
+      "斯 (斯)"
+    ]
+  },
+  {
+    "note_id": 1781004427299,
+    "hanzi": "敞",
+    "pinyin": "chǎng",
+    "english": "open, spacious; clear",
+    "actor": "Chaplin",
+    "set": "-ang",
+    "tone_location": "Room [3]",
+    "components": [
+      "厂 (Factory)",
+      "尚 ([temp] Noble)"
+    ]
+  },
+  {
+    "note_id": 1781004427303,
+    "hanzi": "斥",
+    "pinyin": "chì",
+    "english": "denounce, reprimand; blame; reject",
+    "actor": "Chaplin",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "厂 (Factory)",
+      "斤 (A 500 gr weightor an axe)"
+    ]
+  },
+  {
+    "note_id": 1781004427307,
+    "hanzi": "旷",
+    "pinyin": "kuàng",
+    "english": "vast, extensive; waste; neglect",
+    "actor": "Kevin Hart",
+    "set": "-ang",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "日 ([temp] Sun)",
+      "广 (Swimmer jumping into the pool)"
+    ]
+  },
+  {
+    "note_id": 1781004427310,
+    "hanzi": "昊",
+    "pinyin": "hào",
+    "english": "vast (sky); summer sky",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-ao",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "日 ([temp] Sun)",
+      "天 (Angel)"
+    ]
+  },
+  {
+    "note_id": 1781004427313,
+    "hanzi": "晰",
+    "pinyin": "xī",
+    "english": "clear, distinct; explicit",
+    "actor": "Alien&#x27;s Ripley (Sigourney)",
+    "set": "-(Null)",
+    "tone_location": "In Front [1]",
+    "components": [
+      "日 ([temp] Sun)",
+      "析 (析)"
+    ]
+  },
+  {
+    "note_id": 1781004427317,
+    "hanzi": "杖",
+    "pinyin": "zhàng",
+    "english": "staff, stick, cane; cudgel",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-ang",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "木 (Fig Tree)",
+      "丈 ([temp] Cane)"
+    ]
+  },
+  {
+    "note_id": 1781004427320,
+    "hanzi": "枚",
+    "pinyin": "méi",
+    "english": "(classifier for small objects); tree trunk",
+    "actor": "Luke Skywalker (Matt Hamill)",
+    "set": "-ei",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "木 (Fig Tree)"
+    ]
+  },
+  {
+    "note_id": 1781004427323,
+    "hanzi": "柳",
+    "pinyin": "liǔ",
+    "english": "willow (tree)",
+    "actor": "Lisa Simpsons",
+    "set": "-ou",
+    "tone_location": "Room [3]",
+    "components": [
+      "木 (Fig Tree)",
+      "卯 (A talking rabbitIt’s the 4th branch)"
+    ]
+  },
+  {
+    "note_id": 1781004427327,
+    "hanzi": "楠",
+    "pinyin": "nán",
+    "english": "Phoebe zhennan (a type of tree), nanmu (wood)",
+    "actor": "Astrophysicist (Neil Degrasse Tyson)",
+    "set": "-an",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "木 (Fig Tree)",
+      "南 (Souther woman)"
+    ]
+  },
+  {
+    "note_id": 1781004427331,
+    "hanzi": "榨",
+    "pinyin": "zhà",
+    "english": "to press, to squeeze, to extract",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-a",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "木 (Fig Tree)",
+      "乍 (First Love love actually)"
+    ]
+  },
+  {
+    "note_id": 1781004427334,
+    "hanzi": "殿",
+    "pinyin": "diàn",
+    "english": "palace, hall, temple",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-an",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "尸 (Flagpole, Zombie)",
+      "共 ([temp] Together)",
+      "殳 ([temp] Weapon)"
+    ]
+  },
+  {
+    "note_id": 1781004427338,
+    "hanzi": "湛",
+    "pinyin": "zhàn",
+    "english": "deep (water), clear (water), profound",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-an",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "氵 (Water hose)",
+      "甚 (甚)"
+    ]
+  },
+  {
+    "note_id": 1781004427341,
+    "hanzi": "溢",
+    "pinyin": "yì",
+    "english": "to overflow, to brim over, to spill",
+    "actor": "Yelena (Black Widow)",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "氵 (Water hose)",
+      "益 (益)"
+    ]
+  },
+  {
+    "note_id": 1781004427345,
+    "hanzi": "熄",
+    "pinyin": "xī",
+    "english": "to extinguish, to put out (fire), to go out",
+    "actor": "Alien&#x27;s Ripley (Sigourney)",
+    "set": "-(Null)",
+    "tone_location": "In Front [1]",
+    "components": [
+      "火 (Torch)",
+      "息 (息)"
+    ]
+  },
+  {
+    "note_id": 1781004427348,
+    "hanzi": "燕",
+    "pinyin": "yàn",
+    "english": "swallow (bird), Beijing (short for 北京)",
+    "actor": "Yelena (Black Widow)",
+    "set": "-an",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "廿 (Cup of Tea Chippy, beause of Twenty is similar to tea)",
+      "口 (Giant Mouth, Kirby)",
+      "匕 ([temp] Spoon)",
+      "灬 ([temp] Fire)"
+    ]
+  },
+  {
+    "note_id": 1781004427352,
+    "hanzi": "玛",
+    "pinyin": "mǎ",
+    "english": "agate, onyx (used in 玛瑙, mǎnǎo)",
+    "actor": "Luke Skywalker (Matt Hamill)",
+    "set": "-a",
+    "tone_location": "Room [3]",
+    "components": [
+      "王 ([temp] King)",
+      "马 (Horse, unicorn, my little pony character)"
+    ]
+  },
+  {
+    "note_id": 1781004427356,
+    "hanzi": "疆",
+    "pinyin": "jiāng",
+    "english": "border, boundary, frontier",
+    "actor": "Wednesdey Adams (Gena Ortega)",
+    "set": "-ang",
+    "tone_location": "In Front [1]",
+    "components": [
+      "弓 (Composite Bow)",
+      "田 (Rice Field, Window)",
+      "田 (Rice Field, Window)",
+      "田 (Rice Field, Window)",
+      "止 (Red traffic light)"
+    ]
+  },
+  {
+    "note_id": 1781004427359,
+    "hanzi": "瘾",
+    "pinyin": "yǐn",
+    "english": "addiction, craving, habit",
+    "actor": "Yelena (Black Widow)",
+    "set": "-en",
+    "tone_location": "Room [3]",
+    "components": [
+      "疒 (Doctor in a flying helicopter)",
+      "阝 ([temp] City)",
+      "乚 (Hook (Captain Hook))"
+    ]
+  },
+  {
+    "note_id": 1781004427364,
+    "hanzi": "睁",
+    "pinyin": "zhēng",
+    "english": "to open (eyes)",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-eng",
+    "tone_location": "In Front [1]",
+    "components": [
+      "目 (Beholder)",
+      "争 (Nail gun)"
+    ]
+  },
+  {
+    "note_id": 1781004427368,
+    "hanzi": "砍",
+    "pinyin": "kǎn",
+    "english": "to chop, to hack, to cut down",
+    "actor": "Kevin Hart",
+    "set": "-an",
+    "tone_location": "Room [3]",
+    "components": [
+      "石 ([temp] Stone)",
+      "欠 (Credit 💳)"
+    ]
+  },
+  {
+    "note_id": 1781004427371,
+    "hanzi": "碑",
+    "pinyin": "bēi",
+    "english": "stele, monument, tablet",
+    "actor": "Batman",
+    "set": "-ei",
+    "tone_location": "In Front [1]",
+    "components": [
+      "石 ([temp] Stone)",
+      "卑 (A dildo necklace or headband)"
+    ]
+  },
+  {
+    "note_id": 1781004427375,
+    "hanzi": "磋",
+    "pinyin": "cuō",
+    "english": "to polish, to grind, to discuss",
+    "actor": "C-3P0",
+    "set": "-o",
+    "tone_location": "In Front [1]",
+    "components": [
+      "石 ([temp] Stone)",
+      "差 (差)"
+    ]
+  },
+  {
+    "note_id": 1781004427379,
+    "hanzi": "粘",
+    "pinyin": "zhān",
+    "english": "to stick, to glue; sticky, glutinous",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-an",
+    "tone_location": "In Front [1]",
+    "components": [
+      "米 ([temp] Rice)",
+      "占 (Shop stand)"
+    ]
+  },
+  {
+    "note_id": 1781004427383,
+    "hanzi": "绽",
+    "pinyin": "zhàn",
+    "english": "to burst open, to split, to unravel",
+    "actor": "Branch Trolls (J. Timberlake)",
+    "set": "-an",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "纟 (Silk)",
+      "定 (定)"
+    ]
+  },
+  {
+    "note_id": 1781004427386,
+    "hanzi": "缚",
+    "pinyin": "fù",
+    "english": "to bind, to tie",
+    "actor": "Morgan Freeman",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "纟 (Silk)",
+      "甫 (Grape)",
+      "寸 (Tape Measure)"
+    ]
+  },
+  {
+    "note_id": 1781004427390,
+    "hanzi": "缴",
+    "pinyin": "jiǎo",
+    "english": "to hand over, to pay, to submit",
+    "actor": "Wednesdey Adams (Gena Ortega)",
+    "set": "-ao",
+    "tone_location": "Room [3]",
+    "components": [
+      "纟 (Silk)",
+      "止 (Red traffic light)",
+      "白 (Whitel gorilla (Copito))"
+    ]
+  },
+  {
+    "note_id": 1781004427393,
+    "hanzi": "荷",
+    "pinyin": "hé",
+    "english": "lotus; to carry (on shoulder), burden",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-e",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "艹 (Grass)",
+      "可 (Obama yes we can)"
+    ]
+  },
+  {
+    "note_id": 1781004427397,
+    "hanzi": "葵",
+    "pinyin": "kuí",
+    "english": "sunflower, mallow",
+    "actor": "Kevin Hart",
+    "set": "-ei",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "艹 (Grass)"
+    ]
+  },
+  {
+    "note_id": 1781004427400,
+    "hanzi": "覆",
+    "pinyin": "fù",
+    "english": "to cover, to overturn, to reply, to repeat",
+    "actor": "Morgan Freeman",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "夂 (Slave Owner (slow)Sloth as in go slowly but most places don’t differentiate between **夂 and 夊**)",
+      "曰 (to speak)"
+    ]
+  },
+  {
+    "note_id": 1781004427404,
+    "hanzi": "觅",
+    "pinyin": "mì",
+    "english": "to seek, to search for",
+    "actor": "Luke Skywalker (Matt Hamill)",
+    "set": "-(Null)",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "冂 (Soccer Goal)",
+      "见 ([temp] See)"
+    ]
+  },
+  {
+    "note_id": 1781004427407,
+    "hanzi": "诱",
+    "pinyin": "yòu",
+    "english": "to entice, to lure, to tempt",
+    "actor": "Yelena (Black Widow)",
+    "set": "-ou",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "讠 (🎤, 📣,big olde 📱)",
+      "秀 ((bound form) refined; elegant; graceful; beautiful)"
+    ]
+  },
+  {
+    "note_id": 1781004427411,
+    "hanzi": "谣",
+    "pinyin": "yáo",
+    "english": "ballad, folk song, rumor",
+    "actor": "Yelena (Black Widow)",
+    "set": "-ao",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "讠 (🎤, 📣,big olde 📱)",
+      "尧 ([temp] Tall)"
+    ]
+  },
+  {
+    "note_id": 1781004427414,
+    "hanzi": "踹",
+    "pinyin": "chuài",
+    "english": "to kick, to stamp",
+    "actor": "Chaplin",
+    "set": "-ai",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "足 (Human giant Feet)",
+      "山 ([temp] Mountain)",
+      "而 (Beard comb)"
+    ]
+  },
+  {
+    "note_id": 1781004427418,
+    "hanzi": "轰",
+    "pinyin": "hōng",
+    "english": "to blast, to bombard, rumble, roar",
+    "actor": "Indiana Jones (Harrison Ford)",
+    "set": "-ong",
+    "tone_location": "In Front [1]",
+    "components": [
+      "车 ([temp] Car)",
+      "车 ([temp] Car)",
+      "车 ([temp] Car)"
+    ]
+  },
+  {
+    "note_id": 1781004427421,
+    "hanzi": "迈",
+    "pinyin": "mài",
+    "english": "to stride, to step, to march; mile (loanword)",
+    "actor": "Luke Skywalker (Matt Hamill)",
+    "set": "-ai",
+    "tone_location": "Backyard [4]",
+    "components": [
+      "辶 (Running machine)",
+      "麦 (surname Mai)"
+    ]
+  },
+  {
+    "note_id": 1781004427424,
+    "hanzi": "邪",
+    "pinyin": "xié",
+    "english": "evil, sinister, crooked",
+    "actor": "Alien&#x27;s Ripley (Sigourney)",
+    "set": "-e",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "阝 ([temp] City)",
+      "牙 (Teeth, Dentures, Dentist)"
+    ]
+  },
+  {
+    "note_id": 1781004427428,
+    "hanzi": "陲",
+    "pinyin": "chuí",
+    "english": "border, frontier, remote place",
+    "actor": "Chaplin",
+    "set": "-ei",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "阝 ([temp] City)",
+      "垂 ([temp] Hang down)"
+    ]
+  },
+  {
+    "note_id": 1781004427431,
+    "hanzi": "雅",
+    "pinyin": "yǎ",
+    "english": "elegant, refined, graceful",
+    "actor": "Yelena (Black Widow)",
+    "set": "-a",
+    "tone_location": "Room [3]",
+    "components": [
+      "牙 (Teeth, Dentures, Dentist)",
+      "隹 (Sparrow)"
+    ]
+  },
+  {
+    "note_id": 1781004427435,
+    "hanzi": "颈",
+    "pinyin": "jǐng",
+    "english": "neck",
+    "actor": "Wednesdey Adams (Gena Ortega)",
+    "set": "-eng",
+    "tone_location": "Room [3]",
+    "components": [
+      "工 ([temp] Work)",
+      "川 (RiverBig bubbling hot pot)",
+      "页 (The Constitution)"
+    ]
+  },
+  {
+    "note_id": 1781004427438,
+    "hanzi": "颖",
+    "pinyin": "yǐng",
+    "english": "sharp point, ear of grain, outstanding",
+    "actor": "Yelena (Black Widow)",
+    "set": "-eng",
+    "tone_location": "Room [3]",
+    "components": [
+      "禾 (Weetabix)",
+      "匕 ([temp] Spoon)",
+      "页 (The Constitution)"
+    ]
+  },
+  {
+    "note_id": 1781004427442,
+    "hanzi": "飘",
+    "pinyin": "piāo",
+    "english": "to float, to drift, to waft",
+    "actor": "Peter Griffin",
+    "set": "-ao",
+    "tone_location": "In Front [1]",
+    "components": [
+      "风 (wind)",
+      "票 (ticket)"
+    ]
+  },
+  {
+    "note_id": 1781004427445,
+    "hanzi": "饶",
+    "pinyin": "ráo",
+    "english": "to forgive, to spare, abundant, plentiful",
+    "actor": "Edward Twilight (R. Pattinson)",
+    "set": "-ao",
+    "tone_location": "Hall or Kitchen [2]",
+    "components": [
+      "饣 (Waiter)",
+      "尧 ([temp] Tall)"
+    ]
+  }
+]
