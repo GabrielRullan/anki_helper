@@ -61,6 +61,21 @@ class AnkiConnection:
         cursor.execute("SELECT id, name FROM decks")
         return {row[0]: row[1] for row in cursor.fetchall()}
 
+    def best_match_deck(self, candidates):
+        """Returns the first candidate deck that exists in the database, or the last one as fallback."""
+        decks = self.get_decks()
+        def normalize(name):
+            return name.replace('::', '\x1f').replace('/', '\x1f').replace('\\', '\x1f').lower().strip()
+        
+        normalized_decks = {normalize(name) for name in decks.values()}
+        for cand in candidates:
+            if normalize(cand) in normalized_decks:
+                # Find the actual name
+                for name in decks.values():
+                    if normalize(name) == normalize(cand):
+                        return name
+        return candidates[-1]
+
     def get_notetypes(self):
         """Returns dict of ntid -> {name, fields: {ord: name}}"""
         cursor = self.conn.cursor()
@@ -78,10 +93,14 @@ class AnkiConnection:
         cursor = self.conn.cursor()
         decks = self.get_decks()
         
-        # Find deck ID (case insensitive search)
+        # Normalize and find deck ID (case and separator agnostic)
+        def normalize(name):
+            return name.replace('::', '\x1f').replace('/', '\x1f').replace('\\', '\x1f').lower().strip()
+            
+        target = normalize(deck_name)
         did = None
         for d_id, name in decks.items():
-            if name.lower() == deck_name.lower():
+            if normalize(name) == target:
                 did = d_id
                 break
                 

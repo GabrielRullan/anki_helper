@@ -80,8 +80,10 @@ def load_data_from_live_db():
     try:
         with AnkiConnection(profile_name="Main") as anki:
             print("Connecting to live Anki database...")
-            char_notes = anki.get_notes_in_deck("Characters")
-            migaku_notes = anki.get_notes_in_deck("Migaku")
+            char_deck = anki.best_match_deck(["Chinese::Char", "Chinese\x1fChar", "Characters"])
+            migaku_deck = anki.best_match_deck(["Chinese::Words", "Chinese\x1fWords", "Migaku"])
+            char_notes = anki.get_notes_in_deck(char_deck)
+            migaku_notes = anki.get_notes_in_deck(migaku_deck)
             return char_notes, migaku_notes
     except Exception as e:
         print(f"Could not connect to live Anki DB: {e}")
