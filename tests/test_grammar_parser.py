@@ -3,7 +3,7 @@ import os
 import sys
 import csv
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-from import_grammar import parse_semana_md, generate_csv
+from sync_grammar import parse_semana_md, generate_csv
 
 class TestGrammarParser(unittest.TestCase):
     def setUp(self):
