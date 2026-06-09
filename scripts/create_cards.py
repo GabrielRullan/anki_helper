@@ -22,17 +22,38 @@ if not API_KEY or API_KEY == "YOUR_API_KEY_HERE":
     exit(1)
 
 client = genai.Client(api_key=API_KEY)
-ANKICONNECT_URL = 'http://localhost:8765'
+ANKICONNECT_URL = 'http://127.0.0.1:8765'
 
 # List of models to try in order of preference
 MODELS_TO_TRY = [
-    'imagen-4.0-generate-001',
     'imagen-4.0-fast-generate-001',
+    'imagen-4.0-generate-001',
     'imagen-4.0-ultra-generate-001',
     'imagen-3.0-generate-002'
 ]
 
 ERROR_LOG_PATH = "data/image_generation_errors.log"
+
+def download_tts(text, lang='zh-CN'):
+    url = "https://translate.google.com/translate_tts"
+    params = {
+        'ie': 'UTF-8',
+        'tl': lang,
+        'client': 'tw-ob',
+        'q': text
+    }
+    import urllib.parse
+    query_string = urllib.parse.urlencode(params)
+    full_url = f"{url}?{query_string}"
+    
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    req = urllib.request.Request(full_url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            return response.read()
+    except Exception as e:
+        print(f"Error fetching TTS: {e}")
+        return None
 
 def request_anki(action, **params):
     payload = {"action": action, "version": 6}
@@ -223,11 +244,61 @@ def main():
             print(f"Failed to store media in Anki: {e}. Skipping.")
             continue
             
-        # 3. Create the Anki card payload
+        # 3. Generate and store TTS audio for Word and Sentence
+        word_audio_filename = ""
+        sentence_audio_filename = ""
+        timestamp = int(time.time())
+        
+        # Word audio
+        print(" -> Generating word TTS audio... ", end="", flush=True)
+        word_audio_bytes = download_tts(word)
+        if word_audio_bytes:
+            word_temp_path = os.path.join(output_dir, f"temp_word_{timestamp}.mp3")
+            try:
+                with open(word_temp_path, "wb") as f:
+                    f.write(word_audio_bytes)
+                word_audio_filename = f"tts_word_{word}_{timestamp}.mp3"
+                request_anki("storeMediaFile", filename=word_audio_filename, path=os.path.abspath(word_temp_path))
+                print("Done.")
+            except Exception as e:
+                print(f"Failed to store word audio: {e}")
+                word_audio_filename = ""
+            finally:
+                if os.path.exists(word_temp_path):
+                    try:
+                        os.remove(word_temp_path)
+                    except OSError:
+                        pass
+        else:
+            print("Failed.")
+
+        # Sentence audio
+        frase_clean = frase.replace('*', '').replace('-', '').replace('_', '')
+        print(" -> Generating sentence TTS audio... ", end="", flush=True)
+        sent_audio_bytes = download_tts(frase_clean)
+        if sent_audio_bytes:
+            sent_temp_path = os.path.join(output_dir, f"temp_sent_{timestamp}.mp3")
+            try:
+                with open(sent_temp_path, "wb") as f:
+                    f.write(sent_audio_bytes)
+                sentence_audio_filename = f"tts_sent_{word}_{timestamp}.mp3"
+                request_anki("storeMediaFile", filename=sentence_audio_filename, path=os.path.abspath(sent_temp_path))
+                print("Done.")
+            except Exception as e:
+                print(f"Failed to store sentence audio: {e}")
+                sentence_audio_filename = ""
+            finally:
+                if os.path.exists(sent_temp_path):
+                    try:
+                        os.remove(sent_temp_path)
+                    except OSError:
+                        pass
+        else:
+            print("Failed.")
+            
+        # 4. Create the Anki card payload
         print(" -> Adding card to Anki... ", end="", flush=True)
         definitions_html = f"<p>{word} ({pinyin})</p><p>∙ {translation}</p>"
-        # Clean phrase and translation of any '*', '-' or '_'
-        frase_clean = frase.replace('*', '').replace('-', '').replace('_', '')
         traduccion_clean = traduccion.replace('*', '').replace('-', '').replace('_', '')
         
         note_payload = {
@@ -241,8 +312,8 @@ def main():
                 "Example Sentences": "",
                 "Notes": desc,
                 "Images": f'<img src="{filename}">',
-                "Sentence Audio": "",
-                "Word Audio": ""
+                "Sentence Audio": f"[sound:{sentence_audio_filename}]" if sentence_audio_filename else "",
+                "Word Audio": f"[sound:{word_audio_filename}]" if word_audio_filename else ""
             },
             "options": {
                 "allowDuplicate": False

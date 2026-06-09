@@ -1,3 +1,4 @@
+
 # Vocabulario de Chino
 
 > [!info] **Explicación del Sistema**
@@ -13,12 +14,22 @@
 
 > [!image] **Carpeta de Imágenes de Vocabulario**
 > - Añade imágenes que hagan las frases más memorables para tus tarjetas de Anki.
-> - **Ruta:** [[./imagenes_vocabulario]]
+> - **Ruta:** [[Atlas/Chinese/imagenes_vocabulario]]
 > - **Regla de nomenclatura:** Guarda la imagen con el nombre exacto de la palabra en caracteres chinos (ej. `爆米花.png`).
 
 ---
 
+# Vocabulario
+
 ## 🟢 Incluido en Anki
+* **爆米花** (bàomǐhuā) — Palomitas de maíz
+* **脸谱** (liǎnpǔ) — Máscara / Maquillaje facial (de la ópera tradicional china)
+* **楼长** (lóuzhǎng) — Administrador / Presidente del edificio
+* **传统** (chuántǒng) — Tradicional *(palabra común en trajes, bailes o costumbres "típicas")*
+* **特色** (tèsè) — Característico / con rasgos propios *(identidad única de un lugar)*
+* **典型** (diǎnxíng) — Típico / modelo representativo *(ej. un caso típico)*
+* **水豚** (shuǐtún) — Capibara
+* **招聘** (zhāopìn) / **应聘** (yìngpìn) — Contratar, reclutar / Postularse, solicitar un empleo
 - **平时** (píngshí) — Normalmente, habitualmente, en tiempos normales #tiempo
 - **适应** (shìyìng) — Adaptarse, acomodarse a #acciones
 - **招聘** (zhāopìn) — Contratar, reclutar #trabajo
@@ -119,9 +130,13 @@
 - **优秀** (yōuxiù) — Excelente, sobresaliente
 - **兴奋** (xīngfèn) — Emocionado, entusiasmado
 
-
 ## 🟡 Pendiente de incluir
 *Aquí van las palabras en transición antes de añadirlas a Anki. Cada una debe incluir traducción y una frase memorable:*
 
 ## 🔴 Suelto
 *Palabras en caracteres chinos listas para estudio, con su pronunciación, significado y etiquetas de Obsidian:*
+* Mariquita (animal)
+* 电风扇diànfēngshàn ventilador 
+* 潮湿 chǎoshī húmedo 
+* 闷mēn bochornoso, sofocante,
+* 租一个工位 zū yí ge gōngwèi
