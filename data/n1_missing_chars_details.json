@@ -1,0 +1,652 @@
+[
+  {
+    "character": "丫",
+    "pinyin": "yā",
+    "english": "fork, bifurcation; girl, maiden",
+    "components": [
+      "丫"
+    ]
+  },
+  {
+    "character": "亨",
+    "pinyin": "hēng",
+    "english": "smooth, successful; prosperous",
+    "components": [
+      "亠",
+      "口",
+      "子"
+    ]
+  },
+  {
+    "character": "倔",
+    "pinyin": "jué",
+    "english": "stubborn, unyielding; perverse",
+    "components": [
+      "亻",
+      "屈"
+    ]
+  },
+  {
+    "character": "兽",
+    "pinyin": "shòu",
+    "english": "beast, animal; brute",
+    "components": [
+      "爫",
+      "田",
+      "夬"
+    ]
+  },
+  {
+    "character": "凌",
+    "pinyin": "líng",
+    "english": "high, lofty; severe cold; bully, insult",
+    "components": [
+      "冫",
+      "夌"
+    ]
+  },
+  {
+    "character": "割",
+    "pinyin": "gē",
+    "english": "cut, sever, cleave; divide",
+    "components": [
+      "害",
+      "刀"
+    ]
+  },
+  {
+    "character": "匆",
+    "pinyin": "cōng",
+    "english": "hurried, hasty, rushed",
+    "components": [
+      "勹",
+      "力"
+    ]
+  },
+  {
+    "character": "卓",
+    "pinyin": "zhuó",
+    "english": "outstanding, remarkable; table, desk",
+    "components": [
+      "卜",
+      "早"
+    ]
+  },
+  {
+    "character": "呈",
+    "pinyin": "chéng",
+    "english": "present, submit; show, appear",
+    "components": [
+      "口",
+      "王"
+    ]
+  },
+  {
+    "character": "咯",
+    "pinyin": "lo, gē",
+    "english": "(onomatopoeia for clucking or spitting sound); (exclamatory particle)",
+    "components": [
+      "口",
+      "各"
+    ]
+  },
+  {
+    "character": "嘲",
+    "pinyin": "cháo, zhāo",
+    "english": "ridicule, mock; morning",
+    "components": [
+      "口",
+      "朝"
+    ]
+  },
+  {
+    "character": "嚣",
+    "pinyin": "xiāo",
+    "english": "clamor, uproar; arrogant",
+    "components": [
+      "口",
+      "口",
+      "爻",
+      "页"
+    ]
+  },
+  {
+    "character": "坤",
+    "pinyin": "kūn",
+    "english": "earth; feminine, female; mother",
+    "components": [
+      "土",
+      "申"
+    ]
+  },
+  {
+    "character": "塘",
+    "pinyin": "táng",
+    "english": "dike, embankment; pond, pool",
+    "components": [
+      "土",
+      "唐"
+    ]
+  },
+  {
+    "character": "墅",
+    "pinyin": "shù",
+    "english": "villa, country house",
+    "components": [
+      "艹",
+      "庐",
+      "土"
+    ]
+  },
+  {
+    "character": "奘",
+    "pinyin": "zàng, zhuàng",
+    "english": "(used in names, e.g., Xuanzang); bulky, stout",
+    "components": [
+      "大",
+      "壮"
+    ]
+  },
+  {
+    "character": "娜",
+    "pinyin": "nà",
+    "english": "elegant, graceful (often in names)",
+    "components": [
+      "女",
+      "那"
+    ]
+  },
+  {
+    "character": "岳",
+    "pinyin": "yuè",
+    "english": "high mountain, peak; father-in-law",
+    "components": [
+      "山",
+      "丘"
+    ]
+  },
+  {
+    "character": "崖",
+    "pinyin": "yá",
+    "english": "cliff, precipice; bank",
+    "components": [
+      "山",
+      "厓"
+    ]
+  },
+  {
+    "character": "彗",
+    "pinyin": "huì",
+    "english": "comet; broom",
+    "components": [
+      "彐",
+      "丰"
+    ]
+  },
+  {
+    "character": "忌",
+    "pinyin": "jì",
+    "english": "fear, dread; avoid, abstain from; jealousy",
+    "components": [
+      "己",
+      "心"
+    ]
+  },
+  {
+    "character": "悍",
+    "pinyin": "hàn",
+    "english": "brave, fierce; valiant",
+    "components": [
+      "忄",
+      "干"
+    ]
+  },
+  {
+    "character": "悠",
+    "pinyin": "yōu",
+    "english": "long, distant; leisurely, relaxed",
+    "components": [
+      "攸",
+      "心"
+    ]
+  },
+  {
+    "character": "愧",
+    "pinyin": "kuì",
+    "english": "ashamed; conscience-stricken",
+    "components": [
+      "忄",
+      "鬼"
+    ]
+  },
+  {
+    "character": "拎",
+    "pinyin": "līn",
+    "english": "lift, carry (by hand)",
+    "components": [
+      "扌",
+      "令"
+    ]
+  },
+  {
+    "character": "拯",
+    "pinyin": "zhěng",
+    "english": "rescue, save; lift up",
+    "components": [
+      "扌",
+      "丞"
+    ]
+  },
+  {
+    "character": "捞",
+    "pinyin": "lāo",
+    "english": "dredge, scoop up; fish out",
+    "components": [
+      "扌",
+      "劳"
+    ]
+  },
+  {
+    "character": "撕",
+    "pinyin": "sī",
+    "english": "tear, rip; rend",
+    "components": [
+      "扌",
+      "斯"
+    ]
+  },
+  {
+    "character": "敞",
+    "pinyin": "chǎng",
+    "english": "open, spacious; clear",
+    "components": [
+      "厂",
+      "尚",
+      "攵"
+    ]
+  },
+  {
+    "character": "斥",
+    "pinyin": "chì",
+    "english": "denounce, reprimand; blame; reject",
+    "components": [
+      "厂",
+      "斤"
+    ]
+  },
+  {
+    "character": "旷",
+    "pinyin": "kuàng",
+    "english": "vast, extensive; waste; neglect",
+    "components": [
+      "日",
+      "广"
+    ]
+  },
+  {
+    "character": "昊",
+    "pinyin": "hào",
+    "english": "vast (sky); summer sky",
+    "components": [
+      "日",
+      "天"
+    ]
+  },
+  {
+    "character": "晰",
+    "pinyin": "xī",
+    "english": "clear, distinct; explicit",
+    "components": [
+      "日",
+      "析"
+    ]
+  },
+  {
+    "character": "杖",
+    "pinyin": "zhàng",
+    "english": "staff, stick, cane; cudgel",
+    "components": [
+      "木",
+      "丈"
+    ]
+  },
+  {
+    "character": "枚",
+    "pinyin": "méi",
+    "english": "(classifier for small objects); tree trunk",
+    "components": [
+      "木",
+      "攵"
+    ]
+  },
+  {
+    "character": "柳",
+    "pinyin": "liǔ",
+    "english": "willow (tree)",
+    "components": [
+      "木",
+      "卯"
+    ]
+  },
+  {
+    "character": "楠",
+    "pinyin": "nán",
+    "english": "Phoebe zhennan (a type of tree), nanmu (wood)",
+    "components": [
+      "木",
+      "南"
+    ]
+  },
+  {
+    "character": "榨",
+    "pinyin": "zhà",
+    "english": "to press, to squeeze, to extract",
+    "components": [
+      "木",
+      "乍"
+    ]
+  },
+  {
+    "character": "殿",
+    "pinyin": "diàn",
+    "english": "palace, hall, temple",
+    "components": [
+      "尸",
+      "共",
+      "殳"
+    ]
+  },
+  {
+    "character": "湛",
+    "pinyin": "zhàn",
+    "english": "deep (water), clear (water), profound",
+    "components": [
+      "氵",
+      "甚"
+    ]
+  },
+  {
+    "character": "溢",
+    "pinyin": "yì",
+    "english": "to overflow, to brim over, to spill",
+    "components": [
+      "氵",
+      "益"
+    ]
+  },
+  {
+    "character": "熄",
+    "pinyin": "xī",
+    "english": "to extinguish, to put out (fire), to go out",
+    "components": [
+      "火",
+      "息"
+    ]
+  },
+  {
+    "character": "燕",
+    "pinyin": "yàn",
+    "english": "swallow (bird), Beijing (short for 北京)",
+    "components": [
+      "廿",
+      "口",
+      "匕",
+      "灬"
+    ]
+  },
+  {
+    "character": "玛",
+    "pinyin": "mǎ",
+    "english": "agate, onyx (used in 玛瑙, mǎnǎo)",
+    "components": [
+      "王",
+      "马"
+    ]
+  },
+  {
+    "character": "疆",
+    "pinyin": "jiāng",
+    "english": "border, boundary, frontier",
+    "components": [
+      "弓",
+      "田",
+      "田",
+      "田",
+      "止"
+    ]
+  },
+  {
+    "character": "瘾",
+    "pinyin": "yǐn",
+    "english": "addiction, craving, habit",
+    "components": [
+      "疒",
+      "阝",
+      "乚"
+    ]
+  },
+  {
+    "character": "睁",
+    "pinyin": "zhēng",
+    "english": "to open (eyes)",
+    "components": [
+      "目",
+      "争"
+    ]
+  },
+  {
+    "character": "砍",
+    "pinyin": "kǎn",
+    "english": "to chop, to hack, to cut down",
+    "components": [
+      "石",
+      "欠"
+    ]
+  },
+  {
+    "character": "碑",
+    "pinyin": "bēi",
+    "english": "stele, monument, tablet",
+    "components": [
+      "石",
+      "卑"
+    ]
+  },
+  {
+    "character": "磋",
+    "pinyin": "cuō",
+    "english": "to polish, to grind, to discuss",
+    "components": [
+      "石",
+      "差"
+    ]
+  },
+  {
+    "character": "粘",
+    "pinyin": "zhān",
+    "english": "to stick, to glue; sticky, glutinous",
+    "components": [
+      "米",
+      "占"
+    ]
+  },
+  {
+    "character": "绽",
+    "pinyin": "zhàn",
+    "english": "to burst open, to split, to unravel",
+    "components": [
+      "纟",
+      "定"
+    ]
+  },
+  {
+    "character": "缚",
+    "pinyin": "fù",
+    "english": "to bind, to tie",
+    "components": [
+      "纟",
+      "甫",
+      "寸"
+    ]
+  },
+  {
+    "character": "缴",
+    "pinyin": "jiǎo",
+    "english": "to hand over, to pay, to submit",
+    "components": [
+      "纟",
+      "止",
+      "白",
+      "攵"
+    ]
+  },
+  {
+    "character": "荷",
+    "pinyin": "hé",
+    "english": "lotus; to carry (on shoulder), burden",
+    "components": [
+      "艹",
+      "可"
+    ]
+  },
+  {
+    "character": "葵",
+    "pinyin": "kuí",
+    "english": "sunflower, mallow",
+    "components": [
+      "艹",
+      "癸"
+    ]
+  },
+  {
+    "character": "覆",
+    "pinyin": "fù",
+    "english": "to cover, to overturn, to reply, to repeat",
+    "components": [
+      "襾",
+      "夂",
+      "曰"
+    ]
+  },
+  {
+    "character": "觅",
+    "pinyin": "mì",
+    "english": "to seek, to search for",
+    "components": [
+      "冂",
+      "见"
+    ]
+  },
+  {
+    "character": "诱",
+    "pinyin": "yòu",
+    "english": "to entice, to lure, to tempt",
+    "components": [
+      "讠",
+      "秀"
+    ]
+  },
+  {
+    "character": "谣",
+    "pinyin": "yáo",
+    "english": "ballad, folk song, rumor",
+    "components": [
+      "讠",
+      "尧"
+    ]
+  },
+  {
+    "character": "踹",
+    "pinyin": "chuài",
+    "english": "to kick, to stamp",
+    "components": [
+      "足",
+      "山",
+      "而"
+    ]
+  },
+  {
+    "character": "轰",
+    "pinyin": "hōng",
+    "english": "to blast, to bombard, rumble, roar",
+    "components": [
+      "车",
+      "车",
+      "车"
+    ]
+  },
+  {
+    "character": "迈",
+    "pinyin": "mài",
+    "english": "to stride, to step, to march; mile (loanword)",
+    "components": [
+      "辶",
+      "麦"
+    ]
+  },
+  {
+    "character": "邪",
+    "pinyin": "xié",
+    "english": "evil, sinister, crooked",
+    "components": [
+      "阝",
+      "牙"
+    ]
+  },
+  {
+    "character": "陲",
+    "pinyin": "chuí",
+    "english": "border, frontier, remote place",
+    "components": [
+      "阝",
+      "垂"
+    ]
+  },
+  {
+    "character": "雅",
+    "pinyin": "yǎ",
+    "english": "elegant, refined, graceful",
+    "components": [
+      "牙",
+      "隹"
+    ]
+  },
+  {
+    "character": "颈",
+    "pinyin": "jǐng",
+    "english": "neck",
+    "components": [
+      "工",
+      "川",
+      "页"
+    ]
+  },
+  {
+    "character": "颖",
+    "pinyin": "yǐng",
+    "english": "sharp point, ear of grain, outstanding",
+    "components": [
+      "禾",
+      "匕",
+      "页"
+    ]
+  },
+  {
+    "character": "飘",
+    "pinyin": "piāo",
+    "english": "to float, to drift, to waft",
+    "components": [
+      "风",
+      "票"
+    ]
+  },
+  {
+    "character": "饶",
+    "pinyin": "ráo",
+    "english": "to forgive, to spare, abundant, plentiful",
+    "components": [
+      "饣",
+      "尧"
+    ]
+  }
+]

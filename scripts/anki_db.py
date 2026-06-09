@@ -35,6 +35,23 @@ class AnkiConnection:
         self.temp_db_path = os.path.join(temp_dir, f"collection_temp_{self.profile_name}.anki2")
         
         shutil.copy2(self.db_path, self.temp_db_path)
+        
+        # Also copy WAL file if it exists (crucial for WAL mode SQLite sync)
+        wal_path = self.db_path + "-wal"
+        if os.path.exists(wal_path):
+            try:
+                shutil.copy2(wal_path, self.temp_db_path + "-wal")
+            except OSError:
+                pass
+                
+        # Also copy SHM file if it exists
+        shm_path = self.db_path + "-shm"
+        if os.path.exists(shm_path):
+            try:
+                shutil.copy2(shm_path, self.temp_db_path + "-shm")
+            except OSError:
+                pass
+                
         self.conn = sqlite3.connect(self.temp_db_path)
         return self.conn
 
@@ -42,11 +59,14 @@ class AnkiConnection:
         if self.conn:
             self.conn.close()
             self.conn = None
-        if self.temp_db_path and os.path.exists(self.temp_db_path):
-            try:
-                os.remove(self.temp_db_path)
-            except OSError:
-                pass # ignore errors deleting temp file
+        if self.temp_db_path:
+            for suffix in ['', '-wal', '-shm']:
+                path = self.temp_db_path + suffix
+                if os.path.exists(path):
+                    try:
+                        os.remove(path)
+                    except OSError:
+                        pass # ignore errors deleting temp file
 
     def __enter__(self):
         self.connect()
