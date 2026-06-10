@@ -20,6 +20,11 @@ This workspace contains custom Python tools to analyze your Anki database, bridg
 - [scripts/mbp_profiler.py](file:///c:/Users/gabri/Documents/antigravity/anki/scripts/mbp_profiler.py) - Maps your personal Mandarin Blueprint codebook (Actor/Set/Location), checks for typos, and detects memory leeches and mnemonic collisions (homophones/shared components).
 - [tests/test_gap_finder.py](file:///c:/Users/gabri/Documents/antigravity/anki/tests/test_gap_finder.py) - Unit tests verifying analytical functions, pinyin splitting, and N+1 classification.
 
+### Mnemonic & Image Generation
+- [scripts/generate_scenes_and_images.py](file:///c:/Users/gabri/Documents/antigravity/anki/scripts/generate_scenes_and_images.py) - Generates mnemonic scene stories with Gemini 2.5 and illustrates them using Imagen, uploading them to Anki and syncing note fields.
+- [scripts/generate_missing_images.py](file:///c:/Users/gabri/Documents/antigravity/anki/scripts/generate_missing_images.py) - Utility script to find tag `n1_added` character cards missing images and illustrates them.
+- [scripts/update_card_image.py](file:///c:/Users/gabri/Documents/antigravity/anki/scripts/update_card_image.py) - Updates or replaces the illustration of a specific word or card in Anki using a custom prompt.
+
 ### Visualization & UI
 - [scripts/generate_dashboard.py](file:///c:/Users/gabri/Documents/antigravity/anki/scripts/generate_dashboard.py) - Aggregates data from all analyzer scripts and outputs a self-contained web app.
 - [dashboard.html](file:///c:/Users/gabri/Documents/antigravity/anki/dashboard.html) - A premium, interactive glassmorphic local dashboard (dark mode, search, statistics, conflict diagnostics, and live mnemonic generator).
@@ -60,7 +65,25 @@ python scripts/generate_dashboard.py
 ```
 This writes or overwrites **[dashboard.html](file:///c:/Users/gabri/Documents/antigravity/anki/dashboard.html)** in your workspace. Simply double-click this file to open it in Chrome, Edge, or Firefox.
 
-### 4. How to Use the Dashboard
+### 4. Batch-Generate Mnemonic Scenes and Illustrations
+To generate scenes for mined characters and illustrate them:
+```powershell
+python scripts/generate_scenes_and_images.py
+```
+
+### 5. Generate Missing Illustration Images
+If any character illustrations fail to generate (e.g., due to rate limits), run this script to safely process only the missing cards:
+```powershell
+python scripts/generate_missing_images.py
+```
+
+### 6. Update a Specific Card's Image
+To generate/overwrite the image of a specific card with a custom prompt:
+```powershell
+python scripts/update_card_image.py "单词" "Your custom illustration prompt here"
+```
+
+### 7. How to Use the Dashboard
 
 Once you open `dashboard.html` in your browser, you will see a sidebar containing five main views:
 

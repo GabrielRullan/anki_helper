@@ -23,6 +23,18 @@ The workspace contains Python scripts that extract data from Anki and build anal
   ```
   This updates the cached `data/anki_extract.json` and writes the interactive web dashboard `dashboard.html`.
 - **Inspect Data**: Read [data/anki_extract.json](file:///c:/Users/gabri/Documents/antigravity/anki/data/anki_extract.json). It contains full lists of learned characters (with lapse counts, ease factors, and tags) and immersion sentences.
+- **Generate Mnemonic Scenes and Illustrations**: If the user adds new characters, recommend running:
+  ```powershell
+  python scripts/generate_scenes_and_images.py
+  ```
+- **Fill In Missing Images**: If previous generation runs had failures due to API limits/blocks, recommend running:
+  ```powershell
+  python scripts/generate_missing_images.py
+  ```
+- **Update Specific Image**: If the user wants to regenerate/replace the image of a card with a custom prompt, recommend:
+  ```powershell
+  python scripts/update_card_image.py <word_or_character> "Your custom prompt here"
+  ```
 
 ### 2. Decks & Fields Schema
 - **Characters Deck**:

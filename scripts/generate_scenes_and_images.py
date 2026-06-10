@@ -7,13 +7,16 @@ import re
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+from pydantic import BaseModel
 
 # Reconfigure stdout to use UTF-8 on Windows console
 sys.stdout.reconfigure(encoding='utf-8')
 
 ANKICONNECT_URL = 'http://127.0.0.1:8765'
 MODELS_TO_TRY = [
-    'imagen-4.0-fast-generate-001'
+    'imagen-4.0-generate-001',
+    'imagen-4.0-fast-generate-001',
+    'imagen-4.0-ultra-generate-001'
 ]
 
 def request_anki(action, **params):
@@ -37,6 +40,13 @@ def request_anki(action, **params):
         print(f"AnkiConnect Request Failed: {e}")
         return None
 
+class SceneItem(BaseModel):
+    hanzi: str
+    scene: str
+
+class SceneList(BaseModel):
+    scenes: list[SceneItem]
+
 def fetch_scenes_from_gemini(batch_chars, client):
     prompt = f"""
 Create a memorable, single-sentence mnemonic story (Scene) for each of the following Chinese characters.
@@ -51,22 +61,18 @@ Format the story in English. Keep it concise, dramatic, funny, or vivid.
 
 Input character details:
 {json.dumps(batch_chars, ensure_ascii=False, indent=2)}
-
-You must return a JSON array of objects. Each object must have these exact keys:
-- "hanzi": the character
-- "scene": the generated single-sentence mnemonic story (Scene)
-
-Return ONLY the raw JSON block without markdown formatting or other text.
 """
     try:
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
-                response_mime_type="application/json"
+                response_mime_type="application/json",
+                response_schema=SceneList
             )
         )
-        return json.loads(response.text.strip())
+        data = json.loads(response.text.strip())
+        return data.get('scenes', [])
     except Exception as e:
         print(f"Error fetching scenes: {e}")
         return None
@@ -77,7 +83,7 @@ def generate_image_file(hanzi, scene_text, client, output_dir):
         return filename
 
     # Build illustration prompt
-    prompt_text = f"Vibrant, detailed digital illustration of: {scene_text}. Clean, smooth vector art style, colorful, clear environment, centered, no text, no letters."
+    prompt_text = f"Minimalist Peanuts cartoon style illustration of: {scene_text}. On a plain white background, simple lines, flat colors, centered, no text, no letters."
 
     for model_id in MODELS_TO_TRY:
         print(f"  Trying model {model_id}...", end=" ", flush=True)
