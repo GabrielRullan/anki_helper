@@ -54,7 +54,7 @@ def main():
         # Check if there is a comma in the Word field (accepting both English ',' and Chinese '，')
         if ',' not in word_clean and '，' not in word_clean:
             print(f" -> No comma found in Word. Removing 'has_comma' tag...")
-            request_anki("removeNoteTags", note=note_id, tags="has_comma")
+            request_anki("removeTags", notes=[note_id], tags="has_comma")
             cleaned_count += 1
             continue
             
@@ -62,7 +62,7 @@ def main():
         parts = [p.strip() for p in re.split(r'[,，]+', word_clean) if p.strip()]
         if len(parts) <= 1:
             print(f" -> Word splits to <= 1 parts. Removing 'has_comma' tag...")
-            request_anki("removeNoteTags", note=note_id, tags="has_comma")
+            request_anki("removeTags", notes=[note_id], tags="has_comma")
             cleaned_count += 1
             continue
             
@@ -144,7 +144,7 @@ def main():
                 "Word": parts[0]
             }
         })
-        request_anki("removeNoteTags", note=note_id, tags="has_comma")
+        request_anki("removeTags", notes=[note_id], tags="has_comma")
         split_count += 1
         
     print(f"\nProcessing Complete!")
