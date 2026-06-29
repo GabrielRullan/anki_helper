@@ -36,3 +36,4 @@ data/anki_audio/
 #logs
 data/image_generation_errors.log
 data/image_generation_errors.log
+anki_audio/
