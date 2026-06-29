@@ -1,36 +1,30 @@
-import re
 import os
-import sys
 import json
+import time
+import sys
+import re
 import urllib.request
-import csv
+import urllib.parse
+import hashlib
+import base64
+from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 
 # Reconfigure stdout to UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 
 ANKICONNECT_URL = 'http://127.0.0.1:8765'
 
-def generate_csv(items, output_path):
-    headers = ['Word', 'Grammar Point', 'Sentence', 'Translated Sentence', 'Definitions', 'Notes']
-    with open(output_path, 'w', encoding='utf-8', newline='') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=headers)
-        writer.writeheader()
-        for item in items:
-            notes_parts = []
-            if item['sub_label']:
-                notes_parts.append(f"Grammar usage: {item['sub_label']}")
-            if item['notes']:
-                notes_parts.append(f"Explanation: {item['notes']}")
-            combined_notes = "\n\n".join(notes_parts)
-            writer.writerow({
-                'Word': '',
-                'Grammar Point': item['grammar_pattern'],
-                'Sentence': item['chinese'],
-                'Translated Sentence': item['english'],
-                'Definitions': item['grammar_meaning'],
-                'Notes': combined_notes
-            })
-    print(f"Successfully generated {output_path} with {len(items)} grammar rows matching Migaku fields.")
+# Load configuration
+load_dotenv()
+API_KEY = os.getenv("GOOGLE_API_KEY")
+
+if API_KEY:
+    client = genai.Client(api_key=API_KEY)
+else:
+    client = None
+    print("Warning: GOOGLE_API_KEY not found in .env file. Auto-translation using Gemini will be disabled.")
 
 def request_anki(action, **params):
     payload = {"action": action, "version": 6}
@@ -52,240 +46,313 @@ def request_anki(action, **params):
         print(f"API Request Failed for action '{action}': {e}")
         raise
 
-def parse_semana_md(filepath):
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"File not found: {filepath}")
-        
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-        
-    # Split content by markdown headers "### "
-    sections = re.split(r'\n### ', content)
-    grammar_items = []
+def download_tts(text, lang='zh-CN'):
+    url = "https://translate.google.com/translate_tts"
+    params = {
+        'ie': 'UTF-8',
+        'tl': lang,
+        'client': 'tw-ob',
+        'q': text
+    }
+    query_string = urllib.parse.urlencode(params)
+    full_url = f"{url}?{query_string}"
     
-    for section in sections[1:]:
-        lines = section.strip().split('\n')
-        if not lines:
-            continue
-            
-        header_line = lines[0].strip()
-        header_match = re.match(r'^(\d+)\.\s*(.*)', header_line)
-        if header_match:
-            gid = header_match.group(1)
-            rest = header_match.group(2).strip()
-            if rest.endswith(')'):
-                last_open = rest.rfind('(')
-                if last_open != -1:
-                    gtitle = rest[:last_open].strip()
-                    gmeaning_raw = rest[last_open+1:-1].strip()
-                    if '/' in gmeaning_raw:
-                        gmeaning = gmeaning_raw.split('/')[-1].strip()
-                    else:
-                        gmeaning = gmeaning_raw
-                else:
-                    gtitle = rest
-                    gmeaning = ""
-            else:
-                gtitle = rest
-                gmeaning = ""
-        else:
-            gid = ""
-            gtitle = header_line
-            gmeaning = ""
-            
-        es_list = []
-        en_list = []
-        zh_list = []
-        notes = []
-        
-        for line in lines[1:]:
-            line = line.strip()
-            if not line:
-                continue
-                
-            es_match = re.match(r'^\*\s*\*\*ES(?:\s*\((.*?)\))?:\*\*\s*(.*)', line)
-            en_match = re.match(r'^\*\s*\*\*EN(?:\s*\((.*?)\))?:\*\*\s*(.*)', line)
-            zh_match = re.match(r'^\*\s*\*\*ZH(?:\s*\((.*?)\))?:\*\*\s*(.*)', line)
-            note_match = re.match(r'^\*\s*\*Note:\s*(.*?)\*', line)
-            
-            if es_match:
-                sub_label = es_match.group(1) or ""
-                text = es_match.group(2).strip()
-                es_list.append((sub_label, text))
-            elif en_match:
-                sub_label = en_match.group(1) or ""
-                text = en_match.group(2).strip()
-                en_list.append((sub_label, text))
-            elif zh_match:
-                sub_label = zh_match.group(1) or ""
-                text = zh_match.group(2).strip()
-                zh_list.append((sub_label, text))
-            elif note_match:
-                notes.append(note_match.group(1).strip())
-            elif line.startswith('*') and ('Note:' in line or 'note:' in line):
-                notes.append(line.replace('*', '').strip())
-                
-        n_examples = min(len(es_list), len(en_list), len(zh_list))
-        
-        if len(es_list) != len(en_list) or len(en_list) != len(zh_list):
-            print(f"Warning in Lesson {gid}: count mismatch (ES:{len(es_list)}, EN:{len(en_list)}, ZH:{len(zh_list)})")
-            
-        common_notes = "; ".join(notes)
-        
-        for i in range(n_examples):
-            es_sub, es_text = es_list[i]
-            en_sub, en_text = en_list[i]
-            zh_sub, zh_text = zh_list[i]
-            
-            sub_label = en_sub or zh_sub or es_sub
-            
-            grammar_items.append({
-                'id': gid,
-                'grammar_pattern': gtitle,
-                'grammar_meaning': gmeaning,
-                'sub_label': sub_label,
-                'spanish': es_text,
-                'english': en_text,
-                'chinese': zh_text,
-                'notes': common_notes
-            })
-            
-    return grammar_items
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    req = urllib.request.Request(full_url, headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            return response.read()
+    except Exception as e:
+        print(f"Error fetching TTS for '{text}' ({lang}): {e}")
+        return None
+
+def store_audio_in_anki(audio_bytes, filename):
+    base64_data = base64.b64encode(audio_bytes).decode('utf-8')
+    try:
+        res = request_anki("storeMediaFile", filename=filename, data=base64_data)
+        return res
+    except Exception as e:
+        print(f"Error storing media file '{filename}' in Anki: {e}")
+        return None
+
+def translate_sentence(phrase, client):
+    if not client:
+        print("Warning: Google API client is not initialized. Cannot translate.")
+        return ""
+    prompt = f"Translate the following Chinese sentence into clear, natural English for a language learner. Return ONLY the translated sentence, with no other text, explanation, or formatting:\n\n{phrase}"
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        return response.text.strip().strip('"').strip("'")
+    except Exception as e:
+        print(f"Error translating sentence '{phrase}': {e}")
+        return ""
 
 def normalize_sentence(sentence):
     if not sentence:
         return ""
-    # Strip common markdown bold markers, spaces, and punctuation to match sentences reliably
-    clean = sentence.replace("**", "").replace("强", "").strip()
+    clean = sentence.replace("**", "").replace("*", "").replace(" ", "").strip()
+    clean = re.sub(r'[^\w\s\u4e00-\u9fff]', '', clean)
     return clean
 
-def main():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    input_path = os.path.join(base_dir, "..", "lessons", "semana.md")
-    
-    if not os.path.exists(input_path):
-        print(f"Error: {input_path} does not exist.")
-        sys.exit(1)
-        
-    print(f"Parsing grammar from {input_path}...")
+def get_existing_sentences(deck_name):
     try:
-        items = parse_semana_md(input_path)
-    except Exception as e:
-        print(f"Failed to parse grammar markdown: {e}")
-        sys.exit(1)
-        
-    print(f"Parsed {len(items)} grammar examples.")
-    
-    print("Connecting to Anki via AnkiConnect...")
-    try:
-        # Check if target deck exists (supporting both 'Migaku' and 'Word_Sentence')
         decks = request_anki("deckNames")
-        deck_name = "Migaku"
-        if "Migaku" not in decks:
-            if "Word_Sentence" in decks:
-                deck_name = "Word_Sentence"
-            else:
-                print(f"Error: Target deck ('Migaku' or 'Word_Sentence') not found in Anki. Available decks: {decks}")
-                sys.exit(1)
+        if deck_name not in decks:
+            print(f"Deck '{deck_name}' does not exist yet. It will be created.")
+            request_anki("createDeck", deck=deck_name)
+            return {}
             
-        # Check if Migaku Sentence note type exists
-        models = request_anki("modelNames")
-        if "Migaku Sentence" not in models:
-            print("Error: 'Migaku Sentence' note type not found in Anki.")
-            sys.exit(1)
+        note_ids = request_anki("findNotes", query=f'deck:"{deck_name}"')
+        if not note_ids:
+            return {}
             
-        # Fetch existing notes in target deck to build duplicate check set
-        print(f"Fetching existing notes from Anki deck '{deck_name}' for duplicate checking...")
-        note_ids = request_anki("findNotes", query=f'deck:"{deck_name}" "note:Migaku Sentence"')
         notes_info = request_anki("notesInfo", notes=note_ids)
-        
         existing_sentences = {}
         for note in notes_info:
             fields = note.get('fields', {})
             sentence_field = fields.get('Sentence', {}).get('value', '').strip()
             if sentence_field:
                 existing_sentences[normalize_sentence(sentence_field)] = note.get('noteId')
-                
-        print(f"Found {len(existing_sentences)} existing sentences in the '{deck_name}' deck.")
-        
-        # Categorize notes into additions and updates
-        notes_to_add = []
-        notes_to_update = []
-        
-        for item in items:
-            chinese_sentence = item['chinese']
-            normalized = normalize_sentence(chinese_sentence)
-            
-            notes_parts = []
-            if item['sub_label']:
-                notes_parts.append(f"Grammar usage: {item['sub_label']}")
-            if item['notes']:
-                notes_parts.append(f"Explanation: {item['notes']}")
-            combined_notes = "\n\n".join(notes_parts)
-            
-            row_data = {
-                'Word': "\u200b", # Zero-width space to bypass empty first field constraint
-                'Sentence': chinese_sentence,
-                'Translated Sentence': item['english'],
-                'Definitions': item['grammar_meaning'],
-                'Notes': combined_notes,
-                'Grammar Point': item['grammar_pattern']
-            }
-            
-            if normalized in existing_sentences:
-                note_id = existing_sentences[normalized]
-                notes_to_update.append((note_id, row_data))
-            else:
-                notes_to_add.append(row_data)
-                
-        # Add new notes
-        added_count = 0
-        if notes_to_add:
-            print(f"Pushing {len(notes_to_add)} new grammar phrases to Anki...")
-            for row in notes_to_add:
-                note_payload = {
-                    "deckName": deck_name,
-                    "modelName": "Migaku Sentence",
-                    "fields": row,
-                    "options": {
-                        "allowDuplicate": True
-                    },
-                    "tags": ["grammar", "hsk4"]
-                }
-                try:
-                    note_id = request_anki("addNote", note=note_payload)
-                    if note_id:
-                        added_count += 1
-                        print(f"Added note: {row['Sentence'][:30]}... (ID: {note_id})")
-                except Exception as e:
-                    print(f"Failed to add note '{row['Sentence'][:20]}...': {e}")
-        else:
-            print("No new grammar phrases to add.")
-            
-        # Update existing notes
-        updated_count = 0
-        if notes_to_update:
-            print(f"Updating {len(notes_to_update)} existing grammar phrases to clear 'Word' and sync all fields...")
-            for note_id, row in notes_to_update:
-                update_payload = {
-                    "note": {
-                        "id": note_id,
-                        "fields": row
-                    }
-                }
-                try:
-                    request_anki("updateNoteFields", **update_payload)
-                    updated_count += 1
-                except Exception as e:
-                    print(f"Failed to update note ID {note_id}: {e}")
-        else:
-            print("No existing notes to update.")
-                
-        print(f"\nSync complete! Successfully added {added_count} and updated {updated_count} notes in your Migaku deck.")
-        
+        return existing_sentences
     except Exception as e:
-        print(f"An error occurred: {e}")
-        sys.exit(1)
+        print(f"Error checking existing cards in deck '{deck_name}': {e}")
+        return {}
+
+def parse_new_grammar(filepath):
+    if not os.path.exists(filepath):
+        print(f"Error: {filepath} not found.")
+        return []
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    if "## 🟡 Pendiente de incluir" not in content:
+        print("Error: '## 🟡 Pendiente de incluir' section not found in file.")
+        return []
+    
+    pending_part = content.split("## 🟡 Pendiente de incluir")[1]
+    if "## 🟢 Incluido en Anki" in pending_part:
+        pending_part = pending_part.split("## 🟢 Incluido en Anki")[0]
+        
+    pending_part = pending_part.strip()
+    
+    items = []
+    current_item = None
+    
+    for line in pending_part.split('\n'):
+        line_str = line.strip()
+        if not line_str:
+            continue
+            
+        gp_match = re.match(r'^[-*]\s*\*\*Grammar Point\*\*:\s*(.*)', line_str, re.IGNORECASE)
+        if gp_match:
+            if current_item:
+                items.append(current_item)
+            current_item = {
+                'grammar_point': gp_match.group(1).strip(),
+                'phrase': '',
+                'translation': '',
+                'orig_lines': [line]
+            }
+            continue
+            
+        phrase_match = re.match(r'^[-*]\s*\*\*Phrase\*\*:\s*(.*)', line_str, re.IGNORECASE)
+        if phrase_match and current_item:
+            current_item['phrase'] = phrase_match.group(1).strip()
+            current_item['orig_lines'].append(line)
+            continue
+            
+        trans_match = re.match(r'^[-*]\s*\*\*Translation\*\*:\s*(.*)', line_str, re.IGNORECASE)
+        if trans_match and current_item:
+            current_item['translation'] = trans_match.group(1).strip()
+            current_item['orig_lines'].append(line)
+            continue
+            
+        if current_item:
+            current_item['orig_lines'].append(line)
+            
+    if current_item:
+        items.append(current_item)
+        
+    valid_items = []
+    for item in items:
+        if item['grammar_point'] and item['phrase']:
+            valid_items.append(item)
+            
+    return valid_items
+
+def update_new_grammar_file(filepath, success_items, all_pending_items):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+        
+    header = content.split("## 🟡 Pendiente de incluir")[0].rstrip()
+    
+    incluido_part = ""
+    if "## 🟢 Incluido en Anki" in content:
+        incluido_part = content.split("## 🟢 Incluido en Anki")[1].strip()
+        
+    new_incluido_part = incluido_part
+    if new_incluido_part:
+        new_incluido_part += "\n"
+        
+    for item in success_items:
+        new_incluido_part += f"- **Grammar Point**: {item['grammar_point']}\n"
+        new_incluido_part += f"  - **Phrase**: {item['phrase']}\n"
+        if item['translation']:
+            new_incluido_part += f"  - **Translation**: {item['translation']}\n"
+            
+    success_phrases = {item['phrase'] for item in success_items}
+    remaining_pending = [item for item in all_pending_items if item['phrase'] not in success_phrases]
+    
+    pendiente_section = "\n\n## 🟡 Pendiente de incluir\n"
+    for item in remaining_pending:
+        pendiente_section += f"- **Grammar Point**: {item['grammar_point']}\n"
+        pendiente_section += f"  - **Phrase**: {item['phrase']}\n"
+        if item['translation']:
+            pendiente_section += f"  - **Translation**: {item['translation']}\n"
+            
+    final_content = (
+        header + 
+        pendiente_section + 
+        "\n## 🟢 Incluido en Anki\n" + 
+        new_incluido_part.strip() + "\n"
+    )
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(final_content)
+
+def main():
+    workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    new_grammar_path = os.path.join(workspace_dir, "new_grammar.md")
+    
+    print(f"Reading pending grammar from {new_grammar_path}...")
+    pending_items = parse_new_grammar(new_grammar_path)
+    
+    if not pending_items:
+        print("No pending grammar phrases found.")
+        return
+        
+    print(f"Found {len(pending_items)} phrases to process.")
+    
+    deck_name = "Chinese::Sent"
+    model_name = "Chinese Sentence - Double"
+    
+    print(f"Checking existing cards in deck '{deck_name}'...")
+    existing_sentences = get_existing_sentences(deck_name)
+    print(f"Found {len(existing_sentences)} existing sentences in Anki.")
+    
+    # Check if target model type exists
+    try:
+        models = request_anki("modelNames")
+        if model_name not in models:
+            print(f"Error: '{model_name}' note type not found in Anki. Available models: {models}")
+            sys.exit(1)
+    except Exception as e:
+        print(f"Anki connection check failed: {e}")
+        return
+        
+    queue = [item for item in pending_items if normalize_sentence(item['phrase']) not in existing_sentences]
+    print(f"Already in Anki: {len(pending_items) - len(queue)}")
+    print(f"Queue to add: {len(queue)}")
+    print("-" * 40)
+    
+    if not queue:
+        print("All phrases are already in Anki! Nothing to do.")
+        return
+        
+    success_items = []
+    
+    for idx, item in enumerate(queue, 1):
+        phrase = item['phrase']
+        grammar_point = item['grammar_point']
+        translation = item['translation']
+        
+        print(f"\n[{idx}/{len(queue)}] Processing: {phrase}...")
+        
+        # 1. Translate if not provided
+        if not translation:
+            print(" -> Translating with Gemini... ", end="", flush=True)
+            translation = translate_sentence(phrase, client)
+            if translation:
+                item['translation'] = translation
+                print(f"Done: {translation}")
+            else:
+                print("Failed.")
+                continue
+        else:
+            print(f" -> Using provided translation: {translation}")
+            
+        # Generate hash-based filenames for TTS audio files
+        phrase_hash = hashlib.sha1(phrase.encode('utf-8')).hexdigest()
+        trans_hash = hashlib.sha1(translation.encode('utf-8')).hexdigest()
+        
+        zh_audio_filename = f"zh_tts_{phrase_hash}.mp3"
+        en_audio_filename = f"en_tts_{trans_hash}.mp3"
+        
+        # 2. Download and upload Chinese TTS
+        print(" -> Generating Chinese TTS... ", end="", flush=True)
+        zh_audio_bytes = download_tts(phrase, lang='zh-CN')
+        if zh_audio_bytes:
+            store_audio_in_anki(zh_audio_bytes, zh_audio_filename)
+            print("Done.")
+        else:
+            zh_audio_filename = ""
+            print("Failed.")
+            
+        # 3. Download and upload English TTS
+        print(" -> Generating English TTS... ", end="", flush=True)
+        en_audio_bytes = download_tts(translation, lang='en')
+        if en_audio_bytes:
+            store_audio_in_anki(en_audio_bytes, en_audio_filename)
+            print("Done.")
+        else:
+            en_audio_filename = ""
+            print("Failed.")
+            
+        # 4. Construct payload and add card to Anki
+        print(" -> Adding card to Anki... ", end="", flush=True)
+        note_payload = {
+            "deckName": deck_name,
+            "modelName": model_name,
+            "fields": {
+                "Sentence": phrase,
+                "Translated_Sentence": translation,
+                "Notes": "",
+                "Images": "",
+                "Definitions": "",
+                "Sentence_Audio": f"[sound:{zh_audio_filename}]" if zh_audio_filename else "",
+                "Grammar_Point": grammar_point,
+                "Translated_Audio": f"[sound:{en_audio_filename}]" if en_audio_filename else ""
+            },
+            "options": {
+                "allowDuplicate": True
+            },
+            "tags": ["grammar"]
+        }
+        
+        try:
+            note_id = request_anki("addNote", note=note_payload)
+            if note_id:
+                print(f"Success! Card ID: {note_id}")
+                success_items.append(item)
+                # Pause to avoid hitches and rate limits
+                time.sleep(1.5)
+        except Exception as e:
+            print(f"Failed to add note: {e}")
+            continue
+
+    if success_items:
+        print(f"\nUpdating new_grammar.md with {len(success_items)} successfully added cards...")
+        try:
+            update_new_grammar_file(new_grammar_path, success_items, pending_items)
+            print("new_grammar.md updated successfully!")
+        except Exception as e:
+            print(f"Failed to update new_grammar.md: {e}")
+            
+    print(f"\nSync Job Complete! Added {len(success_items)} cards to Anki.")
 
 if __name__ == "__main__":
     main()
