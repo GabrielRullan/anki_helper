@@ -29,6 +29,9 @@ imagenes_frases_memorable/
 
 #data
 new_words.md
+data/Resources/anki_audio/
+data/Resources/Audio/
+data/anki_audio/
 
 #logs
 data/image_generation_errors.log
