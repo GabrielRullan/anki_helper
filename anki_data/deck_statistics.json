@@ -1,0 +1,71 @@
+{
+  "last_updated": "2026-07-30 16:14:38",
+  "total_notes": 5232,
+  "total_cards": 7792,
+  "decks": {
+    "Default": {
+      "deck_id": 1,
+      "card_count": 0,
+      "note_count": 0,
+      "suspended_count": 0,
+      "avg_ease_percent": 250.0,
+      "total_lapses": 0
+    },
+    "Chinese\u001fWords": {
+      "deck_id": 1768396166495,
+      "card_count": 2574,
+      "note_count": 2574,
+      "suspended_count": 1,
+      "avg_ease_percent": 196.4,
+      "total_lapses": 2511
+    },
+    "Chinese\u001fChar": {
+      "deck_id": 1768474798187,
+      "card_count": 4612,
+      "note_count": 2306,
+      "suspended_count": 0,
+      "avg_ease_percent": 236.5,
+      "total_lapses": 2272
+    },
+    "Japanese\u001fMigaku": {
+      "deck_id": 1771452641110,
+      "card_count": 10,
+      "note_count": 10,
+      "suspended_count": 0,
+      "avg_ease_percent": 238.0,
+      "total_lapses": 5
+    },
+    "Chinese": {
+      "deck_id": 1780305975169,
+      "card_count": 0,
+      "note_count": 0,
+      "suspended_count": 0,
+      "avg_ease_percent": 250.0,
+      "total_lapses": 0
+    },
+    "Chinese\u001fSent": {
+      "deck_id": 1780305999699,
+      "card_count": 575,
+      "note_count": 321,
+      "suspended_count": 14,
+      "avg_ease_percent": 240.9,
+      "total_lapses": 88
+    },
+    "Japanese": {
+      "deck_id": 1780306549193,
+      "card_count": 0,
+      "note_count": 0,
+      "suspended_count": 0,
+      "avg_ease_percent": 250.0,
+      "total_lapses": 0
+    },
+    "Added Today": {
+      "deck_id": 1785415545936,
+      "card_count": 21,
+      "note_count": 21,
+      "suspended_count": 0,
+      "avg_ease_percent": 250.0,
+      "total_lapses": 0
+    }
+  }
+}
