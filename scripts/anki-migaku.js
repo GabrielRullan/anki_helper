@@ -487,11 +487,13 @@ const FieldMapper = {
         var mappings = Storage.loadMappings();
         var globalMapping = mappings["__global__"] || mappings.__global;
 
+        let names;
         if (globalMapping && globalMapping.fields && Array.isArray(globalMapping.fields)) {
-            return globalMapping.fields.map(f => f.ankiName || f.migakuName);
+            names = globalMapping.fields.map(f => f.ankiName || f.migakuName);
+        } else {
+            names = CONFIG.MIGAKU_FIELDS;
         }
-
-        return CONFIG.MIGAKU_FIELDS;
+        return names.map(name => String(name).replaceAll(" ", "_"));
     },
 
     buildFieldValues: async (card, cardType, settings, ensureMediaInZip) => {
@@ -607,14 +609,6 @@ const AnkiBuilder = {
         for (const ct of usedCardTypes) {
             var fields = [];
 
-            const fieldNames = FieldMapper.getFieldNames();
-            const pushField = (name) => fields.push({
-                font: "Arial", media: [], name, ord: fields.length,
-                rtl: false, size: 20, sticky: false
-            });
-
-            fieldNames.forEach(fieldName => pushField(fieldName));
-
             let modelName = ct.name || "base";
             const hasWordField = ct.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
             if (modelName.toLowerCase() === "word") {
@@ -625,6 +619,21 @@ const AnkiBuilder = {
                 }
             } else if (modelName.toLowerCase() === "sentence") {
                 modelName = "Chinese Sentence - Single";
+            }
+
+            const fieldNames = FieldMapper.getFieldNames();
+            const pushField = (name) => fields.push({
+                font: "Arial", media: [], name, ord: fields.length,
+                rtl: false, size: 20, sticky: false
+            });
+
+            fieldNames.forEach(fieldName => pushField(fieldName));
+
+            if (modelName === "Migaku Word") {
+                pushField("Characters");
+            } else if (modelName === "Chinese Sentence - Single") {
+                pushField("Grammar_Point");
+                pushField("Translated_Audio");
             }
 
             // try to create better templates based on card type
@@ -3098,10 +3107,29 @@ const ExportProcessor = {
             var list = cardsByType.get(typeKey);
             var ct = cardTypes.get(typeKey);
 
+            let modelName = ct.name || "base";
+            const hasWordField = ct.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
+            if (modelName.toLowerCase() === "word") {
+                if (!hasWordField) {
+                    modelName = "Chinese Sentence - Single";
+                } else {
+                    modelName = "Migaku Word";
+                }
+            } else if (modelName.toLowerCase() === "sentence") {
+                modelName = "Chinese Sentence - Single";
+            }
+
             for (const card of list) {
                 var finalFieldValues = await FieldMapper.buildFieldValues(
                     card, ct, settings, ensureMediaInZip
                 );
+
+                if (modelName === "Migaku Word") {
+                    finalFieldValues.push("");
+                } else if (modelName === "Chinese Sentence - Single") {
+                    finalFieldValues.push("");
+                    finalFieldValues.push("");
+                }
 
                 var fieldsStr = finalFieldValues.join('\x1F');
                 var shaBuf = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(fieldsStr));
