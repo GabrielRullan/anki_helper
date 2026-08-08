@@ -37,3 +37,10 @@ data/anki_audio/
 data/image_generation_errors.log
 data/image_generation_errors.log
 anki_audio/
+
+# Kaishi-ESP repository
+Kaishi-ESP/
+data/kaishi_temp/
+data/kaishi_cards.json
+*.apkg
+data/Kaishi_15k_Espaol.apkg

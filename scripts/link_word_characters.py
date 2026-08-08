@@ -177,7 +177,7 @@ def get_character_details_from_gemini(char):
 Analyze the Chinese character: '{char}'
 We need the following details to create an Anki flashcard:
 1. "pinyin": The pinyin with tone marks (e.g. "wú").
-2. "english": English translation/meaning of the character (e.g. "I, me; my; our").
+2. "english": A high-quality, extremely clear, concise, and clean English translation/meaning of the character itself. It must be brief and clean for a flashcard (avoid wordy explanations or excessive dictionary definitions). Use proper capitalization when necessary (e.g., capitalize names or proper nouns).
 3. "components": A list of visual components/radicals that make up this character (e.g. ["口", "五"]).
 
 Format your response as a JSON object with keys "pinyin", "english", and "components".
