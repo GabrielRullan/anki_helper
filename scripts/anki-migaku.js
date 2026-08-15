@@ -90,16 +90,16 @@ const Utils = {
         }
     },
 
-    safeGetElement: (id) => {
+    safeGetElement: (id, silent = true) => {
         try {
             const element = document.getElementById(id);
             if (element === null) {
-                console.warn(`[MGK] Element not found: ${id}`);
+                if (!silent) console.warn(`[MGK] Element not found: ${id}`);
                 return null;
             }
             return element;
         } catch (error) {
-            console.warn(`[MGK] Element not found: ${id}`);
+            if (!silent) console.warn(`[MGK] Element not found: ${id}`);
             return null;
         }
     },
@@ -444,8 +444,25 @@ const DatabaseOps = {
                 }));
             }
             map.set(r.id, r);
+            map.set(String(r.id), r);
+            if (typeof r.id === "string" && !isNaN(Number(r.id))) {
+                map.set(Number(r.id), r);
+            }
         }
         return map;
+    },
+
+    getCardType(cardTypes, typeKey) {
+        if (typeKey === undefined || typeKey === null) typeKey = 1;
+        let ct = cardTypes ? (cardTypes.get(typeKey) || cardTypes.get(Number(typeKey)) || cardTypes.get(String(typeKey))) : null;
+        if (!ct) {
+            ct = {
+                id: typeKey,
+                name: "Default",
+                config: { fields: [{ name: "Word", type: "TEXT" }] }
+            };
+        }
+        return ct;
     },
 
     getUserLearningData(db) {
@@ -469,7 +486,7 @@ const DatabaseOps = {
                 decks: decks.filter(d => !d.del),
                 cards: allCards.filter(c => !c.del),
                 wordLists,
-                cardTypes: Array.from(DatabaseOps.readCardTypes(db).values())
+                cardTypes: Array.from(new Set(DatabaseOps.readCardTypes(db).values()))
             };
         } catch (error) {
             console.error("Failed to get user learning data:", error);
@@ -595,22 +612,38 @@ const AnkiBuilder = {
     },
 
     insertCollectionMetadata(db, usedCardTypes, mappings, useTemplates) {
-        var mapping = new Map();
-        for (const ct of usedCardTypes) {
-            mapping.set(ct.id, Number(String(Date.now()).slice(0, 10) + String(ct.id)));
+        var validCardTypes = (Array.isArray(usedCardTypes) ? usedCardTypes.filter(Boolean) : []);
+        if (validCardTypes.length === 0) {
+            validCardTypes = [{ id: 1, name: "Default", config: { fields: [{ name: "Word", type: "TEXT" }] } }];
         }
+
+        var mapping = new Map();
+        for (const ct of validCardTypes) {
+            const ctId = (ct && ct.id != null) ? ct.id : 1;
+            const modelId = Number(String(Date.now()).slice(0, 10) + String(ctId));
+            mapping.set(ctId, modelId);
+            mapping.set(String(ctId), modelId);
+            if (typeof ctId === "string" && !isNaN(Number(ctId))) {
+                mapping.set(Number(ctId), modelId);
+            }
+        }
+
+        const firstCtId = (validCardTypes[0] && validCardTypes[0].id != null) ? validCardTypes[0].id : 1;
+        const firstModelId = mapping.get(firstCtId) || mapping.values().next().value || 1;
 
         var conf = {
             curDeck: 1,
-            curModel: mapping.get(usedCardTypes[0].id).toString()
+            curModel: firstModelId.toString()
         };
 
         var models = {};
-        for (const ct of usedCardTypes) {
+        for (const ct of validCardTypes) {
             var fields = [];
+            const ctId = (ct && ct.id != null) ? ct.id : 1;
+            const modelId = mapping.get(ctId) || Number(String(Date.now()).slice(0, 10) + String(ctId));
 
-            let modelName = ct.name || "base";
-            const hasWordField = ct.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
+            let modelName = (ct && ct.name) || "base";
+            const hasWordField = ct?.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
             if (modelName.toLowerCase() === "word") {
                 if (!hasWordField) {
                     modelName = "Chinese Sentence - Single";
@@ -687,11 +720,11 @@ const AnkiBuilder = {
                 };
             }
 
-            models[mapping.get(ct.id)] = {
+            models[modelId] = {
                 css: "",
                 did: 1,
                 flds: fields,
-                id: mapping.get(ct.id),
+                id: modelId,
                 latexPost: "",
                 latexPre: "",
                 mod: Math.floor(Date.now() / 1000),
@@ -2932,7 +2965,7 @@ const MediaHandler = {
 
         for (const typeKey of cardsByType.keys()) {
             const list = cardsByType.get(typeKey);
-            const ct = cardTypes.get(typeKey);
+            const ct = DatabaseOps.getCardType(cardTypes, typeKey);
             const defFields = (ct && ct.config && Array.isArray(ct.config.fields)) ?
                 ct.config.fields : [{ name: "Field1", type: "TEXT" }];
 
@@ -3103,12 +3136,12 @@ const ExportProcessor = {
         ankiDb.run('BEGIN TRANSACTION;');
 
         for (const typeKey of cardsByType.keys()) {
-            var modelId = modelMapping.get(typeKey);
+            var modelId = modelMapping.get(typeKey) || modelMapping.get(Number(typeKey)) || modelMapping.get(String(typeKey)) || modelMapping.values().next().value;
             var list = cardsByType.get(typeKey);
-            var ct = cardTypes.get(typeKey);
+            var ct = DatabaseOps.getCardType(cardTypes, typeKey);
 
-            let modelName = ct.name || "base";
-            const hasWordField = ct.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
+            let modelName = ct?.name || "base";
+            const hasWordField = ct?.config?.fields?.some(f => (f.name || "").toLowerCase() === "word");
             if (modelName.toLowerCase() === "word") {
                 if (!hasWordField) {
                     modelName = "Chinese Sentence - Single";
@@ -3230,7 +3263,10 @@ const ExportProcessor = {
             cardsByType.get(c.cardTypeId).push(c);
         }
 
-        var usedCardTypes = Array.from(cardsByType.keys()).map(k => cardTypes.get(k));
+        var usedCardTypes = Array.from(cardsByType.keys()).map(k => DatabaseOps.getCardType(cardTypes, k)).filter(Boolean);
+        if (usedCardTypes.length === 0) {
+            usedCardTypes = [DatabaseOps.getCardType(cardTypes, 1)];
+        }
         if (DeckProtection.checkForbiddenContent(usedCardTypes)) {
             var msg = DeckProtection.getForbiddenMessage();
             Utils.setStatus(msg, "#ef4444");
@@ -3329,7 +3365,11 @@ const ExportProcessor = {
                 for (const c of allCards) {
                     if (!cardsByTypeIndividual.has(c.cardTypeId)) cardsByTypeIndividual.set(c.cardTypeId, []);
                     cardsByTypeIndividual.get(c.cardTypeId).push(c);
-                } var individualCardTypes = Array.from(cardsByTypeIndividual.keys()).map(k => cardTypes.get(k));
+                }
+                var individualCardTypes = Array.from(cardsByTypeIndividual.keys()).map(k => DatabaseOps.getCardType(cardTypes, k)).filter(Boolean);
+                if (individualCardTypes.length === 0) {
+                    individualCardTypes = [DatabaseOps.getCardType(cardTypes, 1)];
+                }
                 if (DeckProtection.checkForbiddenContent(individualCardTypes)) {
                     var msg = DeckProtection.getForbiddenMessage();
                     Utils.setStatus(msg, "#ef4444");
