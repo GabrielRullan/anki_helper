@@ -3,6 +3,7 @@ import json
 import time
 import sys
 import re
+import csv
 import urllib.request
 import urllib.parse
 import hashlib
@@ -356,3 +357,134 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def parse_semana_md(filepath):
+    if not os.path.exists(filepath):
+        alt_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "chinese", "lessons", "semana.md")
+        if os.path.exists(alt_path):
+            filepath = alt_path
+        else:
+            return []
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    sections = re.split(r'(?m)^###\s+', content)
+    items = []
+
+    for sec in sections:
+        sec_str = sec.strip()
+        if not sec_str or not re.match(r'^\d+\.', sec_str):
+            continue
+
+        lines = [l.strip() for l in sec_str.split('\n') if l.strip()]
+        header = lines[0]
+
+        m_id = re.match(r'^(\d+)\.\s*(.*)$', header)
+        if not m_id:
+            continue
+
+        item_id = m_id.group(1)
+        header_text = m_id.group(2).strip()
+
+        if header_text.endswith(')'):
+            last_paren = header_text.rfind('(')
+            if last_paren != -1:
+                pattern = header_text[:last_paren].strip()
+                meaning_raw = header_text[last_paren + 1:-1].strip()
+            else:
+                pattern = header_text
+                meaning_raw = ""
+        else:
+            pattern = header_text
+            meaning_raw = ""
+
+        if "/" in meaning_raw:
+            meaning = meaning_raw.split("/")[-1].strip()
+        else:
+            meaning = meaning_raw
+
+        es_map = {}
+        en_map = {}
+        zh_map = {}
+        notes = []
+
+        for line in lines[1:]:
+            note_match = re.match(r'^\*\s*\*?Note:\s*(.*?)\*?$', line, re.IGNORECASE)
+            if note_match:
+                notes.append(note_match.group(1).strip())
+                continue
+
+            es_m = re.match(r'^\*\s*\*\*ES(?:\s*\((.*?)\))?:\*\*\s*(.*)$', line)
+            if es_m:
+                label = es_m.group(1).strip() if es_m.group(1) else ""
+                es_map[label] = es_m.group(2).strip()
+                continue
+
+            en_m = re.match(r'^\*\s*\*\*EN(?:\s*\((.*?)\))?:\*\*\s*(.*)$', line)
+            if en_m:
+                label = en_m.group(1).strip() if en_m.group(1) else ""
+                en_map[label] = en_m.group(2).strip()
+                continue
+
+            zh_m = re.match(r'^\*\s*\*\*ZH(?:\s*\((.*?)\))?:\*\*\s*(.*)$', line)
+            if zh_m:
+                label = zh_m.group(1).strip() if zh_m.group(1) else ""
+                zh_map[label] = zh_m.group(2).strip()
+                continue
+
+        labels = list(en_map.keys()) if en_map else [""]
+        note_str = " ".join(notes)
+
+        for label in labels:
+            sub_label = label
+            es_val = es_map.get(label, list(es_map.values())[0] if es_map else "")
+            en_val = en_map.get(label, list(en_map.values())[0] if en_map else "")
+
+            zh_val = ""
+            if label in zh_map:
+                zh_val = zh_map[label]
+            else:
+                clean_lbl = label.split(" - ")[0].strip() if " - " in label else label
+                if clean_lbl in zh_map:
+                    zh_val = zh_map[clean_lbl]
+                else:
+                    zh_val = list(zh_map.values())[0] if zh_map else ""
+
+            items.append({
+                'id': item_id,
+                'grammar_pattern': pattern,
+                'grammar_meaning': meaning,
+                'sub_label': sub_label,
+                'spanish': es_val,
+                'english': en_val,
+                'chinese': zh_val,
+                'notes': note_str
+            })
+
+    return items
+
+
+def generate_csv(items, output_path):
+    headers = ['Word', 'Grammar Point', 'Sentence', 'Translated Sentence', 'Definitions', 'Notes']
+    rows = []
+    for item in items:
+        notes_val = ""
+        if item.get('notes'):
+            notes_val = f"Explanation: {item['notes']}"
+
+        rows.append({
+            'Word': '',
+            'Grammar Point': item.get('grammar_pattern', ''),
+            'Sentence': item.get('chinese', ''),
+            'Translated Sentence': item.get('english', ''),
+            'Definitions': item.get('grammar_meaning', ''),
+            'Notes': notes_val
+        })
+
+    with open(output_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=headers)
+        writer.writeheader()
+        writer.writerows(rows)
+

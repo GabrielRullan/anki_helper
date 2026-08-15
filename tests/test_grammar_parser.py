@@ -8,7 +8,9 @@ from sync_grammar import parse_semana_md, generate_csv
 class TestGrammarParser(unittest.TestCase):
     def setUp(self):
         self.base_dir = os.path.dirname(os.path.abspath(__file__))
-        self.md_path = os.path.join(self.base_dir, "..", "lessons", "semana.md")
+        self.md_path = os.path.join(self.base_dir, "..", "chinese", "lessons", "semana.md")
+        if not os.path.exists(self.md_path):
+            self.md_path = os.path.join(self.base_dir, "..", "lessons", "semana.md")
         self.csv_path = os.path.join(self.base_dir, "test_grammar_import.csv")
         
     def tearDown(self):
