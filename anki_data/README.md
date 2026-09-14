@@ -2,7 +2,7 @@
 
 This folder contains a local backup of your Anki database and active progress statistics. 
 
-- **Last Updated:** 2026-09-14 14:48:07
+- **Last Updated:** 2026-09-14 17:17:56
 - **Total Decks Tracked:** 9
 - **Total Notes:** 6972
 - **Total Cards:** 10666
@@ -12,7 +12,7 @@ This folder contains a local backup of your Anki database and active progress st
 | Deck Name | Notes | Cards | Suspended | Avg Ease | Total Lapses |
 | --- | --- | --- | --- | --- | --- |
 | **Chinese** | 0 | 0 | 0 | 250.0% | 0 |
-| **ChineseChar** | 3633 | 7077 | 2703 | 234.8% | 2301 |
+| **ChineseChar** | 3633 | 7077 | 2704 | 234.8% | 2301 |
 | **ChineseSent** | 370 | 620 | 4 | 237.3% | 194 |
 | **ChineseSentzh->en** | 0 | 0 | 0 | 250.0% | 0 |
 | **ChineseWords** | 2663 | 2663 | 24 | 191.0% | 2042 |
