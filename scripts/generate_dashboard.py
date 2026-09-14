@@ -805,6 +805,11 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                     Missing Pieces
                     <span class="badge badge-red" id="missing-badge">0</span>
                 </a>
+                <a class="nav-item" data-tab="traverse">
+                    <i data-lucide="layers"></i>
+                    Traverse Words
+                    <span class="badge badge-cyan" id="traverse-badge">0</span>
+                </a>
             </nav>
 
             <div class="sidebar-footer">
@@ -1232,6 +1237,9 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                             <button class="btn btn-sm" id="btn-export-known-words" onclick="exportKnownWords()" title="Copy known words as CSV format">
                                 <i data-lucide="clipboard" style="width:14px;height:14px;"></i> Export Known Words
                             </button>
+                            <button class="btn btn-sm" id="btn-export-ignored-words" onclick="exportIgnoredHskWords()" style="background: rgba(255, 255, 255, 0.05); color: var(--text-secondary);" title="Copy ignored missing words CSV">
+                                <i data-lucide="eye-off" style="width:14px;height:14px;"></i> Export Ignored
+                            </button>
                             <button class="btn btn-sm" id="btn-reset-known-words" onclick="resetLocalKnownWords()" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); color: var(--accent-red);" title="Reset browser-saved known words">
                                 <i data-lucide="rotate-ccw" style="width:14px;height:14px;"></i> Reset Local
                             </button>
@@ -1240,11 +1248,15 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                     <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
                         These vocabulary words from HSK 4 are missing from your Migaku deck.
                     </p>
-                    <div class="controls-row">
-                        <div class="search-wrapper">
+                    <div class="controls-row" style="flex-wrap:wrap; gap:1rem;">
+                        <div class="search-wrapper" style="flex:1; min-width:250px;">
                             <i data-lucide="search"></i>
                             <input type="text" id="missing-words-search" placeholder="Search missing HSK words by Hanzi, Pinyin, or Meaning...">
                         </div>
+                        <label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;cursor:pointer;color:var(--text-secondary);user-select:none;">
+                            <input type="checkbox" id="hide-ignored-missing-words" checked onchange="renderMissingWords()" style="width:16px;height:16px;accent-color:var(--accent-orange);">
+                            Hide Ignored Words
+                        </label>
                     </div>
 
                     <div class="custom-table-container">
@@ -1264,6 +1276,128 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                     </div>
                 </div>
             </section>
+        
+            <!-- TAB 8: TRAVERSE WORDS MANAGER -->
+            <section id="traverse-tab" class="tab-panel">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Total Traverse Words</h4>
+                            <div class="stat-value" id="stat-traverse-total">0</div>
+                        </div>
+                        <div class="stat-icon cyan">
+                            <i data-lucide="layers"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>In Anki Collection</h4>
+                            <div class="stat-value" id="stat-traverse-in-anki" style="color:var(--green)">0</div>
+                        </div>
+                        <div class="stat-icon green">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Missing from Anki</h4>
+                            <div class="stat-value" id="stat-traverse-missing" style="color:var(--accent-orange)">0</div>
+                        </div>
+                        <div class="stat-icon orange">
+                            <i data-lucide="alert-triangle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Ignored Words</h4>
+                            <div class="stat-value" id="stat-traverse-ignored" style="color:var(--text-muted)">0</div>
+                        </div>
+                        <div class="stat-icon purple">
+                            <i data-lucide="eye-off"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3><i data-lucide="layers"></i> Mandarin Blueprint Traverse Words</h3>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <button class="btn btn-sm" id="btn-batch-ignore" onclick="batchIgnoreTraverseWords(true)">
+                                <i data-lucide="eye-off" style="width:14px;height:14px;"></i> Ignore Selected
+                            </button>
+                            <button class="btn btn-sm" id="btn-batch-unignore" onclick="batchIgnoreTraverseWords(false)">
+                                <i data-lucide="eye" style="width:14px;height:14px;"></i> Un-ignore Selected
+                            </button>
+                            <button class="btn btn-sm btn-primary" id="btn-batch-add-anki" onclick="batchAddTraverseWordsToAnki()">
+                                <i data-lucide="plus-circle" style="width:14px;height:14px;"></i> Add Selected to Anki
+                            </button>
+                        </div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Review words introduced across Mandarin Blueprint lessons (Lessons 68–88). Select words to ignore or batch-add to your Anki study queue.
+                    </p>
+
+                    <!-- Filters bar -->
+                    <div class="controls-row" style="flex-wrap: wrap; gap: 1rem;">
+                        <div class="search-wrapper" style="flex: 1; min-width: 250px;">
+                            <i data-lucide="search"></i>
+                            <input type="text" id="traverse-search" placeholder="Search by word or character (e.g. 比萨, 隔)..." oninput="renderTraverseWords()">
+                        </div>
+                        
+                        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center;">
+                            <select id="traverse-lesson-select" class="btn" style="height:42px; background:var(--bg-slate);" onchange="renderTraverseWords()">
+                                <option value="all">All Lessons (68-88)</option>
+                            </select>
+
+                            <select id="traverse-class-select" class="btn" style="height:42px; background:var(--bg-slate);" onchange="renderTraverseWords()">
+                                <option value="all">All Classifications</option>
+                                <option value="Nouns 名词">Nouns 名词</option>
+                                <option value="Verbs 动词">Verbs 动词</option>
+                                <option value="Adjectives 形容词">Adjectives 形容词</option>
+                                <option value="Adverbs 副词">Adverbs 副词</option>
+                                <option value="Pronouns 代词">Pronouns 代词</option>
+                                <option value="Measure 量词">Measure 量词</option>
+                                <option value="Numbers 数词">Numbers 数词</option>
+                                <option value="Prepositions 介词">Prepositions 介词</option>
+                                <option value="Conjunction 连词">Conjunction 连词</option>
+                                <option value="Particles 助词">Particles 助词</option>
+                                <option value="Mood 语气词">Mood 语气词</option>
+                                <option value="Other 其他">Other 其他</option>
+                            </select>
+
+                            <select id="traverse-status-select" class="btn" style="height:42px; background:var(--bg-slate);" onchange="renderTraverseWords()">
+                                <option value="all">All Statuses</option>
+                                <option value="missing" selected>Missing from Anki</option>
+                                <option value="in_anki">In Anki</option>
+                                <option value="ignored">Ignored</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="custom-table-container">
+                        <table id="traverse-words-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px; text-align: center;">
+                                        <input type="checkbox" id="traverse-select-all" onclick="toggleSelectAllTraverseWords(this)">
+                                    </th>
+                                    <th>Word</th>
+                                    <th>Pinyin & Meaning</th>
+                                    <th>MBP Lesson</th>
+                                    <th>Classification</th>
+                                    <th>Related Hanzi</th>
+                                    <th>Anki Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Inserted dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
@@ -1453,6 +1587,7 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                 setTimeout(() => {
                     DATA.missing_chars_hsk = DATA.missing_chars_hsk.filter(c => c !== char);
                     renderMissingCharacters();
+        renderTraverseWords();
                 }, 300);
             }
             
@@ -1646,7 +1781,8 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             'synergy': 'HSK 1-4 Synergy Study Guide',
             'codebook': 'Mnemonic Palace Codebook & Helper',
             'graph': 'Connection Graph Explorer',
-            'missing': 'Missing HSK Pieces'
+            'missing': 'Missing HSK Pieces',
+            'traverse': 'Traverse Words Manager'
         };
 
         const panelDescs = {
@@ -1656,7 +1792,8 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             'synergy': 'Vocabulary words ready for study with zero new characters to memorize.',
             'codebook': 'Your configured Actor, Set, and Location maps, plus a card creation guide.',
             'graph': 'Search and visualize the relationships between characters, components, and vocabulary.',
-            'missing': 'HSK 4 characters and vocabulary words that are not in your Anki decks.'
+            'missing': 'HSK 4 characters and vocabulary words that are not in your Anki decks.',
+            'traverse': 'Filter, review, ignore, or queue Mandarin Blueprint Traverse words for Anki study.'
         };
 
         navItems.forEach(item => {
@@ -1678,6 +1815,299 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                 }
             });
         });
+
+        
+        // ==========================================
+        // TRAVERSE WORDS MANAGER LOGIC
+        // ==========================================
+        function getIgnoredTraverseWords() {
+            try {
+                return JSON.parse(safeLocalStorage.getItem('ignored_traverse_words') || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function setIgnoredTraverseWords(list) {
+            safeLocalStorage.setItem('ignored_traverse_words', JSON.stringify(list));
+        }
+
+        function populateTraverseLessonOptions() {
+            const select = document.getElementById('traverse-lesson-select');
+            if (!select || select.children.length > 1) return;
+            for (let l = 68; l <= 88; l++) {
+                const opt = document.createElement('option');
+                opt.value = l;
+                opt.textContent = `Lesson ${l}`;
+                select.appendChild(opt);
+            }
+        }
+
+        function toggleIgnoreTraverseWord(word) {
+            let ignored = getIgnoredTraverseWords();
+            if (ignored.includes(word)) {
+                ignored = ignored.filter(w => w !== word);
+                showToast(`"${word}" restored from ignored list.`);
+            } else {
+                ignored.push(word);
+                showToast(`"${word}" added to ignored list.`);
+            }
+            setIgnoredTraverseWords(ignored);
+            renderTraverseWords();
+        }
+
+        function toggleSelectAllTraverseWords(masterCb) {
+            const checkboxes = document.querySelectorAll('.traverse-row-cb');
+            checkboxes.forEach(cb => cb.checked = masterCb.checked);
+        }
+
+        function batchIgnoreTraverseWords(shouldIgnore) {
+            const checkboxes = document.querySelectorAll('.traverse-row-cb:checked');
+            if (checkboxes.length === 0) {
+                showToast('Please select at least one word using the checkboxes.');
+                return;
+            }
+            let ignored = getIgnoredTraverseWords();
+            let count = 0;
+            checkboxes.forEach(cb => {
+                const w = cb.value;
+                if (shouldIgnore && !ignored.includes(w)) {
+                    ignored.push(w);
+                    count++;
+                } else if (!shouldIgnore && ignored.includes(w)) {
+                    ignored = ignored.filter(item => item !== w);
+                    count++;
+                }
+            });
+            setIgnoredTraverseWords(ignored);
+            showToast(`${count} words ${shouldIgnore ? 'ignored' : 'restored'}.`);
+            renderTraverseWords();
+        }
+
+        async function addSingleTraverseWordToAnki(word) {
+            try {
+                // Call local server or AnkiConnect
+                const response = await fetch('http://localhost:8000/api/known_words', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ word: word })
+                });
+                showToast(`Word "${word}" queued for Anki!`);
+            } catch (e) {
+                showToast(`Word "${word}" queued in local storage!`);
+            }
+            // Mark as known locally
+            const localKnown = JSON.parse(safeLocalStorage.getItem('known_hsk_words') || '[]');
+            if (!localKnown.includes(word)) {
+                localKnown.push(word);
+                safeLocalStorage.setItem('known_hsk_words', JSON.stringify(localKnown));
+            }
+            renderTraverseWords();
+        }
+
+        async function batchAddTraverseWordsToAnki() {
+            const checkboxes = document.querySelectorAll('.traverse-row-cb:checked');
+            if (checkboxes.length === 0) {
+                showToast('Please select at least one word to add.');
+                return;
+            }
+            const selectedWords = Array.from(checkboxes).map(cb => cb.value);
+            for (const w of selectedWords) {
+                await addSingleTraverseWordToAnki(w);
+            }
+            showToast(`Queued ${selectedWords.length} words for Anki!`);
+            renderTraverseWords();
+        }
+
+        function renderTraverseWords() {
+            populateTraverseLessonOptions();
+            const allWords = DATA.traverse_words || [];
+            const ignoredWords = getIgnoredTraverseWords();
+
+            // Calculate overall statistics
+            const totalCount = allWords.length;
+            const inAnkiCount = allWords.filter(w => w.in_anki).length;
+            const ignoredCount = allWords.filter(w => ignoredWords.includes(w.word)).length;
+            const missingCount = allWords.filter(w => !w.in_anki && !ignoredWords.includes(w.word)).length;
+
+            document.getElementById('stat-traverse-total').textContent = totalCount;
+            document.getElementById('stat-traverse-in-anki').textContent = inAnkiCount;
+            document.getElementById('stat-traverse-missing').textContent = missingCount;
+            document.getElementById('stat-traverse-ignored').textContent = ignoredCount;
+            document.getElementById('traverse-badge').textContent = missingCount;
+
+            // Read filter inputs
+            const searchText = (document.getElementById('traverse-search').value || '').trim().toLowerCase();
+            const selectedLesson = document.getElementById('traverse-lesson-select').value;
+            const selectedClass = document.getElementById('traverse-class-select').value;
+            const selectedStatus = document.getElementById('traverse-status-select').value;
+
+            // Filter logic
+            const filtered = allWords.filter(item => {
+                const isIgnored = ignoredWords.includes(item.word);
+
+                // Search match
+                if (searchText) {
+                    const matchWord = item.word.toLowerCase().includes(searchText);
+                    const matchPinyin = (item.pinyin || '').toLowerCase().includes(searchText);
+                    const matchMeaning = (item.meaning || '').toLowerCase().includes(searchText);
+                    const matchHanzi = item.related_hanzi.some(h => h.includes(searchText));
+                    if (!matchWord && !matchPinyin && !matchMeaning && !matchHanzi) return false;
+                }
+
+                // Lesson filter
+                if (selectedLesson !== 'all' && str(item.lesson) !== str(selectedLesson)) {
+                    if (String(item.lesson) !== String(selectedLesson)) return false;
+                }
+
+                // Classification filter
+                if (selectedClass !== 'all' && item.classification !== selectedClass) {
+                    return false;
+                }
+
+                // Status filter
+                if (selectedStatus === 'missing') {
+                    if (item.in_anki || isIgnored) return false;
+                } else if (selectedStatus === 'in_anki') {
+                    if (!item.in_anki) return false;
+                } else if (selectedStatus === 'ignored') {
+                    if (!isIgnored) return false;
+                }
+
+                return true;
+            });
+
+            const tbody = document.querySelector('#traverse-words-table tbody');
+            tbody.innerHTML = '';
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="empty-state"><i data-lucide="search"></i>No matching Traverse words found. Try adjusting your filters.</td></tr>';
+                lucide.createIcons();
+                return;
+            }
+
+            // Render top 150 matching items for high performance
+            const displayLimit = 150;
+            const displayItems = filtered.slice(0, displayLimit);
+
+            displayItems.forEach(item => {
+                const isIgnored = ignoredWords.includes(item.word);
+                const tr = document.createElement('tr');
+                tr.id = `traverse-row-${item.word}`;
+
+                // Status badge
+                let statusBadge = '<span class="badge badge-cyan">✅ In Anki</span>';
+                if (isIgnored) {
+                    statusBadge = '<span class="badge" style="background:rgba(255,255,255,0.05);color:var(--text-muted);border:1px solid var(--glass-border);">🚫 Ignored</span>';
+                } else if (!item.in_anki) {
+                    statusBadge = '<span class="badge badge-orange">❌ Missing</span>';
+                }
+
+                // Related Hanzi pills
+                let hanziPillsHtml = '';
+                item.related_hanzi.forEach(h => {
+                    hanziPillsHtml += `<span class="badge badge-purple" style="cursor:pointer;margin-right:4px;" title="Click to filter by ${h}" onclick="document.getElementById('traverse-search').value='${h}';renderTraverseWords();">${h}</span>`;
+                });
+
+                // Classification badge color
+                let classBadgeColor = 'badge-blue';
+                if (item.classification.includes('Noun')) classBadgeColor = 'badge-cyan';
+                else if (item.classification.includes('Verb')) classBadgeColor = 'badge-orange';
+                else if (item.classification.includes('Adj')) classBadgeColor = 'badge-purple';
+
+                const ignoreBtnLabel = isIgnored ? 'Un-ignore' : 'Ignore';
+                const ignoreBtnIcon = isIgnored ? 'eye' : 'eye-off';
+
+                const pinyinStr = item.pinyin ? `<div style="font-weight:600;color:var(--text-primary);">${item.pinyin}</div>` : '';
+                const meaningStr = item.meaning ? `<div style="font-size:0.85rem;color:var(--text-secondary);max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${item.meaning}">${item.meaning}</div>` : '<div style="font-size:0.85rem;color:var(--text-muted);">-</div>';
+
+                tr.innerHTML = `
+                    <td style="text-align:center;">
+                        <input type="checkbox" class="traverse-row-cb" value="${item.word}">
+                    </td>
+                    <td class="hanzi-col" style="font-size:1.3rem;">${item.word}</td>
+                    <td>
+                        ${pinyinStr}
+                        ${meaningStr}
+                    </td>
+                    <td><span class="badge badge-cyan">Lesson ${item.lesson}</span></td>
+                    <td><span class="badge ${classBadgeColor}">${item.classification}</span></td>
+                    <td>${hanziPillsHtml}</td>
+                    <td>${statusBadge}</td>
+                    <td>
+                        <div style="display:flex; gap:0.4rem;">
+                            <button class="btn btn-sm" onclick="toggleIgnoreTraverseWord('${item.word}')" title="${ignoreBtnLabel} word">
+                                <i data-lucide="${ignoreBtnIcon}" style="width:13px;height:13px;"></i> ${ignoreBtnLabel}
+                            </button>
+                            ${!item.in_anki ? `
+                            <button class="btn btn-sm btn-primary" onclick="addSingleTraverseWordToAnki('${item.word}')" title="Queue for Anki">
+                                <i data-lucide="plus" style="width:13px;height:13px;"></i> Add
+                            </button>` : ''}
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            if (filtered.length > displayLimit) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td colspan="7" style="color:var(--text-muted);text-align:center;padding:1rem;">Showing ${displayLimit} of ${filtered.length} matching words. Use search or filters to narrow down.</td>`;
+                tbody.appendChild(tr);
+            }
+
+            lucide.createIcons();
+        }
+
+
+        
+        // ==========================================
+        // HSK MISSING WORDS IGNORE LOGIC
+        // ==========================================
+        function getIgnoredHskMissingWords() {
+            try {
+                return JSON.parse(safeLocalStorage.getItem('ignored_hsk_missing_words') || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function setIgnoredHskMissingWords(list) {
+            safeLocalStorage.setItem('ignored_hsk_missing_words', JSON.stringify(list));
+        }
+
+        function ignoreMissingHskWord(word) {
+            let ignored = getIgnoredHskMissingWords();
+            if (!ignored.includes(word)) {
+                ignored.push(word);
+                setIgnoredHskMissingWords(ignored);
+                showToast(`"${word}" added to ignored list.`);
+            }
+            renderMissingWords(document.getElementById('missing-words-search').value);
+        }
+
+        function unignoreMissingHskWord(word) {
+            let ignored = getIgnoredHskMissingWords();
+            if (ignored.includes(word)) {
+                ignored = ignored.filter(w => w !== word);
+                setIgnoredHskMissingWords(ignored);
+                showToast(`"${word}" restored from ignored list.`);
+            }
+            renderMissingWords(document.getElementById('missing-words-search').value);
+        }
+
+                function exportIgnoredHskWords() {
+            const ignored = getIgnoredHskMissingWords();
+            if (ignored.length === 0) {
+                showToast('No ignored HSK words to export.');
+                return;
+            }
+            const csvContent = `Word
+` + ignored.join(`
+`);
+            copyToClipboard(csvContent);
+            showToast('Ignored HSK words CSV copied to clipboard!');
+        }
+
 
         // 1. Populate Top Gaps Table (Overview)
         const gapsTableBody = document.querySelector('#top-gaps-table tbody');
@@ -2129,17 +2559,34 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             if (targetPage >= 1 && targetPage <= totalPages) {
                 missingCharsPage = targetPage;
                 renderMissingCharacters();
+        renderTraverseWords();
                 document.getElementById('missing-tab').scrollIntoView({ behavior: 'smooth' });
             }
         }
 
         renderMissingCharacters();
+        renderTraverseWords();
 
         const missingWordsTableBody = document.querySelector('#missing-words-table tbody');
         
         function renderMissingWords(filterText = '') {
             missingWordsTableBody.innerHTML = '';
-            const filtered = DATA.missing_hsk_words_in_migaku.filter(word => {
+            const ignoredWords = getIgnoredHskMissingWords();
+            const hideIgnored = document.getElementById('hide-ignored-missing-words') ? document.getElementById('hide-ignored-missing-words').checked : true;
+
+            const allMissing = DATA.missing_hsk_words_in_migaku || [];
+            const activeMissingCount = allMissing.filter(w => !ignoredWords.includes(w.word)).length;
+
+            // Update stats badge
+            const wordsBadge = document.getElementById('missing-words-badge');
+            const statWordsCount = document.getElementById('stat-missing-words-count');
+            if (wordsBadge) wordsBadge.textContent = activeMissingCount + ' Words';
+            if (statWordsCount) statWordsCount.textContent = activeMissingCount;
+
+            const filtered = allMissing.filter(word => {
+                const isIgnored = ignoredWords.includes(word.word);
+                if (hideIgnored && isIgnored) return false;
+
                 const t = filterText.toLowerCase();
                 return word.word.toLowerCase().includes(t) || 
                        word.pinyin.toLowerCase().includes(t) || 
@@ -2153,22 +2600,41 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             }
 
             filtered.slice(0, 100).forEach(w => {
+                const isIgnored = ignoredWords.includes(w.word);
                 const tr = document.createElement('tr');
                 tr.id = `missing-word-row-${w.word}`;
+
+                let actionsHtml = '';
+                if (isIgnored) {
+                    actionsHtml = `
+                        <span class="badge" style="background:rgba(255,255,255,0.05);color:var(--text-muted);border:1px solid var(--glass-border);margin-right:0.5rem;">🚫 Ignored</span>
+                        <button class="btn btn-sm" onclick="unignoreMissingHskWord('${w.word}')" title="Un-ignore Word">
+                            <i data-lucide="eye" style="width:12px;height:12px;"></i> Restore
+                        </button>
+                    `;
+                } else {
+                    actionsHtml = `
+                        <button class="btn btn-sm" onclick="copyToClipboard('${w.word}')" title="Copy Word">
+                            <i data-lucide="copy" style="width:12px;height:12px;"></i>
+                        </button>
+                        <button class="btn btn-sm btn-primary" style="background: linear-gradient(135deg, #34D399 0%, #059669 100%); color: #0B0F19; border: none; padding: 0.4rem 0.6rem;" onclick="markWordAsKnown('${w.word}')" title="Mark as Known">
+                            <i data-lucide="check" style="width:12px;height:12px;"></i> Known
+                        </button>
+                        <button class="btn btn-sm" style="background:rgba(255,255,255,0.05);color:var(--text-muted);" onclick="ignoreMissingHskWord('${w.word}')" title="Ignore Word">
+                            <i data-lucide="eye-off" style="width:12px;height:12px;"></i> Ignore
+                        </button>
+                    `;
+                }
+
                 tr.innerHTML = `
-                    <td class="hanzi-col" style="color:var(--accent-magenta)">${w.word}</td>
+                    <td class="hanzi-col" style="color:${isIgnored ? 'var(--text-muted)' : 'var(--accent-magenta)'}">${w.word}</td>
                     <td>${w.pinyin}</td>
                     <td style="font-size:0.85rem;color:var(--text-secondary);max-width:500px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="${w.meaning}">
                         ${w.meaning}
                     </td>
                     <td>
-                        <div style="display: flex; gap: 0.5rem;">
-                            <button class="btn btn-sm" onclick="copyToClipboard('${w.word}')" title="Copy Word">
-                                <i data-lucide="copy" style="width:12px;height:12px;"></i>
-                             </button>
-                             <button class="btn btn-sm btn-primary" style="background: linear-gradient(135deg, #34D399 0%, #059669 100%); color: #0B0F19; border: none; padding: 0.4rem 0.6rem;" onclick="markWordAsKnown('${w.word}')" title="Mark as Known">
-                                 <i data-lucide="check" style="width:12px;height:12px;"></i>
-                             </button>
+                        <div style="display: flex; gap: 0.4rem; align-items: center;">
+                            ${actionsHtml}
                         </div>
                     </td>
                 `;
@@ -2800,6 +3266,16 @@ def generate_dashboard():
         except Exception as e:
             print(f"Warning: Could not read known_words.csv ({e})")
             
+        # Load Traverse words database
+    traverse_words_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "traverse_words_db.json")
+    traverse_words_list = []
+    if os.path.exists(traverse_words_path):
+        try:
+            with open(traverse_words_path, 'r', encoding='utf-8') as f:
+                traverse_words_list = json.load(f)
+        except Exception as e:
+            print(f"Warning: Could not load traverse_words_db.json ({e})")
+
     # 6. Build the data JSON structure
     immersion_cards = []
     for note in migaku_notes:
@@ -2862,7 +3338,8 @@ def generate_dashboard():
         'known_words': known_words,
         'characters': profile['characters'],
         'immersion': immersion_cards,
-        'props': props_list
+        'props': props_list,
+        'traverse_words': traverse_words_list
     }
     
     # 7. Write the dashboard file
