@@ -275,7 +275,7 @@ def main():
 
     char_deck = resolve_anki_deck(["Chinese::Char", "Chinese\x1fChar", "Characters"])
     word_deck = resolve_anki_deck(["Chinese::Words", "Chinese\x1fWords", "Migaku"])
-    char_model = resolve_anki_model(["Chinese Character", "Chinese (Characters)"])
+    char_model = resolve_anki_model(["Chinese Character - Double", "Chinese Character", "Chinese (Characters)"])
     print(f"Using character deck: '{char_deck}'")
     print(f"Using word deck: '{word_deck}'")
     print(f"Using character model: '{char_model}'")

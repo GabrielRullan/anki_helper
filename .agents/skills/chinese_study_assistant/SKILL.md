@@ -8,15 +8,40 @@ description: Skill for parsing Chinese study feeds, generating Mandarin Blueprin
 This skill helps the user learn Chinese vocabulary and characters by interfacing with their Anki deck and using the Mandarin Blueprint (MBP) movie method.
 
 ## Deck and Card configuration
-- **Deck**: `Chinese::Words` (using note type `Migaku Word`)
+
+### 1. Immersion Vocabulary Deck (`Chinese::Words`)
+- **Note Type**: `Migaku Word`
 - **Fields**:
   - `Word`: Target Chinese word.
   - `Sentence`: Example Chinese sentence.
-  - `Translated Sentence`: Spanish/English translation.
+  - `Translated Sentence`: English translation.
   - `Definitions`: Word, pinyin, and definitions.
   - `Notes`: Minimalist Peanuts cartoon visual description prompt.
   - `Images`: The minimalist cartoon image tag.
   - `Word Audio`, `Sentence Audio`: TTS audio media fields.
+
+### 2. Non-Grammar Phrases / Stand-alone Sentences (`Chinese::Sent`)
+- **Note Type**: `Chinese Sentence - Single`
+- **Fields**:
+  - `Word`: `""` (Empty)
+  - `Grammar_Point`: `""` (Empty)
+  - `Sentence`: `<Chinese Example Sentence>`
+  - `Translated_Sentence`: `<English Translation>`
+  - `Definitions`: `""` (Empty)
+  - `Notes`: `<Sentence Pinyin>`
+  - `Sentence_Audio`: `[sound:zh_tts_<hash>.mp3]`
+  - `Translated_Audio`: `[sound:en_tts_<hash>.mp3]`
+
+### 3. Grammar Sentences (`Chinese::Sent`)
+- **Note Type**: `Chinese Sentence - Double`
+- **Fields**:
+  - `Word`: `""` (Empty)
+  - `Grammar_Point`: `<Grammar Pattern (e.g., 是否)>`
+  - `Sentence`: `<Chinese Sentence>`
+  - `Translated_Sentence`: `<English Translation>`
+  - `Notes`: `<Sentence Pinyin>\n\n<Grammar Rule Explanation>`
+  - `Sentence_Audio`: `[sound:zh_tts_<hash>.mp3]`
+  - `Translated_Audio`: `[sound:en_tts_<hash>.mp3]`
 
 ## Core Workflows
 

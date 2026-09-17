@@ -805,6 +805,12 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                     Missing Pieces
                     <span class="badge badge-red" id="missing-badge">0</span>
                 </a>
+                <div style="height: 1px; background: var(--glass-border); margin: 0.5rem 0;"></div>
+                <a class="nav-item" data-tab="n5" style="border-left: 3px solid var(--accent-purple);">
+                    <i data-lucide="languages"></i>
+                    Diferencial N5
+                    <span class="badge" id="n5-badge" style="background: rgba(192, 132, 252, 0.15); color: var(--accent-purple); border: 1px solid rgba(192, 132, 252, 0.3);">0%</span>
+                </a>
             </nav>
 
             <div class="sidebar-footer">
@@ -1264,6 +1270,115 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                     </div>
                 </div>
             </section>
+
+            <!-- TAB 7: JLPT N5 DIFFERENTIAL -->
+            <section id="n5-tab" class="tab-panel">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Objetivo N5 Total</h4>
+                            <div class="stat-value" id="n5-stat-total">0</div>
+                        </div>
+                        <div class="stat-icon purple">
+                            <i data-lucide="book-open"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>En Anki (Incluidas)</h4>
+                            <div class="stat-value" id="n5-stat-included" style="color: var(--green);">0</div>
+                        </div>
+                        <div class="stat-icon green">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Pendientes (Gap N5)</h4>
+                            <div class="stat-value" id="n5-stat-missing" style="color: var(--accent-orange);">0</div>
+                        </div>
+                        <div class="stat-icon orange">
+                            <i data-lucide="alert-triangle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <h4>Cobertura N5</h4>
+                            <div class="stat-value" id="n5-stat-coverage">0%</div>
+                        </div>
+                        <div class="stat-icon cyan">
+                            <i data-lucide="pie-chart"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar & Category Breakdown -->
+                <div class="panel" style="margin-bottom: 1.5rem;">
+                    <div class="panel-header">
+                        <h3><i data-lucide="activity"></i> Progreso de Cobertura por Categoría</h3>
+                        <span id="n5-progress-text" style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 600;"></span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); height: 12px; border-radius: 999px; overflow: hidden; margin: 1rem 0 1.5rem 0;">
+                        <div id="n5-progress-bar" style="background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple)); height: 100%; width: 0%; transition: width 0.8s ease; border-radius: 999px;"></div>
+                    </div>
+                    <div id="n5-category-pills" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+                        <!-- Dynamically populated category breakdown cards -->
+                    </div>
+                </div>
+
+                <!-- Word List Panel -->
+                <div class="panel">
+                    <div class="panel-header" style="flex-wrap: wrap; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <h3><i data-lucide="list-checks"></i> Vocabulario N5 y Diferencial</h3>
+                            <span class="badge badge-purple" id="n5-filtered-count">0 palabras</span>
+                        </div>
+                        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                            <button class="btn btn-sm btn-primary" id="btn-copy-missing-n5" onclick="copyN5MissingCSV()" title="Copiar palabras faltantes en formato CSV">
+                                <i data-lucide="download" style="width:14px;height:14px;"></i> Copiar Faltantes (CSV)
+                            </button>
+                            <button class="btn btn-sm" id="btn-copy-feed-n5" onclick="copyN5MissingFeed()" title="Copiar para feed_me_jp">
+                                <i data-lucide="clipboard-list" style="width:14px;height:14px;"></i> Copiar para feed_me_jp
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filter Controls -->
+                    <div style="display: flex; gap: 1rem; margin: 1.25rem 0; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                            <button class="btn btn-sm n5-status-btn active" id="n5-btn-all" onclick="setN5StatusFilter('all')">Todas</button>
+                            <button class="btn btn-sm n5-status-btn" id="n5-btn-missing" onclick="setN5StatusFilter('missing')" style="border-color: rgba(251, 146, 60, 0.3); color: var(--accent-orange);">Solo Faltantes</button>
+                            <button class="btn btn-sm n5-status-btn" id="n5-btn-included" onclick="setN5StatusFilter('included')" style="border-color: rgba(52, 211, 153, 0.3); color: var(--green);">En Anki</button>
+                            <select id="n5-cat-select" onchange="setN5CategoryFilter(this.value)" style="background: var(--bg-dark); color: var(--text-primary); border: 1px solid var(--glass-border); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.85rem; outline: none; cursor: pointer;">
+                                <option value="all">Todas las Categorías</option>
+                            </select>
+                        </div>
+                        <div style="position: relative; min-width: 250px;">
+                            <input type="text" id="n5-search-input" placeholder="Buscar por kanji, lectura o significado..." oninput="onN5Search(this.value)" style="width: 100%; background: var(--bg-dark); border: 1px solid var(--glass-border); color: var(--text-primary); padding: 0.5rem 1rem 0.5rem 2.2rem; border-radius: 8px; font-size: 0.9rem; outline: none;">
+                            <i data-lucide="search" style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; color: var(--text-muted);"></i>
+                        </div>
+                    </div>
+
+                    <!-- Custom Table Container -->
+                    <div class="custom-table-container">
+                        <table id="n5-vocab-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 120px;">Estado</th>
+                                    <th style="width: 150px;">Palabra</th>
+                                    <th style="width: 150px;">Lectura (Kana)</th>
+                                    <th style="width: 140px;">Categoría</th>
+                                    <th>Significado en Español</th>
+                                    <th style="width: 90px; text-align: right;">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="n5-vocab-tbody">
+                                <!-- Dynamically populated -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -1646,7 +1761,8 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             'synergy': 'HSK 1-4 Synergy Study Guide',
             'codebook': 'Mnemonic Palace Codebook & Helper',
             'graph': 'Connection Graph Explorer',
-            'missing': 'Missing HSK Pieces'
+            'missing': 'Missing HSK Pieces',
+            'n5': 'Diferencial de Vocabulario JLPT N5'
         };
 
         const panelDescs = {
@@ -1656,7 +1772,8 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
             'synergy': 'Vocabulary words ready for study with zero new characters to memorize.',
             'codebook': 'Your configured Actor, Set, and Location maps, plus a card creation guide.',
             'graph': 'Search and visualize the relationships between characters, components, and vocabulary.',
-            'missing': 'HSK 4 characters and vocabulary words that are not in your Anki decks.'
+            'missing': 'HSK 4 characters and vocabulary words that are not in your Anki decks.',
+            'n5': 'Comparativa de cobertura y análisis de brecha (gap) entre tus tarjetas de Anki y el vocabulario oficial JLPT N5.'
         };
 
         navItems.forEach(item => {
@@ -1675,6 +1792,7 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
                 
                 if (targetTab === 'graph') {
                     initGraphView();
+            if (targetTab === 'n5') { renderN5Table(); }
                 }
             });
         });
@@ -2720,6 +2838,104 @@ DASHBOARD_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
+
+def calculate_n5_differential():
+    n5_vocab_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "jlpt_n5_vocab.json")
+    if not os.path.exists(n5_vocab_path):
+        return {
+            'total_n5': 0,
+            'included_count': 0,
+            'missing_count': 0,
+            'coverage_pct': 0,
+            'included': [],
+            'missing': [],
+            'all_n5': [],
+            'categories': {}
+        }
+        
+    with open(n5_vocab_path, 'r', encoding='utf-8') as f:
+        n5_list = json.load(f)
+        
+    from anki_db import AnkiConnection
+    anki_words = {}
+    japanese_notes_count = 0
+    try:
+        with AnkiConnection() as anki:
+            for deck_cand in ['Japanese\x1fMurasaki', 'Japanese\x1fMigaku', 'Japanese']:
+                try:
+                    notes = anki.get_notes_in_deck(deck_cand)
+                    japanese_notes_count += len(notes)
+                    for n in notes:
+                        flds = n.get('fields', {})
+                        w = flds.get('Word', '').strip()
+                        expr = flds.get('Expression', '').strip()
+                        if w:
+                            anki_words[w] = deck_cand.replace('\x1f', '::')
+                        if expr:
+                            anki_words[expr] = deck_cand.replace('\x1f', '::')
+                except Exception:
+                    pass
+    except Exception as e:
+        print(f"Warning: Could not connect to Anki for Japanese differential ({e})")
+
+    included_n5 = []
+    missing_n5 = []
+    categories = {}
+
+    for item in n5_list:
+        w = item['word'].strip()
+        r = item.get('reading', '').strip()
+        cat = item.get('category', 'Otro')
+        
+        if cat not in categories:
+            categories[cat] = {'total': 0, 'included': 0, 'missing': 0}
+        categories[cat]['total'] += 1
+        
+        found = False
+        deck_found = "Japanese::Murasaki"
+        if w in anki_words:
+            found = True
+            deck_found = anki_words[w]
+        elif r in anki_words:
+            found = True
+            deck_found = anki_words[r]
+        else:
+            for aw, adeck in anki_words.items():
+                if w in aw or (r and r in aw):
+                    found = True
+                    deck_found = adeck
+                    break
+                    
+        item_copy = dict(item)
+        if found:
+            item_copy['status'] = 'included'
+            item_copy['deck'] = deck_found
+            included_n5.append(item_copy)
+            categories[cat]['included'] += 1
+        else:
+            item_copy['status'] = 'missing'
+            item_copy['deck'] = ''
+            missing_n5.append(item_copy)
+            categories[cat]['missing'] += 1
+
+    total = len(n5_list)
+    cov = (len(included_n5) / total * 100) if total > 0 else 0
+    
+    for cname, cdata in categories.items():
+        cdata['pct'] = round((cdata['included'] / cdata['total'] * 100), 1) if cdata['total'] > 0 else 0
+
+    return {
+        'total_n5': total,
+        'japanese_notes_in_anki': japanese_notes_count,
+        'included_count': len(included_n5),
+        'missing_count': len(missing_n5),
+        'coverage_pct': round(cov, 1),
+        'included': included_n5,
+        'missing': missing_n5,
+        'all_n5': included_n5 + missing_n5,
+        'categories': categories
+    }
+
 def generate_dashboard():
     # 1. Fetch live or JSON character and immersion data
     char_notes, migaku_notes = load_data_from_live_db()
@@ -2862,7 +3078,8 @@ def generate_dashboard():
         'known_words': known_words,
         'characters': profile['characters'],
         'immersion': immersion_cards,
-        'props': props_list
+        'props': props_list,
+        'n5_differential': calculate_n5_differential()
     }
     
     # 7. Write the dashboard file

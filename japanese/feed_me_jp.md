@@ -1,4 +1,4 @@
-## 1. Input Format
+﻿## 1. Input Format
 The user will provide a markdown file containing vocabulary words and grammar descriptions written in **Spanish**. The input list will mix single vocabulary words and core grammar points.
 
 ### Rule A: Vocabulary Words

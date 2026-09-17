@@ -8,7 +8,7 @@ description: Skill for parsing Japanese study feeds, generating N5-N4 level Japa
 This skill helps the user study Japanese vocabulary and grammar by translating Spanish-written logs, generating N5–N4 level contextual sentence cards, and exporting them to Anki.
 
 ## Deck and Card configuration
-- **Deck**: `Japanese::Migaku` (using note type `Migaku Word Japanese`)
+- **Deck**: `Japanese::Murasaki` (using note type `Migaku Word Japanese`)
 - **Fields**:
   - `Word`: Target vocabulary word or grammar point (e.g. `食べる` or `〜たら`).
   - `Expression`: Example Japanese sentence with the target word/pattern wrapped in `<b>` tags.

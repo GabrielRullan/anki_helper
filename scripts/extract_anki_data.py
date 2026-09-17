@@ -51,6 +51,8 @@ def main():
                     'components': clean_html(f.get('Components', '')),
                     'scene': clean_html(f.get('Scene', '')),
                     'hsk_level': f.get('HSK_2', '').strip(), # This field indicates HSK levels
+                    'frequency_tier': f.get('FrequencyTier', '').strip(),
+                    'frequency_rank': f.get('FrequencyRank', '').strip(),
                     'common_words': clean_html(f.get('Common Words', '')),
                     'translation_of_words': clean_html(f.get('Translation of Words', '')),
                     'notes': clean_html(f.get('Notes', '')),
@@ -94,23 +96,25 @@ def main():
                     extracted_immersion.append(imm_data)
             
             # Extract Props deck
-            print("Extracting 'Chinese Props' deck...")
-            prop_deck = anki.best_match_deck(["Chinese::Props", "Chinese\x1fProps"])
-            prop_notes = anki.get_notes_in_deck(prop_deck)
-            print(f"Retrieved {len(prop_notes)} prop notes.")
-            
             extracted_props = []
-            for note in prop_notes:
-                f = note['fields']
-                prop_data = {
-                    'note_id': note['id'],
-                    'component': f.get('Component', '').strip(),
-                    'prop': f.get('Prop', '').strip(),
-                    'parts': f.get('Parts', '').strip(),
-                    'usage_count': f.get('Usage Count', '').strip()
-                }
-                if prop_data['component']:
-                    extracted_props.append(prop_data)
+            try:
+                print("Extracting 'Chinese Props' deck...")
+                prop_deck = anki.best_match_deck(["Chinese::Props", "Chinese\x1fProps"])
+                prop_notes = anki.get_notes_in_deck(prop_deck)
+                print(f"Retrieved {len(prop_notes)} prop notes.")
+                for note in prop_notes:
+                    f = note['fields']
+                    prop_data = {
+                        'note_id': note['id'],
+                        'component': f.get('Component', '').strip(),
+                        'prop': f.get('Prop', '').strip(),
+                        'parts': f.get('Parts', '').strip(),
+                        'usage_count': f.get('Usage Count', '').strip()
+                    }
+                    if prop_data['component']:
+                        extracted_props.append(prop_data)
+            except Exception as e:
+                print(f"Notice: Skipping props deck ({e})")
             
             # Compile results
             output_data = {

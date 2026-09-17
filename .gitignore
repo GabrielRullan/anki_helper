@@ -43,4 +43,5 @@ Kaishi-ESP/
 data/kaishi_temp/
 data/kaishi_cards.json
 *.apkg
-data/Kaishi_15k_Espaol.apkg
+japanese/course_book/
+scratch/spoonfed_extracted/
