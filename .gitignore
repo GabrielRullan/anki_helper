@@ -45,3 +45,7 @@ data/kaishi_cards.json
 *.apkg
 japanese/course_book/
 scratch/spoonfed_extracted/
+*.anki2
+scratch/aug09_extracted/
+scratch/backup_aug09/
+scratch/aug09_backup_extracted/

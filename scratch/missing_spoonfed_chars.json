@@ -1,0 +1,1460 @@
+{
+  "total_spoonfed_chars": 2804,
+  "total_deck_chars": 3626,
+  "active_chars_count": 2118,
+  "suspended_only_count": 611,
+  "completely_missing_count": 75,
+  "missing_characters": [
+    {
+      "char": "淇",
+      "spoonfed_frequency": 6,
+      "example_sentences": [
+        {
+          "ID": "1560019549222",
+          "Hanzi": "我们都爱吃冰淇淋。",
+          "Pinyin": "Wǒmen dōu ài chī bīngqilín.",
+          "English": "We all love ice cream.",
+          "Audio": "[sound:tmppy6ji1.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "我们, 都, 爱, 吃, 冰淇淋"
+        },
+        {
+          "ID": "1560019549223",
+          "Hanzi": "他喜欢冰淇淋的味道。",
+          "Pinyin": "Tā xǐhuan bīngqilín de wèidao.",
+          "English": "He likes the taste of ice cream.",
+          "Audio": "[sound:tmpajb_gs.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "他, 喜欢, 冰淇淋, 的, 味道"
+        },
+        {
+          "ID": "1560019549224",
+          "Hanzi": "她很喜欢吃冰淇淋。",
+          "Pinyin": "Tā hěn xǐhuan chī bīngqilín.",
+          "English": "She really loves ice cream.",
+          "Audio": "[sound:tmp0retnf.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "她, 很, 喜欢, 吃, 冰淇淋"
+        },
+        {
+          "ID": "1560019549225",
+          "Hanzi": "小孩把冰淇淋含在嘴里。",
+          "Pinyin": "Xiǎohái bǎ bīngqílín hán zài zuǐlǐ.",
+          "English": "The child kept the ice cream in his mouth.",
+          "Audio": "[sound:tmp_wjifx.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "小孩, 把, 冰淇淋, 含, 在, 嘴里"
+        },
+        {
+          "ID": "1560019549382",
+          "Hanzi": "冰淇淋融化了。",
+          "Pinyin": "Bīngqilín rónghuà le.",
+          "English": "The ice cream has melted.",
+          "Audio": "[sound:tmpo80xqn.mp3]",
+          "Word Count": "3",
+          "Char Count": "6",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "冰淇淋, 融化, 了"
+        }
+      ]
+    },
+    {
+      "char": "诿",
+      "spoonfed_frequency": 3,
+      "example_sentences": [
+        {
+          "ID": "1560019552336",
+          "Hanzi": "他们相互推诿责任。",
+          "Pinyin": "Tāmen xiānghù tuīwěi zérèn.",
+          "English": "Each tried to shift the blame onto the other.",
+          "Audio": "[sound:tmpyisunx.mp3]",
+          "Word Count": "4",
+          "Char Count": "8",
+          "Unknown Words Count": "2",
+          "Unknown Words List": "他们, 推诿"
+        },
+        {
+          "ID": "1560019552337",
+          "Hanzi": "别推诿责任。",
+          "Pinyin": "Bié tuīwěi zérèn.",
+          "English": "Don't shirk your responsibilities.",
+          "Audio": "[sound:tmpwmu4uu.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "2",
+          "Unknown Words List": "别, 推诿"
+        },
+        {
+          "ID": "1560019552338",
+          "Hanzi": "别推诿过错。",
+          "Pinyin": "Bié tuīwěi guòcuò.",
+          "English": "Don't shift the blame for your errors.",
+          "Audio": "[sound:tmpsw9d7h.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "别, 推诿, 过错"
+        }
+      ]
+    },
+    {
+      "char": "嚏",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019551254",
+          "Hanzi": "她打了一个喷嚏。",
+          "Pinyin": "Tā dǎle yī gè pēntì.",
+          "English": "She sneezed once.",
+          "Audio": "[sound:tmp8dkkvr.mp3]",
+          "Word Count": "5",
+          "Char Count": "7",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "她, 打, 了, 一个, 喷嚏"
+        },
+        {
+          "ID": "1560019551876",
+          "Hanzi": "她连续打喷嚏。",
+          "Pinyin": "Tā liánxù dǎ pēntì.",
+          "English": "She sneezed several times in a row.",
+          "Audio": "[sound:tmpso7trz.mp3]",
+          "Word Count": "3",
+          "Char Count": "6",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "她, 连续, 打喷嚏"
+        }
+      ]
+    },
+    {
+      "char": "罂",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019551365",
+          "Hanzi": "罂粟花很美。",
+          "Pinyin": "Yīngsùhuā hěn měi.",
+          "English": "The poppy flowers are very beautiful.",
+          "Audio": "[sound:tmpwnosgl.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "罂粟花, 很, 美"
+        },
+        {
+          "ID": "1560019551366",
+          "Hanzi": "罂粟可以做鸦片。",
+          "Pinyin": "Yīngsù kěyǐ zuò yāpiàn.",
+          "English": "Opium poppies can be made into opium.",
+          "Audio": "[sound:tmp6qwju9.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "罂粟, 可以, 做, 鸦片"
+        }
+      ]
+    },
+    {
+      "char": "榄",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019552067",
+          "Hanzi": "我们要订1800万吨橄榄油。",
+          "Pinyin": "wǒmen yào dìng 1800 wàn dūn gǎnlǎnyóu.",
+          "English": "We'd like to order 18MT of olive oil.",
+          "Audio": "[sound:334998.mp3]",
+          "Word Count": "4",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "我们, 要订, 万吨, 橄榄油"
+        },
+        {
+          "ID": "1560019552068",
+          "Hanzi": "油是从橄榄中提炼出来的。",
+          "Pinyin": "yóu shì cóng gǎnlǎn zhōng tíliàn chūlái de.",
+          "English": "Oil is extracted from olives.",
+          "Audio": "[sound:334997.mp3]",
+          "Word Count": "7",
+          "Char Count": "11",
+          "Unknown Words Count": "7",
+          "Unknown Words List": "油, 是从, 橄榄, 中, 提炼, 出来, 的"
+        }
+      ]
+    },
+    {
+      "char": "谚",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019550890",
+          "Hanzi": "老师在为孩子讲谚语故事。",
+          "Pinyin": "Lǎoshī zài wèi háizi jiǎng yànyǔ gùshi.",
+          "English": "The teacher is teaching the children the stories behind proverbs.",
+          "Audio": "[sound:tmplanmlv.mp3]",
+          "Word Count": "7",
+          "Char Count": "11",
+          "Unknown Words Count": "7",
+          "Unknown Words List": "老师, 在, 为, 孩子, 讲, 谚语, 故事"
+        },
+        {
+          "ID": "1560019550891",
+          "Hanzi": "“滚石不生苔”是一句谚语。",
+          "Pinyin": "gǔn shí bù shēngtái  shì yī jù yànyǔ.",
+          "English": "A rolling stone gathers no moss is a saying.  \"A rolling stone gathers no moss\" is a proverb.",
+          "Audio": "[sound:334494.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "滚石, 不生, 苔, 是, 一句, 谚语"
+        }
+      ]
+    },
+    {
+      "char": "簸",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019552082",
+          "Hanzi": "船在汹涌的海浪中颠簸。",
+          "Pinyin": "Chuán zài xiōngyǒng de hǎilàng zhōng diānbǒ.",
+          "English": "The ship is being tossed up and down on the rough sea.",
+          "Audio": "[sound:tmpenwupr.mp3]",
+          "Word Count": "7",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "船, 在, 汹涌, 的, 中"
+        },
+        {
+          "ID": "1560019552083",
+          "Hanzi": "橡皮筏在河里颠簸着。",
+          "Pinyin": "Xiàngpífá zài hé lǐ diānbǒzhe.",
+          "English": "The rubber raft tossed about on the river.",
+          "Audio": "[sound:tmptjoe69.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "橡皮筏, 在, 河里, 着"
+        }
+      ]
+    },
+    {
+      "char": "蜕",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019551998",
+          "Hanzi": "蛇在蜕皮。",
+          "Pinyin": "Shé zài tuìpí.",
+          "English": "The snake is shedding its skin.",
+          "Audio": "[sound:tmp0m7pwk.mp3]",
+          "Word Count": "3",
+          "Char Count": "4",
+          "Unknown Words Count": "2",
+          "Unknown Words List": "在, 蜕皮"
+        },
+        {
+          "ID": "1560019552446",
+          "Hanzi": "蝌蚪蜕变成青蛙。",
+          "Pinyin": "Kēdǒu tuìbiàn chéng qīngwā.",
+          "English": "Tadpoles grow into frogs.",
+          "Audio": "[sound:tmpbs1uih.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "蝌蚪, 蜕变, 成"
+        }
+      ]
+    },
+    {
+      "char": "婷",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019550168",
+          "Hanzi": "请告诉婷婷学校的地址。",
+          "Pinyin": "Qǐng gàosu tíngtíng xuéxiào de dìzhǐ.",
+          "English": "Please tell Ting Ting the school address.",
+          "Audio": "[sound:tmp3o8dd9.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "请, 告诉, 婷婷, 学校, 的"
+        },
+        {
+          "ID": "1560019550168",
+          "Hanzi": "请告诉婷婷学校的地址。",
+          "Pinyin": "Qǐng gàosu tíngtíng xuéxiào de dìzhǐ.",
+          "English": "Please tell Ting Ting the school address.",
+          "Audio": "[sound:tmp3o8dd9.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "请, 告诉, 婷婷, 学校, 的"
+        }
+      ]
+    },
+    {
+      "char": "纭",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019552535",
+          "Hanzi": "谣言传得纷纷纭纭。",
+          "Pinyin": "Yáoyán chuán de fēnfēnyúnyún.",
+          "English": "As the rumor spread, it developed into a jumble of numerous versions.",
+          "Audio": "[sound:tmpubvubq.mp3]",
+          "Word Count": "6",
+          "Char Count": "8",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "谣言, 传, 得, 纷纷, 纭, 纭"
+        },
+        {
+          "ID": "1560019552535",
+          "Hanzi": "谣言传得纷纷纭纭。",
+          "Pinyin": "Yáoyán chuán de fēnfēnyúnyún.",
+          "English": "As the rumor spread, it developed into a jumble of numerous versions.",
+          "Audio": "[sound:tmpubvubq.mp3]",
+          "Word Count": "6",
+          "Char Count": "8",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "谣言, 传, 得, 纷纷, 纭, 纭"
+        }
+      ]
+    },
+    {
+      "char": "饪",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019550456",
+          "Hanzi": "她对烹饪有兴趣。",
+          "Pinyin": "Tā duì pēngrèn yǒu xìngqù.",
+          "English": "She is interested in cooking.",
+          "Audio": "[sound:tmpwgo3sf.mp3]",
+          "Word Count": "5",
+          "Char Count": "7",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "她, 对, 烹饪, 有, 兴趣"
+        },
+        {
+          "ID": "1560019552046",
+          "Hanzi": "豆腐渣也是烹饪的原料。",
+          "Pinyin": "Dòufuzhā yě shì pēngrèn de yuánliào.",
+          "English": "The residue from the process of making bean curd is also used as an ingredient in cooking.",
+          "Audio": "[sound:tmpcapaz3.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "豆腐渣, 也, 是, 烹饪, 的, 原料"
+        }
+      ]
+    },
+    {
+      "char": "螃",
+      "spoonfed_frequency": 2,
+      "example_sentences": [
+        {
+          "ID": "1560019549437",
+          "Hanzi": "她抓了一只螃蟹。",
+          "Pinyin": "Tā zhuāle yī zhī pángxiè.",
+          "English": "She's caught a crab.",
+          "Audio": "[sound:tmp7b8fp0.mp3]",
+          "Word Count": "5",
+          "Char Count": "7",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "她, 抓, 了, 一只, 螃蟹"
+        },
+        {
+          "ID": "1560019549438",
+          "Hanzi": "我爱吃螃蟹。",
+          "Pinyin": "Wǒ ài chī pángxiè.",
+          "English": "I love eating crab.",
+          "Audio": "[sound:tmpwvbtr7.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "我, 爱, 吃螃蟹"
+        }
+      ]
+    },
+    {
+      "char": "藕",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552409",
+          "Hanzi": "莲藕是很有营养的食物。",
+          "Pinyin": "Lián'ǒu shì hěn yǒu yíngyǎng de shíwù.",
+          "English": "Lotus roots are a very nutritious food.",
+          "Audio": "[sound:tmpvng8bm.mp3]",
+          "Word Count": "7",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "莲藕, 是, 很, 有, 的"
+        }
+      ]
+    },
+    {
+      "char": "祉",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552515",
+          "Hanzi": "节约能源关系到全人类的福祉。",
+          "Pinyin": "Jiéyuē néngyuán guānxidào quán rénlèi de fúzhǐ.",
+          "English": "Energy conservation touches on the welfare of all mankind.",
+          "Audio": "[sound:tmprjyb3o.mp3]",
+          "Word Count": "6",
+          "Char Count": "13",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "节约能源, 关系, 到, 全人类, 的, 福祉"
+        }
+      ]
+    },
+    {
+      "char": "蔷",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550477",
+          "Hanzi": "玫瑰属于蔷薇科植物。",
+          "Pinyin": "Méigui shǔyú qiángwēikē zhíwù.",
+          "English": "Roses belong to the Rosaceae family.",
+          "Audio": "[sound:tmpl1mubb.mp3]",
+          "Word Count": "4",
+          "Char Count": "9",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "玫瑰, 蔷薇科, 植物"
+        }
+      ]
+    },
+    {
+      "char": "薰",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550690",
+          "Hanzi": "薰衣草是紫色的。",
+          "Pinyin": "Xūnyīcǎo shì zǐsè de.",
+          "English": "Lavender is purple.",
+          "Audio": "[sound:tmpxat1y9.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "薰衣草, 是, 紫色, 的"
+        }
+      ]
+    },
+    {
+      "char": "斡",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552521",
+          "Hanzi": "他们对谈判进行斡旋。",
+          "Pinyin": "Tāmen duì tánpàn jìnxíng wòxuán.",
+          "English": "They're mediating the negotiation.",
+          "Audio": "[sound:tmp4fz05d.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "他们, 对, 谈判, 斡旋"
+        }
+      ]
+    },
+    {
+      "char": "蟋",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552361",
+          "Hanzi": "蟋蟀的叫声很响亮。",
+          "Pinyin": "Xīshuài de jiàoshēng hěn xiǎngliàng.",
+          "English": "The crickets' chirping is loud and clear.",
+          "Audio": "[sound:tmpgz3fsl.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "蟋蟀, 的, 叫声, 很, 响亮"
+        }
+      ]
+    },
+    {
+      "char": "赊",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552050",
+          "Hanzi": "这家小店可以赊账。",
+          "Pinyin": "Zhè jiā xiǎodiàn kěyǐ shēzhàng.",
+          "English": "This small shop sells things on credit.",
+          "Audio": "[sound:tmplkgwq7.mp3]",
+          "Word Count": "4",
+          "Char Count": "8",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "这家, 小店, 可以, 赊账"
+        }
+      ]
+    },
+    {
+      "char": "疵",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551406",
+          "Hanzi": "这件瓷器上有瑕疵。",
+          "Pinyin": "Zhè jiàn cíqì shàng yǒu xiácī.",
+          "English": "There are imperfections in this piece of porcelain.",
+          "Audio": "[sound:tmpyqp9hk.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "这件, 瓷器, 上, 有, 瑕疵"
+        }
+      ]
+    },
+    {
+      "char": "渍",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552135",
+          "Hanzi": "他身上有污渍。",
+          "Pinyin": "Tā shēnshang yǒu wūzì.",
+          "English": "There are stains on his clothes.",
+          "Audio": "[sound:tmpawyilu.mp3]",
+          "Word Count": "4",
+          "Char Count": "6",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "他, 身上, 有, 污渍"
+        }
+      ]
+    },
+    {
+      "char": "恿",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551929",
+          "Hanzi": "他怂恿他们赌博。",
+          "Pinyin": "Tā sǒngyǒng tāmen dǔbó.",
+          "English": "He eggs them on to gamble.",
+          "Audio": "[sound:tmpcckckx.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "他, 怂恿, 他们, 赌博"
+        }
+      ]
+    },
+    {
+      "char": "湮",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552295",
+          "Hanzi": "回忆不会随着时间而湮灭。",
+          "Pinyin": "Huíyì bù huì suízhe shíjiān ér yānmiè.",
+          "English": "Memories do not fall into oblivion with the passage of time.",
+          "Audio": "[sound:tmp0aq1lx.mp3]",
+          "Word Count": "6",
+          "Char Count": "11",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "回忆, 不会, 随着, 时间, 而, 湮灭"
+        }
+      ]
+    },
+    {
+      "char": "蚪",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552446",
+          "Hanzi": "蝌蚪蜕变成青蛙。",
+          "Pinyin": "Kēdǒu tuìbiàn chéng qīngwā.",
+          "English": "Tadpoles grow into frogs.",
+          "Audio": "[sound:tmpbs1uih.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "蝌蚪, 蜕变, 成"
+        }
+      ]
+    },
+    {
+      "char": "酪",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551881",
+          "Hanzi": "乳酪很好吃。",
+          "Pinyin": "Rǔlào hěn hǎo chī.",
+          "English": "Cheese tastes good.",
+          "Audio": "[sound:tmpgu4d8w.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "乳酪, 很, 好吃"
+        }
+      ]
+    },
+    {
+      "char": "雳",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552304",
+          "Hanzi": "这份帐单犹如晴天霹雳。",
+          "Pinyin": "Zhè fèn zhàngdān yóurú qíngtiān-pīlì.",
+          "English": "The bill hit him like a thunderbolt.",
+          "Audio": "[sound:tmpjseeix.mp3]",
+          "Word Count": "4",
+          "Char Count": "10",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "这份, 帐单, 犹如, 晴天霹雳"
+        }
+      ]
+    },
+    {
+      "char": "吝",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550558",
+          "Hanzi": "他非常吝啬。",
+          "Pinyin": "Tā fēicháng lìnsè.",
+          "English": "He's very very stingy.",
+          "Audio": "[sound:tmp__eu2e.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "他, 非常, 吝啬"
+        }
+      ]
+    },
+    {
+      "char": "赈",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552027",
+          "Hanzi": "政府提供了赈灾援助。",
+          "Pinyin": "Zhèngfǔ tígōngle zhènzāi yuánzhù.",
+          "English": "The government has offered aid to relieve the people affected by the disaster.",
+          "Audio": "[sound:tmpylazto.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "了, 赈灾, 援助"
+        }
+      ]
+    },
+    {
+      "char": "浒",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551261",
+          "Hanzi": "对于我来说，读《水浒传》很重要。",
+          "Pinyin": "Duìyú wǒ lái shuō, dú Shuǐhǔzhuàn hěn zhòngyào.(dui = duiyu = zhendui (pinpoints))",
+          "English": "It is important for me to read The Outlaws of the Marsh.",
+          "Audio": "[sound:R077-01.mp3]",
+          "Word Count": "7",
+          "Char Count": "12",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "我, 来说, 读, 水浒传, 很, 重要"
+        }
+      ]
+    },
+    {
+      "char": "瑕",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551406",
+          "Hanzi": "这件瓷器上有瑕疵。",
+          "Pinyin": "Zhè jiàn cíqì shàng yǒu xiácī.",
+          "English": "There are imperfections in this piece of porcelain.",
+          "Audio": "[sound:tmpyqp9hk.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "这件, 瓷器, 上, 有, 瑕疵"
+        }
+      ]
+    },
+    {
+      "char": "绔",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552014",
+          "Hanzi": "这条绔子太大了。",
+          "Pinyin": "Zhè tiáo kùzi tài dà le.",
+          "English": "This pair of pants is too big.",
+          "Audio": "[sound:tmpfv5cqz.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "这, 条绔子, 太大, 了"
+        }
+      ]
+    },
+    {
+      "char": "莓",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550019",
+          "Hanzi": "这些草莓真贵。",
+          "Pinyin": "Zhèxiē cǎoméi zhēn guì.",
+          "English": "These strawberries are really expensive.",
+          "Audio": "[sound:tmpycatql.mp3]",
+          "Word Count": "3",
+          "Char Count": "6",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "这些, 草莓, 真贵"
+        }
+      ]
+    },
+    {
+      "char": "憬",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019549151",
+          "Hanzi": "他们憧憬着美好的未来。",
+          "Pinyin": "Tāmen chōngjǐngzhe měihǎo de wèilái.",
+          "English": "They're looking forward to a bright future.",
+          "Audio": "[sound:tmp3jbvnf.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "他们, 憧憬, 着, 美好, 的, 未来"
+        }
+      ]
+    },
+    {
+      "char": "菠",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551557",
+          "Hanzi": "这种水果形状像橙子，味道像菠萝。",
+          "Pinyin": "zhèzhǒng shuǐguǒ xíngzhuàng xiàng chéngzi, wèidao xiàng bōluó.",
+          "English": "This fruit is shaped like an orange and tastes like a pineapple.  The fruit is similar to an orange in shape and to a pineapple in taste.",
+          "Audio": "[sound:334505.mp3]",
+          "Word Count": "8",
+          "Char Count": "14",
+          "Unknown Words Count": "8",
+          "Unknown Words List": "这种, 水果, 形状, 像, 橙子, 味道, 像, 菠萝"
+        }
+      ]
+    },
+    {
+      "char": "筏",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552083",
+          "Hanzi": "橡皮筏在河里颠簸着。",
+          "Pinyin": "Xiàngpífá zài hé lǐ diānbǒzhe.",
+          "English": "The rubber raft tossed about on the river.",
+          "Audio": "[sound:tmptjoe69.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "橡皮筏, 在, 河里, 着"
+        }
+      ]
+    },
+    {
+      "char": "壹",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552405",
+          "Hanzi": "李连杰建立了壹基金。",
+          "Pinyin": "Lǐ Liánjié jiànlì le yī jī jīn.",
+          "English": "Jet Li set up a fund.",
+          "Audio": "[sound:tmppqfxim.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "李连杰, 了, 壹, 基金"
+        }
+      ]
+    },
+    {
+      "char": "俨",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019549652",
+          "Hanzi": "这个村庄屋舍俨然。",
+          "Pinyin": "Zhè gè cūnzhuāng wūshè-yǎnrán.",
+          "English": "The houses in this village are laid out neatly.",
+          "Audio": "[sound:tmppoiipz.mp3]",
+          "Word Count": "4",
+          "Char Count": "8",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "这个, 屋舍, 俨然"
+        }
+      ]
+    },
+    {
+      "char": "怂",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551929",
+          "Hanzi": "他怂恿他们赌博。",
+          "Pinyin": "Tā sǒngyǒng tāmen dǔbó.",
+          "English": "He eggs them on to gamble.",
+          "Audio": "[sound:tmpcckckx.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "他, 怂恿, 他们, 赌博"
+        }
+      ]
+    },
+    {
+      "char": "啬",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550558",
+          "Hanzi": "他非常吝啬。",
+          "Pinyin": "Tā fēicháng lìnsè.",
+          "English": "He's very very stingy.",
+          "Audio": "[sound:tmp__eu2e.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "他, 非常, 吝啬"
+        }
+      ]
+    },
+    {
+      "char": "闰",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552144",
+          "Hanzi": "闰年有366天。",
+          "Pinyin": "Rùnnián yǒu sānbǎi liùshíliù tiān.",
+          "English": "A leap year has 366 days.",
+          "Audio": "[sound:tmpnkqn6c.mp3]",
+          "Word Count": "3",
+          "Char Count": "4",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "闰年, 有, 天"
+        }
+      ]
+    },
+    {
+      "char": "漩",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551908",
+          "Hanzi": "流水形成了漩涡。",
+          "Pinyin": "Liúshuǐ xíngchéngle xuánwō.",
+          "English": "The flowing water has formed a whirlpool.",
+          "Audio": "[sound:tmps0jbm_.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "流水, 形成, 了, 漩涡"
+        }
+      ]
+    },
+    {
+      "char": "汾",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552262",
+          "Hanzi": "临汾是个脏的城市。",
+          "Pinyin": "Línfén shì gè zāngde chéngshì.",
+          "English": "Linfen is a dirty city.",
+          "Audio": "[sound:R062-04.mp3]",
+          "Word Count": "6",
+          "Char Count": "8",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "临汾, 是, 个, 脏, 的, 城市"
+        }
+      ]
+    },
+    {
+      "char": "锄",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551629",
+          "Hanzi": "锄强扶弱，惩恶扬善。",
+          "Pinyin": "chú qiáng fú ruò, chéngě yáng shàn.",
+          "English": "Punish the wicked and save the weak.",
+          "Audio": "[sound:333938.mp3]",
+          "Word Count": "2",
+          "Char Count": "8",
+          "Unknown Words Count": "2",
+          "Unknown Words List": "锄强扶弱, 惩恶扬善"
+        }
+      ]
+    },
+    {
+      "char": "耘",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551896",
+          "Hanzi": "农民在田里辛苦地耕耘。",
+          "Pinyin": "Nóngmín zài tián lǐ xīnkǔ de gēngyún.",
+          "English": "The farmers are toiling in the fields.",
+          "Audio": "[sound:tmpdgjxlq.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "在, 田里, 地, 耕耘"
+        }
+      ]
+    },
+    {
+      "char": "彤",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550017",
+          "Hanzi": "李红和李彤是双胞胎姐妹",
+          "Pinyin": "Lǐ Hóng hé Lǐ Tóng shì shuāngbāotāi jiěmèi.",
+          "English": "Li Hong and Li Tong are twin sisters.",
+          "Audio": "[sound:tmpmzckfq.mp3]",
+          "Word Count": "6",
+          "Char Count": "11",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "李红, 和, 李彤, 是, 姐妹"
+        }
+      ]
+    },
+    {
+      "char": "肴",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019549870",
+          "Hanzi": "我肯定你会喜欢我们今晚的菜肴。",
+          "Pinyin": "wǒ kěndìng nǐ huì xǐhuān wǒmen jīnwǎn de càiyáo.",
+          "English": "I'm sure you'll love what we have on the menu tonight.",
+          "Audio": "[sound:332978.mp3]",
+          "Word Count": "9",
+          "Char Count": "14",
+          "Unknown Words Count": "9",
+          "Unknown Words List": "我, 肯定, 你, 会, 喜欢, 我们, 今晚, 的, 菜肴"
+        }
+      ]
+    },
+    {
+      "char": "螳",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551601",
+          "Hanzi": "一只螳螂趴在树叶上。",
+          "Pinyin": "Yī zhī tángláng pā zài shùyè shàng.",
+          "English": "A praying mantis is lying on the leaf.",
+          "Audio": "[sound:tmpqvuvrs.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "一只, 螳螂, 趴在, 树叶, 上"
+        }
+      ]
+    },
+    {
+      "char": "夥",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550631",
+          "Hanzi": "他们是工作夥伴。",
+          "Pinyin": "Tāmen shì gōngzuò huǒ bàn.",
+          "English": "They're partners at work.",
+          "Audio": "[sound:tmpf83rbq.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "他们, 是, 工作, 夥伴"
+        }
+      ]
+    },
+    {
+      "char": "柠",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550321",
+          "Hanzi": "柠檬太酸了。",
+          "Pinyin": "Níngméng tài suān le.",
+          "English": "This lemon is too sour.",
+          "Audio": "[sound:tmptdyfah.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "柠檬, 太酸, 了"
+        }
+      ]
+    },
+    {
+      "char": "熨",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550870",
+          "Hanzi": "你记得关电熨斗吗？",
+          "Pinyin": "Nǐ jìde guān diànyùndǒu ma?",
+          "English": "Did you remember to turn off the iron?",
+          "Audio": "[sound:R091-02.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "你, 记得, 关, 电熨斗, 吗"
+        }
+      ]
+    },
+    {
+      "char": "卅",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551934",
+          "Hanzi": "今天是卅一日。",
+          "Pinyin": "Jīntiān shì sānshíyī rì.",
+          "English": "It's the thirty-first of the month.",
+          "Audio": "[sound:tmpiwlvxz.mp3]",
+          "Word Count": "3",
+          "Char Count": "6",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "今天, 是, 卅一日"
+        }
+      ]
+    },
+    {
+      "char": "檬",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550321",
+          "Hanzi": "柠檬太酸了。",
+          "Pinyin": "Níngméng tài suān le.",
+          "English": "This lemon is too sour.",
+          "Audio": "[sound:tmptdyfah.mp3]",
+          "Word Count": "3",
+          "Char Count": "5",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "柠檬, 太酸, 了"
+        }
+      ]
+    },
+    {
+      "char": "辄",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551215",
+          "Hanzi": "对于酒她都是浅尝辄止。",
+          "Pinyin": "Duìyú jiǔ tā dōu shì qiǎnchángzhézhǐ.",
+          "English": "With wine, she drinks only enough to get a taste of it, not to get drunk.(also zhiyu, to say contrast)&nbsp;(dui = duiyu = zhendui (pinpoints))",
+          "Audio": "[sound:tmpsajbjg.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "酒, 她, 都, 是, 浅尝辄止"
+        }
+      ]
+    },
+    {
+      "char": "帚",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552103",
+          "Hanzi": "她拿着扫帚扫地。",
+          "Pinyin": "Tā názhe sàozhou sǎodì.",
+          "English": "She's using a broom to sweep the floor.",
+          "Audio": "[sound:tmpqc7mtx.mp3]",
+          "Word Count": "5",
+          "Char Count": "7",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "她, 拿, 着, 扫帚, 扫地"
+        }
+      ]
+    },
+    {
+      "char": "磺",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552529",
+          "Hanzi": "硫磺不溶于水。",
+          "Pinyin": "Liúhuáng bù róng yú shuǐ.",
+          "English": "Sulphur doesn't dissolve in water.",
+          "Audio": "[sound:tmp3vjd_s.mp3]",
+          "Word Count": "4",
+          "Char Count": "6",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "硫磺, 不, 溶于, 水"
+        }
+      ]
+    },
+    {
+      "char": "晾",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551413",
+          "Hanzi": "既然天晴了，我们把衣服晾了吧。",
+          "Pinyin": "Jìrán tiānqíng le, wǒmen bǎ yīfu liàng le ba.",
+          "English": "Since the weather became sunny, let's hang our clothes.",
+          "Audio": "[sound:tmpzc7kiz.mp3]",
+          "Word Count": "9",
+          "Char Count": "13",
+          "Unknown Words Count": "8",
+          "Unknown Words List": "天晴, 了, 我们, 把, 衣服, 晾, 了, 吧"
+        }
+      ]
+    },
+    {
+      "char": "驸",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552266",
+          "Hanzi": "皇帝女儿的丈夫叫驸马。",
+          "Pinyin": "Huángdì nǚ'ér de zhàngfu jiào fùmǎ.",
+          "English": "The husband of the emperor's daughter is called \"fuma.\"",
+          "Audio": "[sound:tmprcr77q.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "皇帝, 女儿, 的, 丈夫, 叫, 驸马"
+        }
+      ]
+    },
+    {
+      "char": "胭",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552294",
+          "Hanzi": "她在涂抹胭脂。",
+          "Pinyin": "Tā zài túmǒ yānzhi.",
+          "English": "She's putting on face powder and lipstick.",
+          "Audio": "[sound:tmpt7itn7.mp3]",
+          "Word Count": "4",
+          "Char Count": "6",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "她, 在, 涂抹, 胭脂"
+        }
+      ]
+    },
+    {
+      "char": "诙",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552373",
+          "Hanzi": "他们的谈吐很诙谐。",
+          "Pinyin": "Tāmen de tántǔ hěn huīxié.",
+          "English": "They're talking humorously.",
+          "Audio": "[sound:tmpqsdgpn.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "他们, 的, 谈吐, 很, 诙谐"
+        }
+      ]
+    },
+    {
+      "char": "鹉",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552227",
+          "Hanzi": "鸟笼里有一只鹦鹉。",
+          "Pinyin": "Niǎolóng lǐ yǒu yī zhī yīngwǔ.",
+          "English": "There's a parrot in the birdcage.",
+          "Audio": "[sound:tmp5n4m9q.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "鸟笼, 里, 有, 一只, 鹦鹉"
+        }
+      ]
+    },
+    {
+      "char": "纫",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552522",
+          "Hanzi": "你读给我听的时候，我就可以做缝纫了。",
+          "Pinyin": "nǐ dú gěi wǒ tīng de shíhou, wǒ jiù kěyǐ zuò fèngrèn le.",
+          "English": "While you are reading to me, I can do my sewing.",
+          "Audio": "[sound:333120.mp3]",
+          "Word Count": "13",
+          "Char Count": "16",
+          "Unknown Words Count": "13",
+          "Unknown Words List": "你, 读, 给, 我, 听, 的, 时候, 我, 就, 可以, 做, 缝纫, 了"
+        }
+      ]
+    },
+    {
+      "char": "甄",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551724",
+          "Hanzi": "公司在甄选面试人员。",
+          "Pinyin": "Gōngsī zài zhēnxuǎn miànshì rényuán.",
+          "English": "The company is screening the interviewees.",
+          "Audio": "[sound:tmputu16c.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "公司, 在, 甄选, 面试, 人员"
+        }
+      ]
+    },
+    {
+      "char": "幺",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019549113",
+          "Hanzi": "弟弟是家里的小幺。",
+          "Pinyin": "Dìdi shì jiālǐ de xiǎoyāo.",
+          "English": "My younger brother is the youngest in my family.",
+          "Audio": "[sound:tmp2am6h_.mp3]",
+          "Word Count": "6",
+          "Char Count": "8",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "弟弟, 是, 家里, 的, 小, 幺"
+        }
+      ]
+    },
+    {
+      "char": "佗",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551797",
+          "Hanzi": "中国古代名医华佗的医术很高。",
+          "Pinyin": "Zhōngguó gǔdài míngyī Huá Tuó de yīshù hěn gāo.",
+          "English": "In ancient times, the Chinese doctor Hua Tuo's medical skills were very high.",
+          "Audio": "[sound:tmpze6krw.mp3]",
+          "Word Count": "8",
+          "Char Count": "13",
+          "Unknown Words Count": "7",
+          "Unknown Words List": "中国, 名医, 华佗, 的, 医术, 很, 高"
+        }
+      ]
+    },
+    {
+      "char": "俸",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552461",
+          "Hanzi": "政府官员的俸禄很不错。",
+          "Pinyin": "Zhèngfǔ guānyuán de fènglù hěn bùcuò.",
+          "English": "The government officials have a good salary.",
+          "Audio": "[sound:tmpozzcg2.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "官员, 的, 俸禄, 很, 不错"
+        }
+      ]
+    },
+    {
+      "char": "枭",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552445",
+          "Hanzi": "他曾是一代枭雄。",
+          "Pinyin": "Tā céng shì yīdài xiāoxióng.",
+          "English": "In his time, he was an ambitious and ruthless character.",
+          "Audio": "[sound:tmp3zzi6s.mp3]",
+          "Word Count": "5",
+          "Char Count": "7",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "他, 曾, 是, 一代, 枭雄"
+        }
+      ]
+    },
+    {
+      "char": "蛰",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551920",
+          "Hanzi": "我被蜜蜂蛰了一下。",
+          "Pinyin": "wǒ bèi mìfēng zhé le yīxià.",
+          "English": "I got a bee sting.",
+          "Audio": "[sound:334139.mp3]",
+          "Word Count": "6",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "我, 被, 蛰, 了, 一下"
+        }
+      ]
+    },
+    {
+      "char": "憧",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019549151",
+          "Hanzi": "他们憧憬着美好的未来。",
+          "Pinyin": "Tāmen chōngjǐngzhe měihǎo de wèilái.",
+          "English": "They're looking forward to a bright future.",
+          "Audio": "[sound:tmp3jbvnf.mp3]",
+          "Word Count": "6",
+          "Char Count": "10",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "他们, 憧憬, 着, 美好, 的, 未来"
+        }
+      ]
+    },
+    {
+      "char": "偕",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551678",
+          "Hanzi": "他们偕同妻子参加了聚会。",
+          "Pinyin": "Tāmen xiétóng qīzi cānjiā le jùhuì.",
+          "English": "They attended get-together with their wives.",
+          "Audio": "[sound:tmpazv7_j.mp3]",
+          "Word Count": "6",
+          "Char Count": "11",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "他们, 偕同, 妻子, 参加, 了"
+        }
+      ]
+    },
+    {
+      "char": "湍",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551676",
+          "Hanzi": "这条河水流湍急。",
+          "Pinyin": "zhè tiáo héshuǐ liú tuān jí.",
+          "English": "This river flows rapidly.  The current of this river is rapid.",
+          "Audio": "[sound:334882.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "这条, 河, 水流, 湍急"
+        }
+      ]
+    },
+    {
+      "char": "赘",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019551892",
+          "Hanzi": "背着背包爬山很累赘。",
+          "Pinyin": "Bēizhe bēibāo páshān hěn léizhui.",
+          "English": "It's quite a burden to carry a backpack when mountain-climbing.",
+          "Audio": "[sound:tmpn_2a8o.mp3]",
+          "Word Count": "5",
+          "Char Count": "9",
+          "Unknown Words Count": "4",
+          "Unknown Words List": "背包, 爬山, 很, 累赘"
+        }
+      ]
+    },
+    {
+      "char": "蝌",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552446",
+          "Hanzi": "蝌蚪蜕变成青蛙。",
+          "Pinyin": "Kēdǒu tuìbiàn chéng qīngwā.",
+          "English": "Tadpoles grow into frogs.",
+          "Audio": "[sound:tmpbs1uih.mp3]",
+          "Word Count": "4",
+          "Char Count": "7",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "蝌蚪, 蜕变, 成"
+        }
+      ]
+    },
+    {
+      "char": "蟀",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552361",
+          "Hanzi": "蟋蟀的叫声很响亮。",
+          "Pinyin": "Xīshuài de jiàoshēng hěn xiǎngliàng.",
+          "English": "The crickets' chirping is loud and clear.",
+          "Audio": "[sound:tmpgz3fsl.mp3]",
+          "Word Count": "5",
+          "Char Count": "8",
+          "Unknown Words Count": "5",
+          "Unknown Words List": "蟋蟀, 的, 叫声, 很, 响亮"
+        }
+      ]
+    },
+    {
+      "char": "辍",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019550088",
+          "Hanzi": "他辍学了。",
+          "Pinyin": "Tā chuòxué le.",
+          "English": "He's dropped out.",
+          "Audio": "[sound:tmp2jo3la.mp3]",
+          "Word Count": "3",
+          "Char Count": "4",
+          "Unknown Words Count": "3",
+          "Unknown Words List": "他, 辍学, 了"
+        }
+      ]
+    },
+    {
+      "char": "煸",
+      "spoonfed_frequency": 1,
+      "example_sentences": [
+        {
+          "ID": "1560019552187",
+          "Hanzi": "他讨厌吃干煸四季豆。",
+          "Pinyin": "Tā tǎoyàn chī gānbiān sìjìdòu.",
+          "English": "I hate to eat fried green beans.",
+          "Audio": "[sound:R097-03.mp3]",
+          "Word Count": "6",
+          "Char Count": "9",
+          "Unknown Words Count": "6",
+          "Unknown Words List": "他, 讨厌, 吃, 干, 煸, 四季豆"
+        }
+      ]
+    }
+  ]
+}
