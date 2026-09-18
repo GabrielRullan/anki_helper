@@ -7,6 +7,14 @@ description: Skill for parsing Chinese study feeds, generating Mandarin Blueprin
 
 This skill helps the user learn Chinese vocabulary and characters by interfacing with their Anki deck and using the Mandarin Blueprint (MBP) movie method.
 
+## Card Safety Policy
+> [!IMPORTANT]
+> **ALWAYS UPDATE, NEVER OVERWRITE OR DELETE**
+> - Always update existing cards in place (`updateNoteFields`).
+> - Never delete, recreate, or overwrite existing notes/cards as this wipes review history (`revlog`).
+> - Never reset card progress (`reps`, `ivl`, `type`, `queue`).
+
+
 ## Deck and Card configuration
 
 ### 1. Immersion Vocabulary Deck (`Chinese::Words`)

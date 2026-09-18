@@ -7,6 +7,14 @@ description: Skill for parsing Japanese study feeds, generating N5-N4 level Japa
 
 This skill helps the user study Japanese vocabulary and grammar by translating Spanish-written logs, generating N5–N4 level contextual sentence cards, and exporting them to Anki.
 
+## Card Safety Policy
+> [!IMPORTANT]
+> **ALWAYS UPDATE, NEVER OVERWRITE OR DELETE**
+> - Always update existing cards in place (`updateNoteFields`).
+> - Never delete, recreate, or overwrite existing notes/cards as this wipes review history (`revlog`).
+> - Never reset card progress (`reps`, `ivl`, `type`, `queue`).
+
+
 ## Deck and Card configuration
 - **Deck**: `Japanese::Murasaki` (using note type `Migaku Word Japanese`)
 - **Fields**:
