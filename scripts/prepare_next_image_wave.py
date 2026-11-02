@@ -55,11 +55,12 @@ def build_batch_prompt(batch):
     return "\n".join(lines)
 
 if __name__ == "__main__":
+    merged_total = len(json.load(open('data/active_scenes_merged.json', encoding='utf-8')))
     rem = get_remaining_items()
-    print(f"Remaining images to generate: {len(rem)} / 266")
-    # Write next 8 batches of 8 images each
+    print(f"Remaining images to generate: {len(rem)} / {merged_total}")
+    # Write next 10 batches of 8 images each
     batch_size = 8
-    num_batches = min(8, (len(rem) + batch_size - 1) // batch_size)
+    num_batches = min(10, (len(rem) + batch_size - 1) // batch_size)
     batches_out = []
     for b in range(num_batches):
         sub = rem[b*batch_size : (b+1)*batch_size]

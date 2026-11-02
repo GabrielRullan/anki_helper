@@ -32,21 +32,24 @@ def get_media_filename(hanzi, english):
     return f"mbp_{hanzi}_{meaning_keyword}.png"
 
 def main():
-    merged = []
-    for idx in range(1, 5):
-        path = os.path.join('data', f'active_scenes_output_{idx}.json')
-        if not os.path.exists(path):
-            print(f"[ERROR] Missing {path}")
-            sys.exit(1)
-        with open(path, 'r', encoding='utf-8') as f:
-            chunk = json.load(f)
-            merged.extend(chunk)
-
     merged_path = os.path.join('data', 'active_scenes_merged.json')
-    with open(merged_path, 'w', encoding='utf-8') as f:
-        json.dump(merged, f, ensure_ascii=False, indent=2)
-
-    print(f"Merged {len(merged)} items into {merged_path}.")
+    if os.path.exists(merged_path) and "--remerge" not in sys.argv:
+        with open(merged_path, 'r', encoding='utf-8') as f:
+            merged = json.load(f)
+        print(f"Loaded {len(merged)} items from {merged_path}.")
+    else:
+        merged = []
+        for idx in range(1, 5):
+            path = os.path.join('data', f'active_scenes_output_{idx}.json')
+            if not os.path.exists(path):
+                print(f"[ERROR] Missing {path}")
+                sys.exit(1)
+            with open(path, 'r', encoding='utf-8') as f:
+                chunk = json.load(f)
+                merged.extend(chunk)
+        with open(merged_path, 'w', encoding='utf-8') as f:
+            json.dump(merged, f, ensure_ascii=False, indent=2)
+        print(f"Merged {len(merged)} items into {merged_path}.")
 
     if "--merge-only" in sys.argv:
         return
