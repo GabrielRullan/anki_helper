@@ -67,27 +67,22 @@ When the user asks to import new Chinese cards:
 
 ### 2. Mandarin Blueprint (MBP) Mnemonic Generation
 When generating mnemonics for Hanzi, map components to these visual categories:
-- **Actor** (Consonant Initial): Batman (`b`), Samuel L. Jackson (`s`), etc.
-- **Set** (Vowel Final): Sandbox (`-an`), etc.
+- **Actor** (Consonant Initial): Batman (`b`), Samuel L. Jackson (`s`), etc. (Refer to `scripts/fix_mbp_assignments.py` for full 55-initial standard codebook).
+- **Set** (Vowel Final): Sandbox (`-an`), etc. (13 standard sets).
 - **Tone-Location**:
   - Tone 1: Front Yard/Entrance.
   - Tone 2: Hallway/Kitchen.
   - Tone 3: Bedroom/Bathroom.
   - Tone 4: Backyard.
   - Tone 5: Roof.
-- **Props**: Radicals/visual parts of the Hanzi.
-Create a vivid, memorable scene where the Actor is at the Tone-Location of their Set, using the Props to perform an action related to the character's Meaning.
+- **Props / Components**: Radicals / visual building blocks of the Hanzi. Note that the legacy `Props` deck has been decommissioned; components are stored as plain text without prop links.
+Create a vivid, memorable scene where the Actor is at the Tone-Location of their Set, using the Components to perform an action related to the character's Meaning.
 
 ### 3. Reviewing and Linking Word Characters
 When the user asks to review character linking or populate empty `Characters` fields in `Chinese::Words`:
-1. Check the word notes in deck `Chinese::Words`. For each note where the `Characters` field is empty:
-   - Identify the constituent Chinese characters (`'\u4e00' <= char <= '\u9fff'`).
-   - If the character exists in the `Chinese::Char` deck, generate the link `[char|nidNoteID]`.
-   - If the character does NOT exist, automatically create the character note in `Chinese::Char`:
-     - Query Gemini to get its Pinyin reading, English definition, and components.
-     - Split its Pinyin to determine its tone and consonant initial.
-     - Match the initial, final, and tone to the existing Actors, Sets, and Tone-Locations in the deck (building the standard MBP codebook mappings dynamically).
-     - Call `addNote` to insert the new character card, obtaining its new note ID.
-     - Link the new card `[char|nidNewNoteID]` in the word note's `Characters` field.
-2. Run the linking script using: `python scripts/link_word_characters.py`.
-
+1. Use `python scripts/link_notes.py` for comprehensive bidirectional linking:
+   - Populates `Characters` field on word cards (`[char|nidNoteID]`).
+   - Inserts or updates the marked section in `Notes` on word cards (`<!-- ANKI_LINKER_START --><div><b>Characters in word:</b> ...</div><!-- ANKI_LINKER_END -->`).
+   - Updates `Notes` on character cards (`<!-- ANKI_LINKER_START --><div><b>Words containing [Hanzi]:</b> ...</div><!-- ANKI_LINKER_END -->`).
+   - Cleans legacy prop links from `Components` and removes deprecated 'Derived characters' sections.
+2. Alternatively, run `python scripts/link_word_characters.py` if missing characters need to be auto-generated on the fly with Gemini before linking.
