@@ -46,33 +46,14 @@ def resolve_anki_deck(candidates):
             return normalized_decks[normalize_name(cand)]
     return candidates[-1]
 
-# Import split_pinyin from mbp_profiler
+# Import MBP pinyin decomposition and codebook
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from fix_mbp_assignments import parse_mbp_pinyin, STANDARD_ACTORS
 try:
     from mbp_profiler import split_pinyin
 except ImportError:
-    # Inline split_pinyin if import fails
     def split_pinyin(pinyin):
-        pinyin = pinyin.lower().strip()
-        vowel_map = {
-            'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a',
-            'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e',
-            'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i',
-            'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
-            'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u',
-            'ǖ': 'v', 'ǘ': 'v', 'ǚ': 'v', 'ǜ': 'v', 'ü': 'v'
-        }
-        clean_p = "".join(vowel_map.get(char, char) for char in pinyin)
-        clean_p = re.sub(r'[^a-z]', '', clean_p)
-        if not clean_p:
-            return "", ""
-        for double_init in ['zh', 'ch', 'sh']:
-            if clean_p.startswith(double_init):
-                return double_init, clean_p[2:]
-        for init in 'bpmfdtnlgkhjqxrzcsyw':
-            if clean_p.startswith(init):
-                return init, clean_p[1:]
-        return "", clean_p
+        return "", ""
 
 def get_tone_number(pinyin):
     pinyin = pinyin.lower().strip()
@@ -232,29 +213,29 @@ def main():
         english = item['english']
         components_list = item.get('components', [])
         
-        # Primary reading for MBP lookup
+        # Primary reading for MBP lookup (full 55-initial + 13-set MBP decomposition)
         pinyin_primary = get_primary_pinyin(pinyin_raw)
-        initial, final = split_pinyin(pinyin_primary)
-        tone = get_tone_number(pinyin_primary)
-        
-        # Look up mappings
-        actor = codebook['actors'].get(initial, '')
-        c_set = codebook['sets'].get(final, '')
+        c_init, c_set, tone = parse_mbp_pinyin(pinyin_primary)
+        if not c_init:
+            c_init, c_set, tone = '(null)', '-(Null)', get_tone_number(pinyin_primary)
+
+        expected_init = 'Nu' if c_init == 'Nv' else ('Lu' if c_init == 'Lv' else c_init)
+        actor = STANDARD_ACTORS.get(c_init, codebook['actors'].get(c_init.lower(), ''))
         tone_location = codebook['locations'].get(str(tone), '')
-        
+
         # Determine HSK level
         hsk_level = '4' if char in hsk4_chars else ''
-        
+
         # Unique sequential field ID
         field_id = str(timestamp_sec + idx)
-        
+
         # Field dictionary (all 24 fields)
         fields = {
             'ID': field_id,
             'Hanzi': char,
             'Pinyin': pinyin_raw,
             'English': english,
-            'Initial': initial.upper(),
+            'Initial': expected_init,
             'Actor': actor,
             'Set': c_set,
             'Tone': str(tone),

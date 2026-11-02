@@ -6,10 +6,16 @@ __pycache__/
 # Local database temp files
 scripts/temp/
 collection_temp_*.anki2
+*.anki2
+*.bak
 .env
 
 # Local data extracts containing personal study cards
 data/anki_extract.json
+data/*_backup.json
+scratch/*.txt
+scratch/*.json
+scratch/*.anki2
 
 # Local test outputs
 tests/test_grammar_import.csv
@@ -31,5 +37,4 @@ imagenes_frases_memorable/
 new_words.md
 
 #logs
-data/image_generation_errors.log
 data/image_generation_errors.log

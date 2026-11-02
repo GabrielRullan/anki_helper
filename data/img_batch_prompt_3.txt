@@ -1,0 +1,33 @@
+Generate 10 minimalist Peanuts cartoon style flashcard illustrations (plain solid white background, simple clean line art, flat colors, centered, no text or letters of any alphabet) for the following 10 Mandarin Blueprint mnemonic scenes:
+
+1. Identifier: `mbp_谁_who` (Target: `mbp_谁_who.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Hall or Kitchen [2] of the -ei set, 007 (Connery) shouts into a microphone and megaphone (讠) at a perched Sparrow (隹), demanding to know WHO sent the secret message. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+2. Identifier: `mbp_丙_thirdstem` (Target: `mbp_丙_thirdstem.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: Inside Room [3] of the -eng set, Captain Marvel (Brie Larson) places a glowing Sword (一) inside an Anatomy mannequin (内) to win the THIRD (STEM) prize in the science fair. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+3. Identifier: `mbp_病_sick` (Target: `mbp_病_sick.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -eng set, Captain Marvel (Brie Larson) calls a Doctor in a flying helicopter (疒) to rescue an athlete who collapsed SICK with a DISEASE on the Third place podium (丙). Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+4. Identifier: `mbp_弹_bullet` (Target: `mbp_弹_bullet.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -an set, Maui (Dwayne the Rock) plucks his Composite Bow (弓) in the tall Grass (单) to PLAY a tune while firing a speeding BULLET. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+5. Identifier: `mbp_淡_bland` (Target: `mbp_淡_bland.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -an set, Maui (Dwayne the Rock) sprays a Water hose (氵) over a roaring flame (炎) until the fire turns LIGHT and the soup tastes completely BLAND. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+6. Identifier: `mbp_待_wait` (Target: `mbp_待_wait.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -ai set, Maui (Dwayne the Rock) and Bruce Lee (彳) patiently WAIT beside a golden Buddha Statue (寺) to TREAT their honored guests with respect. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+7. Identifier: `mbp_蛋_egg` (Target: `mbp_蛋_egg.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -an set, Maui (Dwayne the Rock) carefully lifts his foot (疋) so he doesn't crush the giant speckled EGG that a Beetle insect (虫) is rolling across the lawn. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+8. Identifier: `mbp_档_file` (Target: `mbp_档_file.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -ang set, Maui (Dwayne the Rock) rings a bell that goes dong (当) beneath a Fig Tree (木) as he sorts every top-GRADE secret FILE into wooden cabinets. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+9. Identifier: `mbp_倒_pour` (Target: `mbp_倒_pour.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -ao set, Maui (Dwayne the Rock) watches a Strawman (亻) ARRIVE (到) and suddenly flip in REVERSE to POUR out a bucket of water. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+10. Identifier: `mbp_暖_warm` (Target: `mbp_暖_warm.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: Inside Room [3] of the -an set, the Queen of England (Nu Wang) uses a rope to Pull (爰) the glowing Sun (日) closer into the parlor until the whole room feels cozy and WARM. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+Reply with the exact list of 10 generated artifact image paths mapped to their target filenames.

@@ -1,0 +1,950 @@
+{
+  "total_with_paren": 113,
+  "total_improved": 75,
+  "total_kept": 38,
+  "updates": [
+    {
+      "note_id": 1786803211071,
+      "hanzi": "鸣",
+      "pinyin": "míng",
+      "old_english": "Chirp; Cry (of Birds",
+      "new_english": "Chirp / Cry (birds)",
+      "category": "Syntax & Formatting",
+      "reason": "Fix unclosed paren '(of Birds', strange capitalization, and format as concise MBP keyword."
+    },
+    {
+      "note_id": 1786803213198,
+      "hanzi": "啪",
+      "pinyin": "pā",
+      "old_english": "(sound Of A Clap; Slap",
+      "new_english": "Sound of Clap / Slap",
+      "category": "Syntax & Formatting",
+      "reason": "Fix unclosed paren '(sound Of A Clap; Slap' and odd title casing."
+    },
+    {
+      "note_id": 1786803215169,
+      "hanzi": "烹",
+      "pinyin": "pēng",
+      "old_english": "Cook (boil; Steam",
+      "new_english": "Cook / Boil / Steam",
+      "category": "Syntax & Formatting",
+      "reason": "Fix unclosed paren '(boil; Steam' and odd title casing."
+    },
+    {
+      "note_id": 1768474725173,
+      "hanzi": "辛",
+      "pinyin": "xīn",
+      "old_english": "Hard (difficult) / Pungent&nbsp;",
+      "new_english": "Hard (difficult) / Pungent",
+      "category": "Syntax & Formatting",
+      "reason": "Remove trailing raw HTML entity '&nbsp;'."
+    },
+    {
+      "note_id": 1768474725065,
+      "hanzi": "弹",
+      "pinyin": "dàn",
+      "old_english": "Bullet / Play(tán)",
+      "new_english": "Bullet / Play (tán)",
+      "category": "Syntax & Formatting",
+      "reason": "Add missing space before '(tán)'."
+    },
+    {
+      "note_id": 1768474725749,
+      "hanzi": "盛",
+      "pinyin": "shèng",
+      "old_english": "Flourishing / Fill(chéng)",
+      "new_english": "Flourishing / Fill (chéng)",
+      "category": "Syntax & Formatting",
+      "reason": "Add missing space before '(chéng)'."
+    },
+    {
+      "note_id": 1786803213010,
+      "hanzi": "莽",
+      "pinyin": "mǎng",
+      "old_english": "Uncouth; Reckless; Lush (vegetation).",
+      "new_english": "Uncouth / Reckless / Lush (vegetation)",
+      "category": "Syntax & Formatting",
+      "reason": "Remove trailing period and unify with standard slash keyword format."
+    },
+    {
+      "note_id": 1768474725348,
+      "hanzi": "刘",
+      "pinyin": "liú",
+      "old_english": "(Surname)",
+      "new_english": "Surname Liu",
+      "category": "Surname Standardization",
+      "reason": "Replace bare '(Surname)' with 'Surname Liu' to match deck standard (Surname Jiang, Surname Wu, etc.)."
+    },
+    {
+      "note_id": 1768474725577,
+      "hanzi": "吕",
+      "pinyin": "lǚ",
+      "old_english": "(Surname)",
+      "new_english": "Surname Lu",
+      "category": "Surname Standardization",
+      "reason": "Replace bare '(Surname)' with 'Surname Lu' to match deck standard."
+    },
+    {
+      "note_id": 1768474726050,
+      "hanzi": "曹",
+      "pinyin": "<span class=\"tone2\">cáo</span> <!-- cao -->",
+      "old_english": "(Surname)",
+      "new_english": "Surname Cao",
+      "category": "Surname Standardization",
+      "reason": "Replace bare '(Surname)' with 'Surname Cao' to match deck standard."
+    },
+    {
+      "note_id": 1768474725814,
+      "hanzi": "李",
+      "pinyin": "lǐ",
+      "old_english": "Plum / (Surname)",
+      "new_english": "Plum / Surname Li",
+      "category": "Surname Standardization",
+      "reason": "Replace bare '(Surname)' with 'Surname Li' to match deck standard."
+    },
+    {
+      "note_id": 1778227240807,
+      "hanzi": "肖",
+      "pinyin": "xiāo",
+      "old_english": "To resemble; To be like (surname)",
+      "new_english": "Resemble / Surname Xiao",
+      "category": "Surname Standardization",
+      "reason": "Standardize verbose 'To resemble; To be like (surname)'."
+    },
+    {
+      "note_id": 1778227240839,
+      "hanzi": "董",
+      "pinyin": "dǒng",
+      "old_english": "To supervise; To direct; Director (surname)",
+      "new_english": "Supervise / Director / Surname Dong",
+      "category": "Surname Standardization",
+      "reason": "Standardize verbose 'To supervise; To direct; Director (surname)'."
+    },
+    {
+      "note_id": 1781004427320,
+      "hanzi": "枚",
+      "pinyin": "méi",
+      "old_english": "Measure word for small flat objects, coins, stamps, rings; Trunk (of tree)",
+      "new_english": "M.W. (coins, rings, stamps) / Trunk",
+      "category": "Measure Word Standardization",
+      "reason": "Replace lengthy dictionary sentence with standard 'M.W. (...)' format matching other cards."
+    },
+    {
+      "note_id": 1785483643441,
+      "hanzi": "轴",
+      "pinyin": "zhóu",
+      "old_english": "Axis; Axle; Shaft; (Classifier for spools, scrolls, etc.)",
+      "new_english": "Axis / Axle / M.W. (scrolls, spools)",
+      "category": "Measure Word Standardization",
+      "reason": "Replace '(Classifier for spools, scrolls, etc.)' with standard 'M.W. (...)' format."
+    },
+    {
+      "note_id": 1786803210974,
+      "hanzi": "艘",
+      "pinyin": "sōu",
+      "old_english": "(measure Word For Boats; Ships)",
+      "new_english": "M.W. (boats, ships)",
+      "category": "Measure Word Standardization",
+      "reason": "Replace '(measure Word For Boats; Ships)' with clean 'M.W. (boats, ships)'."
+    },
+    {
+      "note_id": 1768474726373,
+      "hanzi": "矣",
+      "pinyin": "yǐ",
+      "old_english": "(Final particle)",
+      "new_english": "Final Particle",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Replace '(Final particle)' with clean 'Final Particle'."
+    },
+    {
+      "note_id": 1781004427228,
+      "hanzi": "咯",
+      "pinyin": "lo, gē",
+      "old_english": "(particle Indicating Obviousness; Often Rhetorical Or Used For Sound)",
+      "new_english": "Particle (obviousness) / Cluck",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Replace verbose '(particle Indicating Obviousness; Often Rhetorical Or Used For Sound)'."
+    },
+    {
+      "note_id": 1786803213074,
+      "hanzi": "哉",
+      "pinyin": "zāi",
+      "old_english": "(exclamatory; Interrogative Particle)",
+      "new_english": "Particle (exclamatory/interrogative)",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Clean '(exclamatory; Interrogative Particle)' and fix casing."
+    },
+    {
+      "note_id": 1786803213093,
+      "hanzi": "兮",
+      "pinyin": "xī",
+      "old_english": "(Poetic particle)",
+      "new_english": "Poetic Particle",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Clean '(Poetic particle)'."
+    },
+    {
+      "note_id": 1786803213326,
+      "hanzi": "娅",
+      "pinyin": "yà",
+      "old_english": "(used In Names; Usually For Women)",
+      "new_english": "Used in Names (women)",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix capitalization in '(used In Names; Usually For Women)'."
+    },
+    {
+      "note_id": 1786803214050,
+      "hanzi": "唔",
+      "pinyin": "wú",
+      "old_english": "(interjection Of Agreement; Disagreement)",
+      "new_english": "Interjection (agreement/disagreement)",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix capitalization in '(interjection Of Agreement; Disagreement)'."
+    },
+    {
+      "note_id": 1786803212724,
+      "hanzi": "伽",
+      "pinyin": "jiā",
+      "old_english": "Suffix For Transliterations (e.g; Yoga)",
+      "new_english": "Transliteration (yoga) / G-sound",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix semicolon typo and casing in 'Suffix For Transliterations (e.g; Yoga)'."
+    },
+    {
+      "note_id": 1786803211013,
+      "hanzi": "孟",
+      "pinyin": "mèng",
+      "old_english": "First (month; Season)",
+      "new_english": "First (month/season) / Surname Meng",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix casing/semicolon in 'First (month; Season)' and include surname."
+    },
+    {
+      "note_id": 1786803213080,
+      "hanzi": "鳞",
+      "pinyin": "lín",
+      "old_english": "Scales (of Fish; Dragon)",
+      "new_english": "Scales (fish, dragons)",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix capitalization and semicolon in 'Scales (of Fish; Dragon)'."
+    },
+    {
+      "note_id": 1786803214103,
+      "hanzi": "砌",
+      "pinyin": "qì",
+      "old_english": "Build (with Bricks; Stones)",
+      "new_english": "Build / Lay (bricks, stones)",
+      "category": "Particle & Grammar Cleanup",
+      "reason": "Fix capitalization and semicolon in 'Build (with Bricks; Stones)'."
+    },
+    {
+      "note_id": 1778227239468,
+      "hanzi": "菇",
+      "pinyin": "gū",
+      "old_english": "(Bound form) mushroom",
+      "new_english": "Mushroom",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove dictionary tag '(Bound form)'."
+    },
+    {
+      "note_id": 1778227240065,
+      "hanzi": "虐",
+      "pinyin": "nüè",
+      "old_english": "(Bound form) brutal; Oppressive; Harsh",
+      "new_english": "Brutal / Oppressive / Harsh",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove dictionary tag '(Bound form)'."
+    },
+    {
+      "note_id": 1778227240054,
+      "hanzi": "妆",
+      "pinyin": "zhuāng",
+      "old_english": "(Of a woman) to adorn oneself",
+      "new_english": "Adorn Oneself / Makeup",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean dictionary gloss '(Of a woman) to adorn oneself'."
+    },
+    {
+      "note_id": 1778227240127,
+      "hanzi": "呦",
+      "pinyin": "yōu",
+      "old_english": "Oh! (exclamation of dismay etc)",
+      "new_english": "Oh! (dismay) / Deer Bleat",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose dictionary gloss 'Oh! (exclamation of dismay etc)'."
+    },
+    {
+      "note_id": 1778227239763,
+      "hanzi": "哟",
+      "pinyin": "yō",
+      "old_english": "Oh! (interjection indicating slight surprise)",
+      "new_english": "Oh! (surprise)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose dictionary gloss 'Oh! (interjection indicating slight surprise)'."
+    },
+    {
+      "note_id": 1778227240161,
+      "hanzi": "绸",
+      "pinyin": "chóu",
+      "old_english": "(Light) silk",
+      "new_english": "Silk (light)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Format '(Light) silk' as clean keyword."
+    },
+    {
+      "note_id": 1778227240761,
+      "hanzi": "嫁",
+      "pinyin": "jià",
+      "old_english": "To marry (of a woman)",
+      "new_english": "Marry (of a woman)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To '."
+    },
+    {
+      "note_id": 1778227240793,
+      "hanzi": "啰",
+      "pinyin": "luō",
+      "old_english": "(Used as an onomatopoeia for continuous talking); Verbose",
+      "new_english": "Verbose / Chatter (onomatopoeia)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose explanation '(Used as an onomatopoeia for continuous talking); Verbose'."
+    },
+    {
+      "note_id": 1778227240816,
+      "hanzi": "馨",
+      "pinyin": "xīn",
+      "old_english": "Fragrant; Aromatic (often used for pleasant, far-reaching fragrance)",
+      "new_english": "Fragrant / Aromatic",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose explanation 'Fragrant; Aromatic (often used for pleasant, far-reaching fragrance)'."
+    },
+    {
+      "note_id": 1778227240834,
+      "hanzi": "蝴",
+      "pinyin": "hú",
+      "old_english": "Butterfly (as in 蝴蝶)",
+      "new_english": "Butterfly (húdié)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Butterfly (as in 蝴蝶)'."
+    },
+    {
+      "note_id": 1778227240858,
+      "hanzi": "瞒",
+      "pinyin": "mán",
+      "old_english": "To hide; To conceal (from)",
+      "new_english": "Conceal / Hide (from)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'To hide; To conceal (from)'."
+    },
+    {
+      "note_id": 1778227240884,
+      "hanzi": "嗨",
+      "pinyin": "hāi",
+      "old_english": "Hey; Hi; Oh; Alas (interjection)",
+      "new_english": "Hey / Hi / Alas",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove dictionary tag '(interjection)'."
+    },
+    {
+      "note_id": 1778227240908,
+      "hanzi": "臼",
+      "pinyin": "jiù",
+      "old_english": "Mortar (for pounding); Socket",
+      "new_english": "Mortar (for pounding) / Socket",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Standardize semicolon to slash formatting."
+    },
+    {
+      "note_id": 1778227240917,
+      "hanzi": "募",
+      "pinyin": "mù",
+      "old_english": "To recruit; To raise (funds); To solicit",
+      "new_english": "Recruit / Raise (funds) / Solicit",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To ' and standardize."
+    },
+    {
+      "note_id": 1778227240943,
+      "hanzi": "呸",
+      "pinyin": "pēi",
+      "old_english": "To spit; Pooh (an expression of contempt or disgust)",
+      "new_english": "Ptooey / Spit (contempt)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean dictionary gloss 'Pooh (an expression of contempt or disgust)'."
+    },
+    {
+      "note_id": 1778227240953,
+      "hanzi": "哎",
+      "pinyin": "āi",
+      "old_english": "Exclamatory particle (indicating surprise, regret, or a call)",
+      "new_english": "Exclamation (surprise/regret) / Alas",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose dictionary gloss 'Exclamatory particle (indicating surprise, regret, or a call)'."
+    },
+    {
+      "note_id": 1778227240962,
+      "hanzi": "橙",
+      "pinyin": "chéng",
+      "old_english": "Orange (color or fruit)",
+      "new_english": "Orange (fruit or color)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clarify 'Orange (color or fruit)'."
+    },
+    {
+      "note_id": 1778227240986,
+      "hanzi": "耍",
+      "pinyin": "shuǎ",
+      "old_english": "To play, to play with; To juggle; To brandish; To employ (tricks); To show off",
+      "new_english": "Play / Juggle / Show Off",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Prune whole dictionary entry dump into concise keywords."
+    },
+    {
+      "note_id": 1778227240991,
+      "hanzi": "咋",
+      "pinyin": "zǎ",
+      "old_english": "How, why, what (dialectal); To make a noise",
+      "new_english": "How / Why / What (dialect)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'How, why, what (dialectal); To make a noise'."
+    },
+    {
+      "note_id": 1778227241044,
+      "hanzi": "遛",
+      "pinyin": "liú",
+      "old_english": "To walk (an animal)",
+      "new_english": "Walk (an animal) / Stroll",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To ' and add stroll matching scene."
+    },
+    {
+      "note_id": 1781004427249,
+      "hanzi": "奘",
+      "pinyin": "zàng, zhuàng",
+      "old_english": "Stout; Bulky (often in names)",
+      "new_english": "Stout / Bulky / Great",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Stout; Bulky (often in names)'."
+    },
+    {
+      "note_id": 1781004427253,
+      "hanzi": "娜",
+      "pinyin": "nà",
+      "old_english": "Elegant; Graceful (often used in names)",
+      "new_english": "Elegant / Graceful (in names)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Elegant; Graceful (often used in names)'."
+    },
+    {
+      "note_id": 1781004427285,
+      "hanzi": "拎",
+      "pinyin": "līn",
+      "old_english": "To lift; To carry (with a handle)",
+      "new_english": "Lift / Carry (with handle)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To '."
+    },
+    {
+      "note_id": 1781004427299,
+      "hanzi": "敞",
+      "pinyin": "chǎng",
+      "old_english": "Open, spacious, wide (e.g., of a room, a door)",
+      "new_english": "Open / Spacious (room/door)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Open, spacious, wide (e.g., of a room, a door)'."
+    },
+    {
+      "note_id": 1781004427310,
+      "hanzi": "昊",
+      "pinyin": "hào",
+      "old_english": "Vast, grand (referring to the sky/heaven)",
+      "new_english": "Vast Sky / Grand (heaven)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Vast, grand (referring to the sky/heaven)'."
+    },
+    {
+      "note_id": 1781004427327,
+      "hanzi": "楠",
+      "pinyin": "nán",
+      "old_english": "Phoebe (a type of tree, often associated with valuable timber)",
+      "new_english": "Phoebe Tree / Nanmu",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Phoebe (a type of tree, often associated with valuable timber)'."
+    },
+    {
+      "note_id": 1781004427331,
+      "hanzi": "榨",
+      "pinyin": "zhà",
+      "old_english": "Squeeze, press (to extract liquid); Extract",
+      "new_english": "Squeeze / Press (liquid) / Extract",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Squeeze, press (to extract liquid); Extract'."
+    },
+    {
+      "note_id": 1781004427338,
+      "hanzi": "湛",
+      "pinyin": "zhàn",
+      "old_english": "Clear, profound, deep (of water/color)",
+      "new_english": "Crystal Clear / Deep (water)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Clear, profound, deep (of water/color)'."
+    },
+    {
+      "note_id": 1781004427345,
+      "hanzi": "熄",
+      "pinyin": "xī",
+      "old_english": "Extinguish, put out (fire), stop",
+      "new_english": "Extinguish / Put Out (fire)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Extinguish, put out (fire), stop'."
+    },
+    {
+      "note_id": 1781004427352,
+      "hanzi": "玛",
+      "pinyin": "mǎ",
+      "old_english": "Agate; Used in transliterations (e.g., Mary)",
+      "new_english": "Agate / Transliteration (Mary)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Agate; Used in transliterations (e.g., Mary)'."
+    },
+    {
+      "note_id": 1781004427364,
+      "hanzi": "睁",
+      "pinyin": "zhēng",
+      "old_english": "To open (eyes)",
+      "new_english": "Open (eyes)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To '."
+    },
+    {
+      "note_id": 1781004427383,
+      "hanzi": "绽",
+      "pinyin": "zhàn",
+      "old_english": "To burst, split, crack (open)",
+      "new_english": "Burst / Split Open",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'To burst, split, crack (open)'."
+    },
+    {
+      "note_id": 1785483539446,
+      "hanzi": "琢",
+      "pinyin": "zhuó",
+      "old_english": "To polish (jade, stone)",
+      "new_english": "Polish (jade, stone)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To '."
+    },
+    {
+      "note_id": 1785483541813,
+      "hanzi": "妾",
+      "pinyin": "qiè",
+      "old_english": "Concubine; Servant girl (old term)",
+      "new_english": "Concubine / Servant Girl (old)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Concubine; Servant girl (old term)'."
+    },
+    {
+      "note_id": 1785483605338,
+      "hanzi": "铸",
+      "pinyin": "zhù",
+      "old_english": "To cast (metal); To mint",
+      "new_english": "Cast (metal) / Mint",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To '."
+    },
+    {
+      "note_id": 1785483652272,
+      "hanzi": "斋",
+      "pinyin": "zhāi",
+      "old_english": "Studio; Study; (In temples) fast; Vegetarian meal",
+      "new_english": "Studio / Study / Vegetarian Fast",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Studio; Study; (In temples) fast; Vegetarian meal'."
+    },
+    {
+      "note_id": 1786803210722,
+      "hanzi": "洛",
+      "pinyin": "luò",
+      "old_english": "Luoyang (river/place name)",
+      "new_english": "Luo River / Luoyang",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Luoyang (river/place name)'."
+    },
+    {
+      "note_id": 1787514324361,
+      "hanzi": "彈",
+      "pinyin": "dàn, tán",
+      "old_english": "bullet, bomb; to pluck (strings), to spring, to bounce",
+      "new_english": "Bullet / Bomb / Pluck (strings) / Bounce",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Standardize semicolon/comma mix to slash keywords."
+    },
+    {
+      "note_id": 1787581231369,
+      "hanzi": "娲",
+      "pinyin": "wā",
+      "old_english": "goddess in Chinese mythology (Nüwa)",
+      "new_english": "Goddess Nuwa (mythology)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'goddess in Chinese mythology (Nüwa)'."
+    },
+    {
+      "note_id": 1778227239705,
+      "hanzi": "瑰",
+      "pinyin": "guī",
+      "old_english": "(Semiprecious stone)",
+      "new_english": "Rose Gem / Extraordinary Jade",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Replace vague '(Semiprecious stone)' with meaningful keyword matching 玫瑰 and character sense."
+    },
+    {
+      "note_id": 1778227239972,
+      "hanzi": "玫",
+      "pinyin": "méi",
+      "old_english": "(Fine jade)",
+      "new_english": "Rose Gem / Fine Jade",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Replace vague '(Fine jade)' with meaningful keyword matching 玫瑰 and character sense."
+    },
+    {
+      "note_id": 1778227239500,
+      "hanzi": "籽",
+      "pinyin": "zǐ",
+      "old_english": "Seed (of a plant)",
+      "new_english": "Seed (plant)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Seed (of a plant)'."
+    },
+    {
+      "note_id": 1778227239630,
+      "hanzi": "叮",
+      "pinyin": "dīng",
+      "old_english": "To sting or bite (of mosquito, bee etc)",
+      "new_english": "Sting / Bite (insect)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean verbose dictionary gloss 'To sting or bite (of mosquito, bee etc)'."
+    },
+    {
+      "note_id": 1778227240089,
+      "hanzi": "揍",
+      "pinyin": "zòu",
+      "old_english": "To hit; To beat (sb)",
+      "new_english": "Hit / Beat (sb)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Remove leading 'To ' and standardize."
+    },
+    {
+      "note_id": 1778227240103,
+      "hanzi": "涂",
+      "pinyin": "tú",
+      "old_english": "To apply (paint etc)",
+      "new_english": "Apply / Spread (paint)",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'To apply (paint etc)'."
+    },
+    {
+      "note_id": 1768474725833,
+      "hanzi": "斯",
+      "pinyin": "sī",
+      "old_english": "This / (Suffix)",
+      "new_english": "This / Suffix",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'This / (Suffix)' to standard keyword format."
+    },
+    {
+      "note_id": 1768474726375,
+      "hanzi": "唉",
+      "pinyin": "āi",
+      "old_english": "Alas / (Sigh)",
+      "new_english": "Alas / Sigh",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Alas / (Sigh)' to standard keyword format."
+    },
+    {
+      "note_id": 1768474726376,
+      "hanzi": "诶",
+      "pinyin": "èi",
+      "old_english": "Hey / (Interjection)",
+      "new_english": "Hey / Interjection",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Hey / (Interjection)' to standard keyword format."
+    },
+    {
+      "note_id": 1768474726147,
+      "hanzi": "哇",
+      "pinyin": "wa",
+      "old_english": "Wow / (Particle)",
+      "new_english": "Wow / Particle",
+      "category": "Concise Keyword Cleanup",
+      "reason": "Clean 'Wow / (Particle)' to standard keyword format."
+    }
+  ],
+  "kept": [
+    {
+      "note_id": 1768474724562,
+      "hanzi": "尔",
+      "pinyin": "ěr",
+      "english": "You (literary)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724564,
+      "hanzi": "您",
+      "pinyin": "nín",
+      "english": "You (polite)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724600,
+      "hanzi": "两",
+      "pinyin": "liǎng",
+      "english": "Two (pair)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724613,
+      "hanzi": "嗯",
+      "pinyin": "ńg",
+      "english": "Hmm (Approval)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724727,
+      "hanzi": "饱",
+      "pinyin": "bǎo",
+      "english": "Full (eaten)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724867,
+      "hanzi": "轻",
+      "pinyin": "qīng",
+      "english": "Light (weight)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724925,
+      "hanzi": "矮",
+      "pinyin": "ǎi",
+      "english": "Short (height)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474724987,
+      "hanzi": "丙",
+      "pinyin": "bǐng",
+      "english": "Third (Stem)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725051,
+      "hanzi": "睛",
+      "pinyin": "jīng",
+      "english": "Pupil (eye)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725224,
+      "hanzi": "俩",
+      "pinyin": "liǎ",
+      "english": "Two (people)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725281,
+      "hanzi": "咱",
+      "pinyin": "zán",
+      "english": "We (inclusive)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725318,
+      "hanzi": "顿",
+      "pinyin": "dùn",
+      "english": "M.W. (meal) / Pause",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725353,
+      "hanzi": "刮",
+      "pinyin": "guā",
+      "english": "Blow (wind)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725410,
+      "hanzi": "久",
+      "pinyin": "jiǔ",
+      "english": "Long (time)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725433,
+      "hanzi": "秒",
+      "pinyin": "miǎo",
+      "english": "Second (time)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725437,
+      "hanzi": "阿",
+      "pinyin": "ā",
+      "english": "Prefix (names)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725438,
+      "hanzi": "啊",
+      "pinyin": "a",
+      "english": "Ah (Particle)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725604,
+      "hanzi": "座",
+      "pinyin": "zuò",
+      "english": "Seat / M.W. (mountains)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725629,
+      "hanzi": "硕",
+      "pinyin": "shuò",
+      "english": "Large / Master (degree)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725785,
+      "hanzi": "橘",
+      "pinyin": "jú",
+      "english": "Orange (fruit)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725848,
+      "hanzi": "戴",
+      "pinyin": "dài",
+      "english": "Wear (accessories)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725852,
+      "hanzi": "搬",
+      "pinyin": "<span class=\"tone1\">bān</span> <!-- ban -->",
+      "english": "Move (heavy items)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725919,
+      "hanzi": "铅",
+      "pinyin": "qiān",
+      "english": "Lead (metal)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474725935,
+      "hanzi": "浇",
+      "pinyin": "<span class=\"tone1\">jiāo</span> <!-- jiao -->",
+      "english": "Pour / Water (plants)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726051,
+      "hanzi": "遭",
+      "pinyin": "zāo",
+      "english": "Encounter (bad)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726110,
+      "hanzi": "舅",
+      "pinyin": "jiù",
+      "english": "Uncle (maternal)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726119,
+      "hanzi": "阎",
+      "pinyin": "<span class=\"tone2\">yán</span> <!-- yan -->",
+      "english": "Yama (Gate of Hell)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726183,
+      "hanzi": "镑",
+      "pinyin": "bàng",
+      "english": "Pound (money)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726184,
+      "hanzi": "傍",
+      "pinyin": "bàng",
+      "english": "Near (time) / Depend",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726185,
+      "hanzi": "磅",
+      "pinyin": "<span class=\"tone4\">bàng</span> <!-- bang -->",
+      "english": "Pound (weight)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726202,
+      "hanzi": "栋",
+      "pinyin": "dòng",
+      "english": "M.W. (buildings)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726324,
+      "hanzi": "剪",
+      "pinyin": "jiǎn",
+      "english": "Cut (scissors)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726342,
+      "hanzi": "颗",
+      "pinyin": "kē",
+      "english": "M.W. (small round)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726346,
+      "hanzi": "匹",
+      "pinyin": "pǐ",
+      "english": "M.W. (horses) / Match",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1768474726387,
+      "hanzi": "姨",
+      "pinyin": "yí",
+      "english": "Aunt (maternal)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1778227240770,
+      "hanzi": "蝇",
+      "pinyin": "yíng",
+      "english": "Fly (insect)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1778227241039,
+      "hanzi": "蝠",
+      "pinyin": "fú",
+      "english": "Bat (animal)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    },
+    {
+      "note_id": 1781004427323,
+      "hanzi": "柳",
+      "pinyin": "liǔ",
+      "english": "Willow (tree)",
+      "reason": "Accurate, concise semantic disambiguator (e.g. distinguishing from homophones/near-synonyms)"
+    }
+  ]
+}

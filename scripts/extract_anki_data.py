@@ -93,38 +93,18 @@ def main():
                 if imm_data['sentence'] or imm_data['word']:
                     extracted_immersion.append(imm_data)
             
-            # Extract Props deck
-            print("Extracting 'Chinese Props' deck...")
-            prop_deck = anki.best_match_deck(["Chinese::Props", "Chinese\x1fProps"])
-            prop_notes = anki.get_notes_in_deck(prop_deck)
-            print(f"Retrieved {len(prop_notes)} prop notes.")
-            
-            extracted_props = []
-            for note in prop_notes:
-                f = note['fields']
-                prop_data = {
-                    'note_id': note['id'],
-                    'component': f.get('Component', '').strip(),
-                    'prop': f.get('Prop', '').strip(),
-                    'parts': f.get('Parts', '').strip(),
-                    'usage_count': f.get('Usage Count', '').strip()
-                }
-                if prop_data['component']:
-                    extracted_props.append(prop_data)
-            
-            # Compile results
+            # Compile results (props have been removed per user instruction)
             output_data = {
                 'characters': extracted_chars,
-                'immersion': extracted_immersion,
-                'props': extracted_props
+                'immersion': extracted_immersion
             }
             
-            output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "anki_extract.json"))
+            output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "anki_extract.json")
             with open(output_path, 'w', encoding='utf-8') as outfile:
                 json.dump(output_data, outfile, ensure_ascii=False, indent=2)
                 
             print(f"Extraction complete! Saved data to: {output_path}")
-            print(f"Successfully extracted {len(extracted_chars)} characters, {len(extracted_immersion)} immersion cards, and {len(extracted_props)} prop cards.")
+            print(f"Successfully extracted {len(extracted_chars)} characters and {len(extracted_immersion)} immersion cards.")
             
     except Exception as e:
         print(f"An error occurred during extraction: {e}")

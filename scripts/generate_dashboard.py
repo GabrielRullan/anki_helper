@@ -2726,26 +2726,9 @@ def generate_dashboard():
     if char_notes is None:
         char_notes, migaku_notes = load_data_from_backup_json()
         
-    # Fetch props notes
-    from anki_db import AnkiConnection
+    # Props have been removed per user instruction
     prop_notes = []
-    try:
-        with AnkiConnection(profile_name="Main") as anki:
-            prop_deck = anki.best_match_deck(["Chinese::Props", "Chinese\x1fProps"])
-            prop_notes = anki.get_notes_in_deck(prop_deck)
-            print(f"Loaded {len(prop_notes)} prop notes from live DB.")
-    except Exception as e:
-        print(f"Could not connect to live DB for props ({e}). Trying backup JSON...")
-        backup_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "anki_extract.json")
-        if os.path.exists(backup_path):
-            try:
-                with open(backup_path, 'r', encoding='utf-8') as f:
-                    backup_data = json.load(f)
-                    prop_notes = [{'id': n['note_id'], 'fields': {'Component': n['component'], 'Prop': n['prop']}} for n in backup_data.get('props', [])]
-                    print(f"Loaded {len(prop_notes)} prop notes from backup JSON.")
-            except Exception as e_bak:
-                print(f"Error reading props from backup: {e_bak}")
-        
+    
     if not char_notes:
         print("Error: Could not retrieve notes. Ensure Anki is running or anki_extract.json exists.")
         return

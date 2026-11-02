@@ -2,7 +2,7 @@
 
 This document defines the system instructions, guidelines, and prompts for an AI agent acting as a personal tutor and tool developer for this workspace.
 
-**Last Run:** May 29, 2026 (Updated with the new `data/hsk4_vocab.csv` Spanish translation data, character palace, and Migaku deck entries).
+**Last Run:** November 1, 2026 (Updated with MBP 55-initial + 13-set decomposition, Props deck retirement, bidirectional Hanzi/Word linker, automated scene/image pipelines, and updated dashboard).
 
 ---
 

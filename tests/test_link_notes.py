@@ -4,7 +4,16 @@ import os
 
 # Import modules from scripts directory
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-from link_notes import clean_components, update_marked_section, get_field_val, has_field, link_text_characters, resolve_component
+from link_notes import (
+    clean_components, 
+    strip_component_links,
+    update_marked_section, 
+    remove_marked_section,
+    get_field_val, 
+    has_field, 
+    link_text_characters,
+    build_links_plan
+)
 
 class TestLinkNotes(unittest.TestCase):
     def test_clean_components(self):
@@ -21,6 +30,11 @@ class TestLinkNotes(unittest.TestCase):
         # Test empty input
         self.assertEqual(clean_components(""), [])
         self.assertEqual(clean_components(None), [])
+
+    def test_strip_component_links(self):
+        self.assertEqual(strip_component_links("[日|nid12345], [月|nid67890]"), "日, 月")
+        self.assertEqual(strip_component_links("日, 月"), "日, 月")
+        self.assertEqual(strip_component_links(""), "")
 
     def test_get_field_val(self):
         note = {
@@ -89,6 +103,16 @@ class TestLinkNotes(unittest.TestCase):
         )
         self.assertEqual(result_updated, expected_updated)
 
+    def test_remove_marked_section(self):
+        start_tag = "<!-- ANKI_LINKER_START -->"
+        end_tag = "<!-- ANKI_LINKER_END -->"
+        
+        content = f"User note.\n\n{start_tag}\n<div>Old section</div>\n{end_tag}"
+        self.assertEqual(remove_marked_section(content), "User note.")
+        
+        content_only = f"{start_tag}\n<div>Old section</div>\n{end_tag}"
+        self.assertEqual(remove_marked_section(content_only), "")
+
     def test_link_text_characters(self):
         char_to_nid = {
             "高": 1768474724490,
@@ -118,24 +142,50 @@ class TestLinkNotes(unittest.TestCase):
         # Test empty input
         self.assertEqual(link_text_characters("", char_to_nid), "")
 
-    def test_resolve_component(self):
-        char_to_nid = {"力": 1111, "日": 2222}
-        prop_to_nid = {"力": 3333, "辶": 4444}
+    def test_build_links_plan(self):
+        char_notes = [
+            {
+                'id': 101,
+                'fields': {
+                    'Hanzi': {'value': '高'},
+                    'Simplified': {'value': '高'},
+                    'Components': {'value': '高'},
+                    'Notes': {'value': '<!-- ANKI_LINKER_START -->\n<b>Derived characters:</b> [亮|nid102]\n<!-- ANKI_LINKER_END -->'}
+                }
+            },
+            {
+                'id': 102,
+                'fields': {
+                    'Hanzi': {'value': '兴'},
+                    'Simplified': {'value': '兴'},
+                    'Components': {'value': '兴'},
+                    'Notes': {'value': ''}
+                }
+            }
+        ]
+        word_notes = [
+            {
+                'id': 201,
+                'fields': {
+                    'Word': {'value': '高兴'},
+                    'Characters': {'value': ''},
+                    'Notes': {'value': 'Word notes.'}
+                }
+            }
+        ]
         
-        # Prioritize Prop deck over Character deck
-        self.assertEqual(resolve_component("力", char_to_nid, prop_to_nid), "[力|nid3333]")
+        char_updates, word_updates, nids_to_tag = build_links_plan(char_notes, word_notes)
         
-        # Resolve to Character deck if only in Character deck
-        self.assertEqual(resolve_component("日", char_to_nid, prop_to_nid), "[日|nid2222]")
+        # Check word updates
+        self.assertEqual(len(word_updates), 1)
+        self.assertEqual(word_updates[0]['fields']['Characters'], '[高|nid101][兴|nid102]')
+        self.assertIn('<b>Characters in word:</b> [高|nid101] [兴|nid102]', word_updates[0]['fields']['Notes'])
         
-        # Resolve to Prop deck if only in Prop deck
-        self.assertEqual(resolve_component("辶", char_to_nid, prop_to_nid), "[辶|nid4444]")
-        
-        # Resolve existing link to character card back to prop card if present in prop deck
-        self.assertEqual(resolve_component("[力|nid1111]", char_to_nid, prop_to_nid), "[力|nid3333]")
-        
-        # Keep unresolved
-        self.assertEqual(resolve_component("unknown", char_to_nid, prop_to_nid), "unknown")
+        # Check char updates: both 高 and 兴 should link to 高兴, and 'Derived characters' must be removed
+        self.assertEqual(len(char_updates), 2)
+        for cu in char_updates:
+            self.assertIn('<b>Words containing', cu['fields']['Notes'])
+            self.assertNotIn('Derived characters', cu['fields']['Notes'])
 
 if __name__ == "__main__":
     unittest.main()

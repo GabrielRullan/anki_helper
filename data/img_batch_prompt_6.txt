@@ -1,0 +1,33 @@
+Generate 10 minimalist Peanuts cartoon style flashcard illustrations (plain solid white background, simple clean line art, flat colors, centered, no text or letters of any alphabet) for the following 10 Mandarin Blueprint mnemonic scenes:
+
+1. Identifier: `mbp_怪_strange` (Target: `mbp_怪_strange.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -ai set, Growthlite's little heart (忄) pounds as he watches a STRANGE MONSTER dig with persistent effort (圣) for wild vegetables in the dirt. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+2. Identifier: `mbp_党_party` (Target: `mbp_党_party.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: Inside Room [3] of the -ang set, Maui (Dwayne the Rock) wears a glowing crown (⺌) and Two high heel shoes (儿) beneath a velvet Cover (冖) while hosting a lively political PARTY for his FACTION. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+3. Identifier: `mbp_葡_grape` (Target: `mbp_葡_grape.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Hall or Kitchen [2] of the -(Null) set, Puar plucks a juicy purple GRAPE (甫) hidden beneath a clump of fresh green Grass (艹) on the counter. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+4. Identifier: `mbp_登_climb` (Target: `mbp_登_climb.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In Front [1] of the -eng set, Maui (Dwayne the Rock) puts on the Wicked Witch's Silver shoes (癶) and steps onto a Giant Bean (豆) to CLIMB up high and REGISTER his name at the top. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+5. Identifier: `mbp_属_belongto` (Target: `mbp_属_belongto.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: Inside Room [3] of the -(Null) set, Shrek plants a Flagpole (尸) next to an Aquatic robot built in honor of Yu the Great (禹) to declare that these swamp treasures BELONG TO him. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+6. Identifier: `mbp_举_lift` (Target: `mbp_举_lift.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: Inside Room [3] of the -(Null) set, Jimbey uses a Giant hand (手) to LIFT, HOLD, and RAISE a fluttering Golden snitch (兴) high up toward the ceiling. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+7. Identifier: `mbp_贴_paste` (Target: `mbp_贴_paste.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In Front [1] of the -e set, Tinkerbell helps a slow Tortoise (贝) PASTE and STICK a colorful poster right onto the front of a wooden Shop stand (占). Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+8. Identifier: `mbp_贷_loan` (Target: `mbp_贷_loan.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -ai set, Maui (Dwayne the Rock) watches a Substitute teacher (代) hand a prized Tortoise (贝) over to the bank as collateral for a LOAN. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+9. Identifier: `mbp_换_change` (Target: `mbp_换_change.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Backyard [4] of the -an set, Hulk uses the giant hand from Adam's creation (扌) to trade with Mr. Huan (奂) so they can CHANGE and EXCHANGE their collectibles. Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+10. Identifier: `mbp_夺_seize` (Target: `mbp_夺_seize.png`)
+   Prompt: Minimalist Peanuts cartoon style illustration of: In the Hall or Kitchen [2] of the -o set, Dumbo swoops down with a Tape Measure (寸) to SEIZE and SNATCH the battery pack right out of a Giant robot (大). Plain solid white background, simple clean line art, flat colors, centered, no text or letters.
+
+Reply with the exact list of 10 generated artifact image paths mapped to their target filenames.
