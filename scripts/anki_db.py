@@ -16,15 +16,35 @@ class AnkiConnection:
         if not appdata:
             raise EnvironmentError("APPDATA environment variable not found.")
         
-        path = os.path.join(appdata, "Anki2", self.profile_name, "collection.anki2")
-        if not os.path.exists(path):
-            # Try to list available profiles to help the user
-            anki2_dir = os.path.join(appdata, "Anki2")
-            if os.path.exists(anki2_dir):
-                profiles = [d for d in os.listdir(anki2_dir) if os.path.isdir(os.path.join(anki2_dir, d)) and d != "addons21"]
-                raise FileNotFoundError(f"Database not found for profile '{self.profile_name}'. Available profiles: {profiles}")
-            else:
-                raise FileNotFoundError(f"Anki2 folder not found in AppData/Roaming.")
+        # 1. Allow environment variable override
+        env_profile = os.getenv("ANKI_PROFILE")
+        profile = env_profile if env_profile else self.profile_name
+
+        path = os.path.join(appdata, "Anki2", profile, "collection.anki2")
+        if os.path.exists(path):
+            return path
+
+        # 2. Check if folder exists for "Gabriel"
+        if profile != "Gabriel":
+            gabriel_path = os.path.join(appdata, "Anki2", "Gabriel", "collection.anki2")
+            if os.path.exists(gabriel_path):
+                print(f"Profile '{profile}' not found. Falling back to active profile 'Gabriel'.")
+                return gabriel_path
+
+        # 3. Dynamic auto-detection of available profiles
+        anki2_dir = os.path.join(appdata, "Anki2")
+        if os.path.exists(anki2_dir):
+            profiles = [d for d in os.listdir(anki2_dir) 
+                        if os.path.isdir(os.path.join(anki2_dir, d)) 
+                        and d not in ["addons21", "logs", "templates"]]
+            if len(profiles) == 1:
+                auto_path = os.path.join(anki2_dir, profiles[0], "collection.anki2")
+                if os.path.exists(auto_path):
+                    print(f"Profile '{profile}' not found. Auto-detected and using single profile '{profiles[0]}'.")
+                    return auto_path
+            raise FileNotFoundError(f"Database not found for profile '{profile}'. Available profiles: {profiles}")
+        else:
+            raise FileNotFoundError(f"Anki2 folder not found in AppData/Roaming.")
         return path
 
     def connect(self):

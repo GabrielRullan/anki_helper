@@ -1,0 +1,3266 @@
+[
+  {
+    "word": "会う",
+    "reading": "あう",
+    "meaning": "encontrarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "開く",
+    "reading": "あく",
+    "meaning": "abrirse (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "上がる",
+    "reading": "あがる",
+    "meaning": "subir (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "遊ぶ",
+    "reading": "あそぶ",
+    "meaning": "jugar",
+    "category": "Verbo"
+  },
+  {
+    "word": "洗う",
+    "reading": "あらう",
+    "meaning": "lavar",
+    "category": "Verbo"
+  },
+  {
+    "word": "ある",
+    "reading": "ある",
+    "meaning": "haber, existir (inanimado)",
+    "category": "Verbo"
+  },
+  {
+    "word": "歩く",
+    "reading": "あるく",
+    "meaning": "caminar",
+    "category": "Verbo"
+  },
+  {
+    "word": "言う",
+    "reading": "いう",
+    "meaning": "decir",
+    "category": "Verbo"
+  },
+  {
+    "word": "行く",
+    "reading": "いく",
+    "meaning": "ir",
+    "category": "Verbo"
+  },
+  {
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "meaning": "darse prisa",
+    "category": "Verbo"
+  },
+  {
+    "word": "歌う",
+    "reading": "うたう",
+    "meaning": "cantar",
+    "category": "Verbo"
+  },
+  {
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "meaning": "nadar",
+    "category": "Verbo"
+  },
+  {
+    "word": "置く",
+    "reading": "おく",
+    "meaning": "poner, colocar",
+    "category": "Verbo"
+  },
+  {
+    "word": "押す",
+    "reading": "おす",
+    "meaning": "empujar, presionar",
+    "category": "Verbo"
+  },
+  {
+    "word": "踊る",
+    "reading": "おどる",
+    "meaning": "bailar",
+    "category": "Verbo"
+  },
+  {
+    "word": "思う",
+    "reading": "おもう",
+    "meaning": "pensar",
+    "category": "Verbo"
+  },
+  {
+    "word": "終わる",
+    "reading": "おわる",
+    "meaning": "terminar (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "買う",
+    "reading": "かう",
+    "meaning": "comprar",
+    "category": "Verbo"
+  },
+  {
+    "word": "帰る",
+    "reading": "かえる",
+    "meaning": "regresar (a casa)",
+    "category": "Verbo"
+  },
+  {
+    "word": "返す",
+    "reading": "かえす",
+    "meaning": "devolver",
+    "category": "Verbo"
+  },
+  {
+    "word": "書く",
+    "reading": "かく",
+    "meaning": "escribir",
+    "category": "Verbo"
+  },
+  {
+    "word": "掛かる",
+    "reading": "かかる",
+    "meaning": "costar (tiempo/dinero), tardar",
+    "category": "Verbo"
+  },
+  {
+    "word": "貸す",
+    "reading": "かす",
+    "meaning": "prestar",
+    "category": "Verbo"
+  },
+  {
+    "word": "消す",
+    "reading": "けす",
+    "meaning": "apagar, borrar",
+    "category": "Verbo"
+  },
+  {
+    "word": "聞く",
+    "reading": "きく",
+    "meaning": "escuchar, preguntar",
+    "category": "Verbo"
+  },
+  {
+    "word": "切る",
+    "reading": "きる",
+    "meaning": "cortar",
+    "category": "Verbo"
+  },
+  {
+    "word": "困る",
+    "reading": "こまる",
+    "meaning": "tener problemas",
+    "category": "Verbo"
+  },
+  {
+    "word": "下がる",
+    "reading": "さがる",
+    "meaning": "bajar (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "閉まる",
+    "reading": "しまる",
+    "meaning": "cerrarse (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "知る",
+    "reading": "しる",
+    "meaning": "saber, conocer",
+    "category": "Verbo"
+  },
+  {
+    "word": "吸う",
+    "reading": "すう",
+    "meaning": "fumar, aspirar",
+    "category": "Verbo"
+  },
+  {
+    "word": "住む",
+    "reading": "すむ",
+    "meaning": "vivir (en un lugar)",
+    "category": "Verbo"
+  },
+  {
+    "word": "座る",
+    "reading": "すわる",
+    "meaning": "sentarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "出す",
+    "reading": "だす",
+    "meaning": "sacar, enviar",
+    "category": "Verbo"
+  },
+  {
+    "word": "立つ",
+    "reading": "たつ",
+    "meaning": "ponerse de pie",
+    "category": "Verbo"
+  },
+  {
+    "word": "使う",
+    "reading": "つかう",
+    "meaning": "usar",
+    "category": "Verbo"
+  },
+  {
+    "word": "着く",
+    "reading": "つく",
+    "meaning": "llegar",
+    "category": "Verbo"
+  },
+  {
+    "word": "作る",
+    "reading": "つくる",
+    "meaning": "hacer, fabricar",
+    "category": "Verbo"
+  },
+  {
+    "word": "手伝う",
+    "reading": "てつだう",
+    "meaning": "ayudar",
+    "category": "Verbo"
+  },
+  {
+    "word": "止まる",
+    "reading": "とまる",
+    "meaning": "pararse (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "撮る",
+    "reading": "とる",
+    "meaning": "tomar (una foto)",
+    "category": "Verbo"
+  },
+  {
+    "word": "取る",
+    "reading": "とる",
+    "meaning": "tomar, coger",
+    "category": "Verbo"
+  },
+  {
+    "word": "泣く",
+    "reading": "なく",
+    "meaning": "llorar",
+    "category": "Verbo"
+  },
+  {
+    "word": "なくす",
+    "reading": "なくす",
+    "meaning": "perder (algo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "習う",
+    "reading": "ならう",
+    "meaning": "aprender",
+    "category": "Verbo"
+  },
+  {
+    "word": "並ぶ",
+    "reading": "ならぶ",
+    "meaning": "hacer fila, alinearse (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "脱ぐ",
+    "reading": "ぬぐ",
+    "meaning": "quitarse (ropa)",
+    "category": "Verbo"
+  },
+  {
+    "word": "飲む",
+    "reading": "のむ",
+    "meaning": "beber",
+    "category": "Verbo"
+  },
+  {
+    "word": "登る",
+    "reading": "のぼる",
+    "meaning": "subir, escalar",
+    "category": "Verbo"
+  },
+  {
+    "word": "乗る",
+    "reading": "のる",
+    "meaning": "subir (a un vehículo), montar",
+    "category": "Verbo"
+  },
+  {
+    "word": "履く",
+    "reading": "はく",
+    "meaning": "ponerse (calzado, pantalones, faldas)",
+    "category": "Verbo"
+  },
+  {
+    "word": "始まる",
+    "reading": "はじまる",
+    "meaning": "empezar (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "走る",
+    "reading": "はしる",
+    "meaning": "correr",
+    "category": "Verbo"
+  },
+  {
+    "word": "働く",
+    "reading": "はたらく",
+    "meaning": "trabajar",
+    "category": "Verbo"
+  },
+  {
+    "word": "話す",
+    "reading": "はなす",
+    "meaning": "hablar",
+    "category": "Verbo"
+  },
+  {
+    "word": "払う",
+    "reading": "はらう",
+    "meaning": "pagar",
+    "category": "Verbo"
+  },
+  {
+    "word": "入る",
+    "reading": "はいる",
+    "meaning": "entrar",
+    "category": "Verbo"
+  },
+  {
+    "word": "引く",
+    "reading": "ひく",
+    "meaning": "tirar, tocar (instrumento de cuerda)",
+    "category": "Verbo"
+  },
+  {
+    "word": "弾く",
+    "reading": "ひく",
+    "meaning": "tocar (piano, guitarra)",
+    "category": "Verbo"
+  },
+  {
+    "word": "太る",
+    "reading": "ふとる",
+    "meaning": "engordar",
+    "category": "Verbo"
+  },
+  {
+    "word": "降る",
+    "reading": "ふる",
+    "meaning": "caer (lluvia, nieve)",
+    "category": "Verbo"
+  },
+  {
+    "word": "曲がる",
+    "reading": "まがる",
+    "meaning": "girar, doblar (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "間に合う",
+    "reading": "まにあう",
+    "meaning": "llegar a tiempo",
+    "category": "Verbo"
+  },
+  {
+    "word": "待つ",
+    "reading": "まつ",
+    "meaning": "esperar",
+    "category": "Verbo"
+  },
+  {
+    "word": "磨く",
+    "reading": "みがく",
+    "meaning": "pulir, cepillar",
+    "category": "Verbo"
+  },
+  {
+    "word": "持つ",
+    "reading": "もつ",
+    "meaning": "tener, sostener",
+    "category": "Verbo"
+  },
+  {
+    "word": "もらう",
+    "reading": "もらう",
+    "meaning": "recibir",
+    "category": "Verbo"
+  },
+  {
+    "word": "休む",
+    "reading": "やすむ",
+    "meaning": "descansar",
+    "category": "Verbo"
+  },
+  {
+    "word": "呼ぶ",
+    "reading": "よぶ",
+    "meaning": "llamar",
+    "category": "Verbo"
+  },
+  {
+    "word": "読む",
+    "reading": "よむ",
+    "meaning": "leer",
+    "category": "Verbo"
+  },
+  {
+    "word": "わかる",
+    "reading": "わかる",
+    "meaning": "entender",
+    "category": "Verbo"
+  },
+  {
+    "word": "渡る",
+    "reading": "わたる",
+    "meaning": "cruzar",
+    "category": "Verbo"
+  },
+  {
+    "word": "開ける",
+    "reading": "あける",
+    "meaning": "abrir (transitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "上げる",
+    "reading": "あげる",
+    "meaning": "dar, subir",
+    "category": "Verbo"
+  },
+  {
+    "word": "集める",
+    "reading": "あつめる",
+    "meaning": "recolectar",
+    "category": "Verbo"
+  },
+  {
+    "word": "浴びる",
+    "reading": "あびる",
+    "meaning": "tomar (una ducha)",
+    "category": "Verbo"
+  },
+  {
+    "word": "いる",
+    "reading": "いる",
+    "meaning": "haber, existir (animado)",
+    "category": "Verbo"
+  },
+  {
+    "word": "入れる",
+    "reading": "いれる",
+    "meaning": "meter, poner dentro",
+    "category": "Verbo"
+  },
+  {
+    "word": "生まれる",
+    "reading": "うまれる",
+    "meaning": "nacer",
+    "category": "Verbo"
+  },
+  {
+    "word": "教える",
+    "reading": "おしえる",
+    "meaning": "enseñar",
+    "category": "Verbo"
+  },
+  {
+    "word": "起きる",
+    "reading": "おきる",
+    "meaning": "levantarse, despertarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "遅れる",
+    "reading": "おくれる",
+    "meaning": "llegar tarde",
+    "category": "Verbo"
+  },
+  {
+    "word": "降りる",
+    "reading": "おりる",
+    "meaning": "bajarse (de un vehículo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "覚える",
+    "reading": "おぼえる",
+    "meaning": "recordar, aprender de memoria",
+    "category": "Verbo"
+  },
+  {
+    "word": "掛ける",
+    "reading": "かける",
+    "meaning": "colgar, llamar por teléfono, ponerse (gafas)",
+    "category": "Verbo"
+  },
+  {
+    "word": "借りる",
+    "reading": "かりる",
+    "meaning": "pedir prestado",
+    "category": "Verbo"
+  },
+  {
+    "word": "消える",
+    "reading": "きえる",
+    "meaning": "desaparecer, apagarse (intransitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "決める",
+    "reading": "きめる",
+    "meaning": "decidir",
+    "category": "Verbo"
+  },
+  {
+    "word": "閉める",
+    "reading": "しめる",
+    "meaning": "cerrar (transitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "付ける",
+    "reading": "つける",
+    "meaning": "encender, adjuntar",
+    "category": "Verbo"
+  },
+  {
+    "word": "答える",
+    "reading": "こたえる",
+    "meaning": "responder",
+    "category": "Verbo"
+  },
+  {
+    "word": "出かける",
+    "reading": "でかける",
+    "meaning": "salir (de paseo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "出る",
+    "reading": "でる",
+    "meaning": "salir, dejar",
+    "category": "Verbo"
+  },
+  {
+    "word": "食べる",
+    "reading": "たべる",
+    "meaning": "comer",
+    "category": "Verbo"
+  },
+  {
+    "word": "疲れる",
+    "reading": "つかれる",
+    "meaning": "cansarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "勤める",
+    "reading": "つとめる",
+    "meaning": "trabajar para",
+    "category": "Verbo"
+  },
+  {
+    "word": "寝る",
+    "reading": "ねる",
+    "meaning": "dormir",
+    "category": "Verbo"
+  },
+  {
+    "word": "始める",
+    "reading": "はじめる",
+    "meaning": "empezar (transitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "見る",
+    "reading": "みる",
+    "meaning": "ver, mirar",
+    "category": "Verbo"
+  },
+  {
+    "word": "見せる",
+    "reading": "みせる",
+    "meaning": "mostrar",
+    "category": "Verbo"
+  },
+  {
+    "word": "見つける",
+    "reading": "みつける",
+    "meaning": "encontrar (transitivo)",
+    "category": "Verbo"
+  },
+  {
+    "word": "忘れる",
+    "reading": "わすれる",
+    "meaning": "olvidar",
+    "category": "Verbo"
+  },
+  {
+    "word": "来る",
+    "reading": "くる",
+    "meaning": "venir",
+    "category": "Verbo"
+  },
+  {
+    "word": "する",
+    "reading": "する",
+    "meaning": "hacer",
+    "category": "Verbo"
+  },
+  {
+    "word": "運転する",
+    "reading": "うんてんする",
+    "meaning": "conducir",
+    "category": "Verbo"
+  },
+  {
+    "word": "買い物する",
+    "reading": "かいものする",
+    "meaning": "hacer compras",
+    "category": "Verbo"
+  },
+  {
+    "word": "結婚する",
+    "reading": "けっこんする",
+    "meaning": "casarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "散歩する",
+    "reading": "さんぽする",
+    "meaning": "pasear",
+    "category": "Verbo"
+  },
+  {
+    "word": "食事する",
+    "reading": "しょくじする",
+    "meaning": "comer, tomar una comida",
+    "category": "Verbo"
+  },
+  {
+    "word": "質問する",
+    "reading": "しつもんする",
+    "meaning": "preguntar",
+    "category": "Verbo"
+  },
+  {
+    "word": "掃除する",
+    "reading": "そうじする",
+    "meaning": "limpiar",
+    "category": "Verbo"
+  },
+  {
+    "word": "洗濯する",
+    "reading": "せんたくする",
+    "meaning": "lavar la ropa",
+    "category": "Verbo"
+  },
+  {
+    "word": "電話する",
+    "reading": "でんわする",
+    "meaning": "llamar por teléfono",
+    "category": "Verbo"
+  },
+  {
+    "word": "勉強する",
+    "reading": "べんきょうする",
+    "meaning": "estudiar",
+    "category": "Verbo"
+  },
+  {
+    "word": "旅行する",
+    "reading": "りょこうする",
+    "meaning": "viajar",
+    "category": "Verbo"
+  },
+  {
+    "word": "練習する",
+    "reading": "れんしゅうする",
+    "meaning": "practicar",
+    "category": "Verbo"
+  },
+  {
+    "word": "新しい",
+    "reading": "あたらしい",
+    "meaning": "nuevo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "古い",
+    "reading": "ふるい",
+    "meaning": "viejo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "暑い",
+    "reading": "あつい",
+    "meaning": "caluroso (clima)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "熱い",
+    "reading": "あつい",
+    "meaning": "caliente (objeto)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "寒い",
+    "reading": "さむい",
+    "meaning": "frío (clima)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "冷たい",
+    "reading": "つめたい",
+    "meaning": "frío (objeto)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "高い",
+    "reading": "たかい",
+    "meaning": "alto, caro",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "安い",
+    "reading": "やすい",
+    "meaning": "barato",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "大きい",
+    "reading": "おおきい",
+    "meaning": "grande",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "小さい",
+    "reading": "ちいさい",
+    "meaning": "pequeño",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "良い",
+    "reading": "よい",
+    "meaning": "bueno",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "悪い",
+    "reading": "わるい",
+    "meaning": "malo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "忙しい",
+    "reading": "いそがしい",
+    "meaning": "ocupado",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "面白い",
+    "reading": "おもしろい",
+    "meaning": "interesante, divertido",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "美味しい",
+    "reading": "おいしい",
+    "meaning": "delicioso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "難しい",
+    "reading": "むずかしい",
+    "meaning": "difícil",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "易しい",
+    "reading": "やさしい",
+    "meaning": "fácil, amable",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "楽しい",
+    "reading": "たのしい",
+    "meaning": "divertido",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "白い",
+    "reading": "しろい",
+    "meaning": "blanco",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "黒い",
+    "reading": "くろい",
+    "meaning": "negro",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "赤い",
+    "reading": "あかい",
+    "meaning": "rojo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "青い",
+    "reading": "あおい",
+    "meaning": "azul",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "黄色い",
+    "reading": "きいろい",
+    "meaning": "amarillo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "遠い",
+    "reading": "とおい",
+    "meaning": "lejos",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "近い",
+    "reading": "ちかい",
+    "meaning": "cerca",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "重い",
+    "reading": "おもい",
+    "meaning": "pesado",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "軽い",
+    "reading": "かるい",
+    "meaning": "ligero",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "早い",
+    "reading": "はやい",
+    "meaning": "temprano",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "速い",
+    "reading": "はやい",
+    "meaning": "rápido (velocidad)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "遅い",
+    "reading": "おそい",
+    "meaning": "lento, tarde",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "長い",
+    "reading": "ながい",
+    "meaning": "largo",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "短い",
+    "reading": "みじかい",
+    "meaning": "corto",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "広い",
+    "reading": "ひろい",
+    "meaning": "amplio, espacioso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "狭い",
+    "reading": "せまい",
+    "meaning": "estrecho",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "多い",
+    "reading": "おおい",
+    "meaning": "muchos",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "少ない",
+    "reading": "すくない",
+    "meaning": "pocos",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "甘い",
+    "reading": "あまい",
+    "meaning": "dulce",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "辛い",
+    "reading": "からい",
+    "meaning": "picante",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "眠い",
+    "reading": "ねむい",
+    "meaning": "soñoliento",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "若い",
+    "reading": "わかい",
+    "meaning": "joven",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "厚い",
+    "reading": "あつい",
+    "meaning": "grueso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "薄い",
+    "reading": "うすい",
+    "meaning": "delgado",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "明るい",
+    "reading": "あかるい",
+    "meaning": "luminoso, alegre",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "暗い",
+    "reading": "くらい",
+    "meaning": "oscuro, sombrío",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "危ない",
+    "reading": "あぶない",
+    "meaning": "peligroso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "綺麗",
+    "reading": "きれい",
+    "meaning": "bonito, limpio",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "静か",
+    "reading": "しずか",
+    "meaning": "tranquilo, silencioso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "賑やか",
+    "reading": "にぎやか",
+    "meaning": "animado, bullicioso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "有名",
+    "reading": "ゆうめい",
+    "meaning": "famoso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "元気",
+    "reading": "げんき",
+    "meaning": "sano, enérgico",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "暇",
+    "reading": "ひま",
+    "meaning": "libre (tiempo)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "便利",
+    "reading": "べんり",
+    "meaning": "conveniente",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "不便",
+    "reading": "ふべん",
+    "meaning": "inconveniente",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "簡単",
+    "reading": "かんたん",
+    "meaning": "fácil, simple",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "大変",
+    "reading": "たいへん",
+    "meaning": "duro, terrible",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "好き",
+    "reading": "すき",
+    "meaning": "gustar (agradable)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "嫌い",
+    "reading": "きらい",
+    "meaning": "odiar (desagradable)",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "上手",
+    "reading": "じょうず",
+    "meaning": "hábil",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "下手",
+    "reading": "へた",
+    "meaning": "torpe",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "大切",
+    "reading": "たいせつ",
+    "meaning": "importante",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "大丈夫",
+    "reading": "だいじょうぶ",
+    "meaning": "todo bien, no hay problema",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "色々",
+    "reading": "いろいろ",
+    "meaning": "varios",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "パン",
+    "reading": "パン",
+    "meaning": "pan",
+    "category": "Katakana"
+  },
+  {
+    "word": "テレビ",
+    "reading": "テレビ",
+    "meaning": "televisión",
+    "category": "Katakana"
+  },
+  {
+    "word": "ラジオ",
+    "reading": "ラジオ",
+    "meaning": "radio",
+    "category": "Katakana"
+  },
+  {
+    "word": "テーブル",
+    "reading": "テーブル",
+    "meaning": "mesa",
+    "category": "Katakana"
+  },
+  {
+    "word": "ナイフ",
+    "reading": "ナイフ",
+    "meaning": "cuchillo",
+    "category": "Katakana"
+  },
+  {
+    "word": "フォーク",
+    "reading": "フォーク",
+    "meaning": "tenedor",
+    "category": "Katakana"
+  },
+  {
+    "word": "スプーン",
+    "reading": "スプーン",
+    "meaning": "cuchara",
+    "category": "Katakana"
+  },
+  {
+    "word": "シャツ",
+    "reading": "シャツ",
+    "meaning": "camisa",
+    "category": "Katakana"
+  },
+  {
+    "word": "Tシャツ",
+    "reading": "Tシャツ",
+    "meaning": "camiseta",
+    "category": "Katakana"
+  },
+  {
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "meaning": "café",
+    "category": "Katakana"
+  },
+  {
+    "word": "ジュース",
+    "reading": "ジュース",
+    "meaning": "zumo/jugo",
+    "category": "Katakana"
+  },
+  {
+    "word": "ビール",
+    "reading": "ビール",
+    "meaning": "cerveza",
+    "category": "Katakana"
+  },
+  {
+    "word": "ワイン",
+    "reading": "ワイン",
+    "meaning": "vino",
+    "category": "Katakana"
+  },
+  {
+    "word": "ノート",
+    "reading": "ノート",
+    "meaning": "cuaderno",
+    "category": "Katakana"
+  },
+  {
+    "word": "ペン",
+    "reading": "ペン",
+    "meaning": "bolígrafo",
+    "category": "Katakana"
+  },
+  {
+    "word": "ボールペン",
+    "reading": "ボールペン",
+    "meaning": "bolígrafo",
+    "category": "Katakana"
+  },
+  {
+    "word": "カメラ",
+    "reading": "カメラ",
+    "meaning": "cámara",
+    "category": "Katakana"
+  },
+  {
+    "word": "パソコン",
+    "reading": "パソコン",
+    "meaning": "computadora personal",
+    "category": "Katakana"
+  },
+  {
+    "word": "バス",
+    "reading": "バス",
+    "meaning": "autobús",
+    "category": "Katakana"
+  },
+  {
+    "word": "タクシー",
+    "reading": "タクシー",
+    "meaning": "taxi",
+    "category": "Katakana"
+  },
+  {
+    "word": "デパート",
+    "reading": "デパート",
+    "meaning": "grandes almacenes",
+    "category": "Katakana"
+  },
+  {
+    "word": "レストラン",
+    "reading": "レストラン",
+    "meaning": "restaurante",
+    "category": "Katakana"
+  },
+  {
+    "word": "ホテル",
+    "reading": "ホテル",
+    "meaning": "hotel",
+    "category": "Katakana"
+  },
+  {
+    "word": "エレベーター",
+    "reading": "エレベーター",
+    "meaning": "ascensor",
+    "category": "Katakana"
+  },
+  {
+    "word": "エスカレーター",
+    "reading": "エスカレーター",
+    "meaning": "escalera mecánica",
+    "category": "Katakana"
+  },
+  {
+    "word": "ドア",
+    "reading": "ドア",
+    "meaning": "puerta",
+    "category": "Katakana"
+  },
+  {
+    "word": "ベッド",
+    "reading": "ベッド",
+    "meaning": "cama",
+    "category": "Katakana"
+  },
+  {
+    "word": "カップ",
+    "reading": "カップ",
+    "meaning": "taza",
+    "category": "Katakana"
+  },
+  {
+    "word": "グラス",
+    "reading": "グラス",
+    "meaning": "vaso",
+    "category": "Katakana"
+  },
+  {
+    "word": "ケーキ",
+    "reading": "ケーキ",
+    "meaning": "pastel",
+    "category": "Katakana"
+  },
+  {
+    "word": "アイスクリーム",
+    "reading": "アイスクリーム",
+    "meaning": "helado",
+    "category": "Katakana"
+  },
+  {
+    "word": "サンドイッチ",
+    "reading": "サンドイッチ",
+    "meaning": "sándwich",
+    "category": "Katakana"
+  },
+  {
+    "word": "ハンバーガー",
+    "reading": "ハンバーガー",
+    "meaning": "hamburguesa",
+    "category": "Katakana"
+  },
+  {
+    "word": "ピザ",
+    "reading": "ピザ",
+    "meaning": "pizza",
+    "category": "Katakana"
+  },
+  {
+    "word": "カバン",
+    "reading": "カバン",
+    "meaning": "bolso/maleta",
+    "category": "Katakana"
+  },
+  {
+    "word": "ズボン",
+    "reading": "ズボン",
+    "meaning": "pantalones",
+    "category": "Katakana"
+  },
+  {
+    "word": "スカート",
+    "reading": "スカート",
+    "meaning": "falda",
+    "category": "Katakana"
+  },
+  {
+    "word": "ネクタイ",
+    "reading": "ネクタイ",
+    "meaning": "corbata",
+    "category": "Katakana"
+  },
+  {
+    "word": "プレゼント",
+    "reading": "プレゼント",
+    "meaning": "regalo",
+    "category": "Katakana"
+  },
+  {
+    "word": "パーティー",
+    "reading": "パーティー",
+    "meaning": "fiesta",
+    "category": "Katakana"
+  },
+  {
+    "word": "スーパー",
+    "reading": "スーパー",
+    "meaning": "supermercado",
+    "category": "Katakana"
+  },
+  {
+    "word": "トイレ",
+    "reading": "トイレ",
+    "meaning": "aseo/baño",
+    "category": "Katakana"
+  },
+  {
+    "word": "スポーツ",
+    "reading": "スポーツ",
+    "meaning": "deportes",
+    "category": "Katakana"
+  },
+  {
+    "word": "テニス",
+    "reading": "テニス",
+    "meaning": "tenis",
+    "category": "Katakana"
+  },
+  {
+    "word": "サッカー",
+    "reading": "サッカー",
+    "meaning": "fútbol",
+    "category": "Katakana"
+  },
+  {
+    "word": "ゴルフ",
+    "reading": "ゴルフ",
+    "meaning": "golf",
+    "category": "Katakana"
+  },
+  {
+    "word": "コンサート",
+    "reading": "コンサート",
+    "meaning": "concierto",
+    "category": "Katakana"
+  },
+  {
+    "word": "アルバイト",
+    "reading": "アルバイト",
+    "meaning": "trabajo a tiempo parcial",
+    "category": "Katakana"
+  },
+  {
+    "word": "ニュース",
+    "reading": "ニュース",
+    "meaning": "noticias",
+    "category": "Katakana"
+  },
+  {
+    "word": "ビデオ",
+    "reading": "ビデオ",
+    "meaning": "vídeo",
+    "category": "Katakana"
+  },
+  {
+    "word": "インターネット",
+    "reading": "インターネット",
+    "meaning": "internet",
+    "category": "Katakana"
+  },
+  {
+    "word": "メール",
+    "reading": "メール",
+    "meaning": "correo electrónico",
+    "category": "Katakana"
+  },
+  {
+    "word": "コピー",
+    "reading": "コピー",
+    "meaning": "copia",
+    "category": "Katakana"
+  },
+  {
+    "word": "ガソリン",
+    "reading": "ガソリン",
+    "meaning": "gasolina",
+    "category": "Katakana"
+  },
+  {
+    "word": "クレジットカード",
+    "reading": "クレジットカード",
+    "meaning": "tarjeta de crédito",
+    "category": "Katakana"
+  },
+  {
+    "word": "カード",
+    "reading": "カード",
+    "meaning": "tarjeta",
+    "category": "Katakana"
+  },
+  {
+    "word": "メニュー",
+    "reading": "メニュー",
+    "meaning": "menú",
+    "category": "Katakana"
+  },
+  {
+    "word": "サービス",
+    "reading": "サービス",
+    "meaning": "servicio",
+    "category": "Katakana"
+  },
+  {
+    "word": "サイズ",
+    "reading": "サイズ",
+    "meaning": "talla/tamaño",
+    "category": "Katakana"
+  },
+  {
+    "word": "ページ",
+    "reading": "ページ",
+    "meaning": "página",
+    "category": "Katakana"
+  },
+  {
+    "word": "ファイル",
+    "reading": "ファイル",
+    "meaning": "archivo",
+    "category": "Katakana"
+  },
+  {
+    "word": "カレンダー",
+    "reading": "カレンダー",
+    "meaning": "calendario",
+    "category": "Katakana"
+  },
+  {
+    "word": "シャワー",
+    "reading": "シャワー",
+    "meaning": "ducha",
+    "category": "Katakana"
+  },
+  {
+    "word": "ビル",
+    "reading": "ビル",
+    "meaning": "edificio",
+    "category": "Katakana"
+  },
+  {
+    "word": "アパート",
+    "reading": "アパート",
+    "meaning": "apartamento",
+    "category": "Katakana"
+  },
+  {
+    "word": "ホーム",
+    "reading": "ホーム",
+    "meaning": "andén (de tren)",
+    "category": "Katakana"
+  },
+  {
+    "word": "チケット",
+    "reading": "チケット",
+    "meaning": "billete/entrada",
+    "category": "Katakana"
+  },
+  {
+    "word": "ガイド",
+    "reading": "ガイド",
+    "meaning": "guía",
+    "category": "Katakana"
+  },
+  {
+    "word": "ツアー",
+    "reading": "ツアー",
+    "meaning": "tour",
+    "category": "Katakana"
+  },
+  {
+    "word": "エアコン",
+    "reading": "エアコン",
+    "meaning": "aire acondicionado",
+    "category": "Katakana"
+  },
+  {
+    "word": "日曜日",
+    "reading": "にちようび",
+    "meaning": "domingo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "月曜日",
+    "reading": "げつようび",
+    "meaning": "lunes",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "火曜日",
+    "reading": "かようび",
+    "meaning": "martes",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "水曜日",
+    "reading": "すいようび",
+    "meaning": "miércoles",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "木曜日",
+    "reading": "もくようび",
+    "meaning": "jueves",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "金曜日",
+    "reading": "きんようび",
+    "meaning": "viernes",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "土曜日",
+    "reading": "どようび",
+    "meaning": "sábado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今日",
+    "reading": "きょう",
+    "meaning": "hoy",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "明日",
+    "reading": "あした",
+    "meaning": "mañana (día siguiente)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "昨日",
+    "reading": "きのう",
+    "meaning": "ayer",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今朝",
+    "reading": "けさ",
+    "meaning": "esta mañana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今晩",
+    "reading": "こんばん",
+    "meaning": "esta noche",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今週",
+    "reading": "こんしゅう",
+    "meaning": "esta semana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "来週",
+    "reading": "らいしゅう",
+    "meaning": "la próxima semana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "先週",
+    "reading": "せんしゅう",
+    "meaning": "la semana pasada",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今月",
+    "reading": "こんげつ",
+    "meaning": "este mes",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "来月",
+    "reading": "らいげつ",
+    "meaning": "el próximo mes",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "先月",
+    "reading": "せんげつ",
+    "meaning": "el mes pasado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今年",
+    "reading": "ことし",
+    "meaning": "este año",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "来年",
+    "reading": "らいねん",
+    "meaning": "el próximo año",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "去年",
+    "reading": "きょねん",
+    "meaning": "el año pasado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "毎日",
+    "reading": "まいにち",
+    "meaning": "cada día",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "毎週",
+    "reading": "まいしゅう",
+    "meaning": "cada semana",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "毎月",
+    "reading": "まいつき",
+    "meaning": "cada mes",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "毎年",
+    "reading": "まいとし",
+    "meaning": "cada año",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "午前",
+    "reading": "ごぜん",
+    "meaning": "a.m.",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "午後",
+    "reading": "ごご",
+    "meaning": "p.m.",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "朝",
+    "reading": "あさ",
+    "meaning": "mañana (parte del día)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "昼",
+    "reading": "ひる",
+    "meaning": "mediodía/tarde",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "晩",
+    "reading": "ばん",
+    "meaning": "noche (temprano)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "夜",
+    "reading": "よる",
+    "meaning": "noche (tardío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "時間",
+    "reading": "じかん",
+    "meaning": "tiempo/hora (duración)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "分",
+    "reading": "ふん",
+    "meaning": "minuto",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "時",
+    "reading": "じ",
+    "meaning": "hora (en punto)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "週間",
+    "reading": "しゅうかん",
+    "meaning": "semana (duración)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ヶ月",
+    "reading": "かげつ",
+    "meaning": "mes (duración)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "年",
+    "reading": "ねん",
+    "meaning": "año (duración)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "週末",
+    "reading": "しゅうまつ",
+    "meaning": "fin de semana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "曜日",
+    "reading": "ようび",
+    "meaning": "día de la semana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ごろ",
+    "reading": "ごろ",
+    "meaning": "alrededor de (tiempo)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "から",
+    "reading": "から",
+    "meaning": "desde (tiempo)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "まで",
+    "reading": "まで",
+    "meaning": "hasta (tiempo)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "何時",
+    "reading": "なんじ",
+    "meaning": "¿qué hora?",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "何曜日",
+    "reading": "なんようび",
+    "meaning": "¿qué día de la semana?",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "何月",
+    "reading": "なんがつ",
+    "meaning": "¿qué mes?",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "何日",
+    "reading": "なんにち",
+    "meaning": "¿qué día del mes?",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "誕生日",
+    "reading": "たんじょうび",
+    "meaning": "cumpleaños",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "一月",
+    "reading": "いちがつ",
+    "meaning": "enero",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "二月",
+    "reading": "にがつ",
+    "meaning": "febrero",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "三月",
+    "reading": "さんがつ",
+    "meaning": "marzo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "四月",
+    "reading": "しがつ",
+    "meaning": "abril",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "五月",
+    "reading": "ごがつ",
+    "meaning": "mayo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "六月",
+    "reading": "ろくがつ",
+    "meaning": "junio",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "七月",
+    "reading": "しちがつ",
+    "meaning": "julio",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "八月",
+    "reading": "はちがつ",
+    "meaning": "agosto",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "九月",
+    "reading": "くがつ",
+    "meaning": "septiembre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "十月",
+    "reading": "じゅうがつ",
+    "meaning": "octubre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "十一月",
+    "reading": "じゅういちがつ",
+    "meaning": "noviembre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "十二月",
+    "reading": "じゅうにがつ",
+    "meaning": "diciembre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "父",
+    "reading": "ちち",
+    "meaning": "padre (mío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "母",
+    "reading": "はは",
+    "meaning": "madre (mía)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お父さん",
+    "reading": "おとうさん",
+    "meaning": "padre (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お母さん",
+    "reading": "おかあさん",
+    "meaning": "madre (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "兄",
+    "reading": "あに",
+    "meaning": "hermano mayor (mío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "弟",
+    "reading": "おとうと",
+    "meaning": "hermano menor (mío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "姉",
+    "reading": "あね",
+    "meaning": "hermana mayor (mía)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "妹",
+    "reading": "いもうと",
+    "meaning": "hermana menor (mía)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お兄さん",
+    "reading": "おにいさん",
+    "meaning": "hermano mayor (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お姉さん",
+    "reading": "おねえさん",
+    "meaning": "hermana mayor (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "家族",
+    "reading": "かぞく",
+    "meaning": "familia",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "友達",
+    "reading": "ともだち",
+    "meaning": "amigo/a",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "先生",
+    "reading": "せんせい",
+    "meaning": "profesor/a",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "学生",
+    "reading": "がくせい",
+    "meaning": "estudiante",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "医者",
+    "reading": "いしゃ",
+    "meaning": "médico/a",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "会社員",
+    "reading": "かいしゃいん",
+    "meaning": "empleado de empresa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "銀行員",
+    "reading": "ぎんこういん",
+    "meaning": "empleado de banco",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "日本人",
+    "reading": "にほんじん",
+    "meaning": "japonés/a",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "人",
+    "reading": "ひと",
+    "meaning": "persona",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "男の人",
+    "reading": "おとこのひと",
+    "meaning": "hombre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "女の人",
+    "reading": "おんなのひと",
+    "meaning": "mujer",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "子供",
+    "reading": "こども",
+    "meaning": "niño/a",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "男の子",
+    "reading": "おとこのこ",
+    "meaning": "niño",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "女の子",
+    "reading": "おんなのこ",
+    "meaning": "niña",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ご主人",
+    "reading": "ごしゅじん",
+    "meaning": "esposo (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "奥さん",
+    "reading": "おくさん",
+    "meaning": "esposa (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "夫",
+    "reading": "おっと",
+    "meaning": "esposo (mío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "妻",
+    "reading": "つま",
+    "meaning": "esposa (mía)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "息子",
+    "reading": "むすこ",
+    "meaning": "hijo (mío)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "娘",
+    "reading": "むすめ",
+    "meaning": "hija (mía)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お子さん",
+    "reading": "おこさん",
+    "meaning": "hijo/a (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "赤ちゃん",
+    "reading": "あかちゃん",
+    "meaning": "bebé",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "主婦",
+    "reading": "しゅふ",
+    "meaning": "ama de casa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "店員",
+    "reading": "てんいん",
+    "meaning": "dependiente/vendedor",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "警察官",
+    "reading": "けいさつかん",
+    "meaning": "policía",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お客さん",
+    "reading": "おきゃくさん",
+    "meaning": "cliente/invitado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "皆さん",
+    "reading": "みなさん",
+    "meaning": "todos/as",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "名前",
+    "reading": "なまえ",
+    "meaning": "nombre",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "だれ",
+    "reading": "だれ",
+    "meaning": "quién",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "私",
+    "reading": "わたし",
+    "meaning": "yo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "あなた",
+    "reading": "あなた",
+    "meaning": "tú",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "学校",
+    "reading": "がっこう",
+    "meaning": "escuela",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "部屋",
+    "reading": "へや",
+    "meaning": "habitación",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "病院",
+    "reading": "びょういん",
+    "meaning": "hospital",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "駅",
+    "reading": "えき",
+    "meaning": "estación",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "庭",
+    "reading": "にわ",
+    "meaning": "jardín",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "家",
+    "reading": "いえ",
+    "meaning": "casa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お宅",
+    "reading": "おたく",
+    "meaning": "casa/hogar (de otro)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "コンビニ",
+    "reading": "コンビニ",
+    "meaning": "tienda de conveniencia",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "銀行",
+    "reading": "ぎんこう",
+    "meaning": "banco",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "郵便局",
+    "reading": "ゆうびんきょく",
+    "meaning": "oficina de correos",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "図書館",
+    "reading": "としょかん",
+    "meaning": "biblioteca",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "公園",
+    "reading": "こうえん",
+    "meaning": "parque",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "喫茶店",
+    "reading": "きっさてん",
+    "meaning": "cafetería",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "町",
+    "reading": "まち",
+    "meaning": "ciudad/pueblo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "大学",
+    "reading": "だいがく",
+    "meaning": "universidad",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "教室",
+    "reading": "きょうしつ",
+    "meaning": "aula",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "食堂",
+    "reading": "しょくどう",
+    "meaning": "comedor",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "事務所",
+    "reading": "じむしょ",
+    "meaning": "oficina",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "会議室",
+    "reading": "かいぎしつ",
+    "meaning": "sala de reuniones",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "受付",
+    "reading": "うけつけ",
+    "meaning": "recepción",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お手洗い",
+    "reading": "おてあらい",
+    "meaning": "aseo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "台所",
+    "reading": "だいどころ",
+    "meaning": "cocina",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "玄関",
+    "reading": "げんかん",
+    "meaning": "entrada (de casa)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "リビング",
+    "reading": "リビング",
+    "meaning": "sala de estar",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "寝室",
+    "reading": "しんしつ",
+    "meaning": "dormitorio",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "風呂場",
+    "reading": "ふろば",
+    "meaning": "baño (lugar de baño)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "上",
+    "reading": "うえ",
+    "meaning": "arriba",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "下",
+    "reading": "した",
+    "meaning": "abajo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "中",
+    "reading": "なか",
+    "meaning": "dentro",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "外",
+    "reading": "そと",
+    "meaning": "fuera",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "前",
+    "reading": "まえ",
+    "meaning": "delante",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "後ろ",
+    "reading": "うしろ",
+    "meaning": "detrás",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "右",
+    "reading": "みぎ",
+    "meaning": "derecha",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "左",
+    "reading": "ひだり",
+    "meaning": "izquierda",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "隣",
+    "reading": "となり",
+    "meaning": "al lado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "近く",
+    "reading": "ちかく",
+    "meaning": "cerca",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "場所",
+    "reading": "ばしょ",
+    "meaning": "lugar",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "国",
+    "reading": "くに",
+    "meaning": "país",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "こちら",
+    "reading": "こちら",
+    "meaning": "aquí (formal)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "そちら",
+    "reading": "そちら",
+    "meaning": "allí (formal)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "あちら",
+    "reading": "あちら",
+    "meaning": "allá (formal)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "どこ",
+    "reading": "どこ",
+    "meaning": "dónde",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "方",
+    "reading": "ほう",
+    "meaning": "dirección/lado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "入口",
+    "reading": "いりぐち",
+    "meaning": "entrada (de un edificio)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "出口",
+    "reading": "でぐち",
+    "meaning": "salida (de un edificio)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "自動販売機",
+    "reading": "じどうはんばいき",
+    "meaning": "máquina expendedora",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "売店",
+    "reading": "ばいてん",
+    "meaning": "quiosco",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "店",
+    "reading": "みせ",
+    "meaning": "tienda",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "窓",
+    "reading": "まど",
+    "meaning": "ventana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ロビー",
+    "reading": "ロビー",
+    "meaning": "vestíbulo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "車",
+    "reading": "くるま",
+    "meaning": "coche",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "電車",
+    "reading": "でんしゃ",
+    "meaning": "tren eléctrico",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "自転車",
+    "reading": "じてんしゃ",
+    "meaning": "bicicleta",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "meaning": "avión",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "船",
+    "reading": "ふね",
+    "meaning": "barco",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "地下鉄",
+    "reading": "ちかてつ",
+    "meaning": "metro",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "空港",
+    "reading": "くうこう",
+    "meaning": "aeropuerto",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "切符",
+    "reading": "きっぷ",
+    "meaning": "billete",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "定期券",
+    "reading": "ていきけん",
+    "meaning": "abono de transporte",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "道",
+    "reading": "みち",
+    "meaning": "camino/calle",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "信号",
+    "reading": "しんごう",
+    "meaning": "semáforo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "乗り場",
+    "reading": "のりば",
+    "meaning": "parada/andén",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "乗り物",
+    "reading": "のりもの",
+    "meaning": "vehículo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "運転手",
+    "reading": "うんてんしゅ",
+    "meaning": "conductor",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "荷物",
+    "reading": "にもつ",
+    "meaning": "equipaje",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "旅行",
+    "reading": "りょこう",
+    "meaning": "viaje",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "地図",
+    "reading": "ちず",
+    "meaning": "mapa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "水",
+    "reading": "みず",
+    "meaning": "agua",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お茶",
+    "reading": "おちゃ",
+    "meaning": "té",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ご飯",
+    "reading": "ごはん",
+    "meaning": "arroz cocido / comida",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "肉",
+    "reading": "にく",
+    "meaning": "carne",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "魚",
+    "reading": "さかな",
+    "meaning": "pescado",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "野菜",
+    "reading": "やさい",
+    "meaning": "verdura",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "果物",
+    "reading": "くだもの",
+    "meaning": "fruta",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "牛乳",
+    "reading": "ぎゅうにゅう",
+    "meaning": "leche",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "卵",
+    "reading": "たまご",
+    "meaning": "huevo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "塩",
+    "reading": "しお",
+    "meaning": "sal",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "砂糖",
+    "reading": "さとう",
+    "meaning": "azúcar",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "醤油",
+    "reading": "しょうゆ",
+    "meaning": "salsa de soja",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "箸",
+    "reading": "はし",
+    "meaning": "palillos",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "コップ",
+    "reading": "コップ",
+    "meaning": "vaso",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お皿",
+    "reading": "おさら",
+    "meaning": "plato",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お椀",
+    "reading": "おわん",
+    "meaning": "cuenco",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "料理",
+    "reading": "りょうり",
+    "meaning": "cocina/plato",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "朝ご飯",
+    "reading": "あさごはん",
+    "meaning": "desayuno",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "昼ご飯",
+    "reading": "ひるごはん",
+    "meaning": "almuerzo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "晩ご飯",
+    "reading": "ばんごはん",
+    "meaning": "cena",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お酒",
+    "reading": "おさけ",
+    "meaning": "alcohol/sake",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "紅茶",
+    "reading": "こうちゃ",
+    "meaning": "té negro",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "たばこ",
+    "reading": "たばこ",
+    "meaning": "tabaco/cigarrillo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お菓子",
+    "reading": "おかし",
+    "meaning": "dulces/galletas",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "麺",
+    "reading": "めん",
+    "meaning": "fideos",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "スープ",
+    "reading": "スープ",
+    "meaning": "sopa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "サラダ",
+    "reading": "サラダ",
+    "meaning": "ensalada",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "味噌汁",
+    "reading": "みそしる",
+    "meaning": "sopa de miso",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "おにぎり",
+    "reading": "おにぎり",
+    "meaning": "bola de arroz",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "ステーキ",
+    "reading": "ステーキ",
+    "meaning": "bistec",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "カレー",
+    "reading": "カレー",
+    "meaning": "curry",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お金",
+    "reading": "おかね",
+    "meaning": "dinero",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お弁当",
+    "reading": "おべんとう",
+    "meaning": "bento/caja de comida",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "レシート",
+    "reading": "レシート",
+    "meaning": "recibo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "お釣り",
+    "reading": "おつり",
+    "meaning": "cambio (dinero)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "雨",
+    "reading": "あめ",
+    "meaning": "lluvia",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "雪",
+    "reading": "ゆき",
+    "meaning": "nieve",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "空",
+    "reading": "そら",
+    "meaning": "cielo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "山",
+    "reading": "やま",
+    "meaning": "montaña",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "川",
+    "reading": "かわ",
+    "meaning": "río",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "花",
+    "reading": "はな",
+    "meaning": "flor",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "木",
+    "reading": "き",
+    "meaning": "árbol",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "天気",
+    "reading": "てんき",
+    "meaning": "tiempo (meteorológico)",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "服",
+    "reading": "ふく",
+    "meaning": "ropa",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "靴",
+    "reading": "くつ",
+    "meaning": "zapatos",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "帽子",
+    "reading": "ぼうし",
+    "meaning": "sombrero",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "手",
+    "reading": "て",
+    "meaning": "mano",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "目",
+    "reading": "め",
+    "meaning": "ojo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "口",
+    "reading": "くち",
+    "meaning": "boca",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "足",
+    "reading": "あし",
+    "meaning": "pie, pierna",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "耳",
+    "reading": "みみ",
+    "meaning": "oreja",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "鼻",
+    "reading": "はな",
+    "meaning": "nariz",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "頭",
+    "reading": "あたま",
+    "meaning": "cabeza",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "体",
+    "reading": "からだ",
+    "meaning": "cuerpo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "髪",
+    "reading": "かみ",
+    "meaning": "pelo",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "本",
+    "reading": "ほん",
+    "meaning": "libro",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "辞書",
+    "reading": "じしょ",
+    "meaning": "diccionario",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "鉛筆",
+    "reading": "えんぴつ",
+    "meaning": "lápiz",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "紙",
+    "reading": "かみ",
+    "meaning": "papel",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "時計",
+    "reading": "とけい",
+    "meaning": "reloj",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "電話",
+    "reading": "でんわ",
+    "meaning": "teléfono",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "傘",
+    "reading": "かさ",
+    "meaning": "paraguas",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "財布",
+    "reading": "さいふ",
+    "meaning": "cartera",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "かばん",
+    "reading": "かばん",
+    "meaning": "bolso, mochila",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "机",
+    "reading": "つくえ",
+    "meaning": "escritorio",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "椅子",
+    "reading": "いす",
+    "meaning": "silla",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "電気",
+    "reading": "でんき",
+    "meaning": "luz, electricidad",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "今",
+    "reading": "いま",
+    "meaning": "ahora",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "週",
+    "reading": "しゅう",
+    "meaning": "semana",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "所",
+    "reading": "ところ",
+    "meaning": "lugar",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "円",
+    "reading": "えん",
+    "meaning": "yen",
+    "category": "Sustantivo"
+  },
+  {
+    "word": "いつ",
+    "reading": "いつ",
+    "meaning": "cuándo",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "なに",
+    "reading": "なに",
+    "meaning": "qué",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "どれ",
+    "reading": "どれ",
+    "meaning": "cuál (entre varios)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "どう",
+    "reading": "どう",
+    "meaning": "cómo",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "どうして",
+    "reading": "どうして",
+    "meaning": "por qué",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "とても",
+    "reading": "とても",
+    "meaning": "muy",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "たくさん",
+    "reading": "たくさん",
+    "meaning": "mucho/s",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "少し",
+    "reading": "すこし",
+    "meaning": "un poco",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "もう",
+    "reading": "もう",
+    "meaning": "ya, otra vez",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "まだ",
+    "reading": "まだ",
+    "meaning": "todavía no",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "いつも",
+    "reading": "いつも",
+    "meaning": "siempre",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "よく",
+    "reading": "よく",
+    "meaning": "a menudo, bien",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ときどき",
+    "reading": "ときどき",
+    "meaning": "a veces",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ぜんぜん",
+    "reading": "ぜんぜん",
+    "meaning": "para nada (con negativo)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "あまり",
+    "reading": "あまり",
+    "meaning": "no muy (con negativo)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "はい",
+    "reading": "はい",
+    "meaning": "sí",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "いいえ",
+    "reading": "いいえ",
+    "meaning": "no",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "おねがいします",
+    "reading": "おねがいします",
+    "meaning": "por favor",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "すみません",
+    "reading": "すみません",
+    "meaning": "disculpe, perdón",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ありがとう",
+    "reading": "ありがとう",
+    "meaning": "gracias",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ごめんなさい",
+    "reading": "ごめんなさい",
+    "meaning": "lo siento",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "おはようございます",
+    "reading": "おはようございます",
+    "meaning": "buenos días (mañana)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "こんにちは",
+    "reading": "こんにちは",
+    "meaning": "hola, buenas tardes",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "こんばんは",
+    "reading": "こんばんは",
+    "meaning": "buenas noches",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "さようなら",
+    "reading": "さようなら",
+    "meaning": "adiós",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "おやすみなさい",
+    "reading": "おやすみなさい",
+    "meaning": "buenas noches (al irse a dormir)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "いってきます",
+    "reading": "いってきます",
+    "meaning": "me voy (dicho al salir de casa)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "いってらっしゃい",
+    "reading": "いってらっしゃい",
+    "meaning": "que te vaya bien (dicho a quien sale)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ただいま",
+    "reading": "ただいま",
+    "meaning": "ya estoy en casa (dicho al volver a casa)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "おかえりなさい",
+    "reading": "おかえりなさい",
+    "meaning": "bienvenido a casa (dicho a quien vuelve)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "いただきます",
+    "reading": "いただきます",
+    "meaning": "¡a comer! (antes de comer)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "ごちそうさまでした",
+    "reading": "ごちそうさまでした",
+    "meaning": "gracias por la comida (después de comer)",
+    "category": "Adverbio / Expresión"
+  },
+  {
+    "word": "あります",
+    "reading": "あります",
+    "meaning": "haber, tener (inanimados)",
+    "category": "Verbo"
+  },
+  {
+    "word": "います",
+    "reading": "います",
+    "meaning": "haber, tener (animados)",
+    "category": "Verbo"
+  },
+  {
+    "word": "行きます",
+    "reading": "いきます",
+    "meaning": "ir",
+    "category": "Verbo"
+  },
+  {
+    "word": "来ます",
+    "reading": "きます",
+    "meaning": "venir",
+    "category": "Verbo"
+  },
+  {
+    "word": "帰ります",
+    "reading": "かえります",
+    "meaning": "regresar",
+    "category": "Verbo"
+  },
+  {
+    "word": "飲みます",
+    "reading": "のみます",
+    "meaning": "beber",
+    "category": "Verbo"
+  },
+  {
+    "word": "食べます",
+    "reading": "たべます",
+    "meaning": "comer",
+    "category": "Verbo"
+  },
+  {
+    "word": "買います",
+    "reading": "かいます",
+    "meaning": "comprar",
+    "category": "Verbo"
+  },
+  {
+    "word": "見ます",
+    "reading": "みます",
+    "meaning": "ver",
+    "category": "Verbo"
+  },
+  {
+    "word": "聞きます",
+    "reading": "ききます",
+    "meaning": "escuchar, preguntar",
+    "category": "Verbo"
+  },
+  {
+    "word": "話します",
+    "reading": "はなします",
+    "meaning": "hablar",
+    "category": "Verbo"
+  },
+  {
+    "word": "読みます",
+    "reading": "よみます",
+    "meaning": "leer",
+    "category": "Verbo"
+  },
+  {
+    "word": "書きます",
+    "reading": "かきます",
+    "meaning": "escribir",
+    "category": "Verbo"
+  },
+  {
+    "word": "します",
+    "reading": "します",
+    "meaning": "hacer",
+    "category": "Verbo"
+  },
+  {
+    "word": "勉強します",
+    "reading": "べんきょうします",
+    "meaning": "estudiar",
+    "category": "Verbo"
+  },
+  {
+    "word": "起きます",
+    "reading": "おきます",
+    "meaning": "levantarse",
+    "category": "Verbo"
+  },
+  {
+    "word": "寝ます",
+    "reading": "ねます",
+    "meaning": "dormir",
+    "category": "Verbo"
+  },
+  {
+    "word": "働きます",
+    "reading": "はたらきます",
+    "meaning": "trabajar",
+    "category": "Verbo"
+  },
+  {
+    "word": "休みます",
+    "reading": "やすみます",
+    "meaning": "descansar",
+    "category": "Verbo"
+  },
+  {
+    "word": "わかります",
+    "reading": "わかります",
+    "meaning": "entender",
+    "category": "Verbo"
+  },
+  {
+    "word": "いい",
+    "reading": "いい",
+    "meaning": "bueno",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "暖かい",
+    "reading": "あたたかい",
+    "meaning": "cálido",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "涼しい",
+    "reading": "すずしい",
+    "meaning": "fresco",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "やさしい",
+    "reading": "やさしい",
+    "meaning": "fácil, amable",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "おいしい",
+    "reading": "おいしい",
+    "meaning": "delicioso",
+    "category": "Adjetivo"
+  },
+  {
+    "word": "きれい",
+    "reading": "きれい",
+    "meaning": "bonito, limpio",
+    "category": "Adjetivo"
+  }
+]

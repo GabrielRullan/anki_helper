@@ -37,17 +37,34 @@ The workspace contains Python scripts that extract data from Anki and build anal
   ```
 
 ### 2. Decks & Fields Schema
-- **Characters Deck**:
+- **Characters Deck (`Chinese::Char`)**:
   - `Hanzi`: The character.
   - `Pinyin`: Contextual pinyin.
   - `Tone`: 1, 2, 3, 4, or 5.
   - `Actor` / `Set` / `Tone-Location` / `Scene`: MBP movie components.
   - Performance: `lapses`, `ease` (factor in permille), `reps`, `tags` (e.g. `'leech'`), `suspended`.
-- **Migaku Deck**:
+- **Vocabulary Deck (`Chinese::Words`)**:
   - `Sentence`: Mined Chinese sentence.
   - `Word`: Mined target word.
   - `Translated Sentence`: English translation.
   - `Notes`: Grammar/vocabulary annotations.
+- **Non-Grammar Sentences Deck (`Chinese::Sent` - `Chinese Sentence - Single`)**:
+  - `Word`: `""` (Empty)
+  - `Grammar_Point`: `""` (Empty)
+  - `Sentence`: `<Chinese Example Sentence>`
+  - `Translated_Sentence`: `<English Translation>`
+  - `Definitions`: `""` (Empty)
+  - `Notes`: `<Sentence Pinyin>`
+  - `Sentence_Audio`: `[sound:zh_tts_<hash>.mp3]`
+  - `Translated_Audio`: `[sound:en_tts_<hash>.mp3]`
+- **Grammar Sentences Deck (`Chinese::Sent` - `Chinese Sentence - Double`)**:
+  - `Word`: `""` (Empty)
+  - `Grammar_Point`: `<Grammar Pattern (e.g., 是否)>`
+  - `Sentence`: `<Chinese Sentence>`
+  - `Translated_Sentence`: `<English Translation>`
+  - `Notes`: `<Sentence Pinyin>\n\n<Grammar Rule Explanation>`
+  - `Sentence_Audio`: `[sound:zh_tts_<hash>.mp3]`
+  - `Translated_Audio`: `[sound:en_tts_<hash>.mp3]`
 
 ### 3. How to Use the Dashboard
 When advising the user, refer to the dashboard views to guide them:

@@ -16,6 +16,8 @@ data/*_backup.json
 scratch/*.txt
 scratch/*.json
 scratch/*.anki2
+data/anki_audio/
+anki_audio/
 
 # Local test outputs
 tests/test_grammar_import.csv
@@ -38,3 +40,14 @@ new_words.md
 
 #logs
 data/image_generation_errors.log
+
+# Kaishi-ESP repository
+Kaishi-ESP/
+data/kaishi_temp/
+data/kaishi_cards.json
+*.apkg
+japanese/course_book/
+scratch/spoonfed_extracted/
+scratch/aug09_extracted/
+scratch/backup_aug09/
+scratch/aug09_backup_extracted/
