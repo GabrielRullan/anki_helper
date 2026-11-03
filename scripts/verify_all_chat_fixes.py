@@ -113,7 +113,7 @@ def main():
     for cn in char_notes:
         nid = cn['id']
         cards = nid_to_cards.get(nid, [])
-        susp_cards = [c for c in cards if c['queue'] < 0]
+        susp_cards = [c for c in cards if c['queue'] == -1]
         if not susp_cards:
             continue
         h = cn['fields'].get('Hanzi', '').strip()

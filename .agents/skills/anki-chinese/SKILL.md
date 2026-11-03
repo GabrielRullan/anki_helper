@@ -103,7 +103,7 @@ python scripts/generate_dashboard.py
 - Writes updated cache to `data/anki_extract.json`.
 - Regenerates standalone interactive `dashboard.html`.
 
-### Workflow B: Bidirectional Note Linking
+### Workflow B: Bidirectional Note Linking & Unsuspending Word Characters
 To scan and link all characters with corresponding vocabulary words:
 ```powershell
 python scripts/link_notes.py
@@ -114,6 +114,11 @@ python scripts/link_notes.py
 - Always run unit tests before/after changes:
   ```powershell
   python -m unittest tests/test_link_notes.py
+  ```
+- To find and unsuspend any suspended character cards (`queue == -1`) in `Chinese::Char` whose Hanzi appears in a `Chinese::Words` card (see also the `Unsuspend Word Characters` skill):
+  ```powershell
+  python scripts/unsuspend_word_characters.py --dry-run
+  python scripts/unsuspend_word_characters.py --clear-red-flag
   ```
 
 ### Workflow C: Add Missing N+1 Characters
